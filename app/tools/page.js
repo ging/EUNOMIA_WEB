@@ -8,8 +8,8 @@ import Link from "next/link";
 import image from "next/image";
 import { useState, useEffect } from "react";
 import { mytools } from "@/constants/tools";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import {
   faGit,
   faGithub,
@@ -79,21 +79,21 @@ export default function Tools(props) {
                         <div className="tool_button_container">
                           <button className="tool_button">
                             <CreateLink route={route}>
-                              <FontAwesomeIcon
+                              {/* <FontAwesomeIcon
                                 className="award_icon"
                                 icon={faArrowRight}
-                              />
+                              /> */}
 
                                <span> {t('tools.toolCards.button')}</span>
                             </CreateLink>
                           </button>
                           <button className="tool_github">
                             <CreateLink route={github}>
-                              <FontAwesomeIcon
+                              {/* <FontAwesomeIcon
                                 className="mr-2 "
                                 icon={faGithub}
                                 size="lg"
-                              />
+                              /> */}
                               <span> Github </span>{" "}
                             </CreateLink>
                           </button>

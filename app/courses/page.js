@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 // aquí habría que importar los cursos
 import { mycourses } from "@/constants/courses.js";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 export default function Courses() {
@@ -49,7 +49,7 @@ export default function Courses() {
                         </div>
                         <button className="course_route">
                         <CreateLink route={route}>
-                        <FontAwesomeIcon className="award_icon" icon={faArrowRight} />
+                        {/* <FontAwesomeIcon className="award_icon" icon={faArrowRight} /> */}
                           <span>{t('courses.button')}</span>
                         </CreateLink>
                         </button>

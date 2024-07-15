@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
+import Header from "@/components/core/Header";
 import Footer from "@/components/Footer";
 import { myteam } from "@/constants/team";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 export default function Team(props) {

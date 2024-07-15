@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { mypublications } from "../constants/publications";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function RecentPublications(props) {
@@ -60,7 +60,7 @@ export default function RecentPublications(props) {
                             href={doi}
                           >
                             <span>{t("publications.button")}</span>
-                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                            {/* <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> */}
                           </Link>
                         </button>
                       ) : null}

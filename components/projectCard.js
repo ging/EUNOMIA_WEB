@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { myProjectCards } from "@/constants/projectsCards";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from 'react-i18next';
 
 export default function projectCards(props) {
@@ -46,7 +46,7 @@ export default function projectCards(props) {
                 <a href={route} target="_blank">
                   {" "}
                   <p> {t('projects.button')}</p>
-                  <FontAwesomeIcon icon={faUpRightFromSquare} />
+                  {/* <FontAwesomeIcon icon={faUpRightFromSquare} /> */}
                 </a>
               </div>
               <div className="project_info">

@@ -2,15 +2,18 @@
 import * as React from "react";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import { myProjectCards } from "@/constants/projectsCards.js";
 import { useTranslation } from "react-i18next";
 
+// Layout
+import Header from "@/components/core/Header";
+import Footer from "@/components/Footer";
+
 // Components
 import { Button } from "@/components/ui/button";
-import Heading from "@/components/core/Heading"
+import Heading from "@/components/core/Heading";
+
 
 
 import {
@@ -37,8 +40,17 @@ export default function Projects() {
 
   return (
     <main>
-      <Heading level="h1" className="">
-        Página de prueba
+      <Header/>
+
+      <div className="h-64 bg-slate-300">Imagen hero con logo etc</div>
+      <div className="h-32 bg-slate-200">Párrafo/texto sobre el proyecto</div>
+
+      {/* Card grid Heading*/}
+      <Heading level="h4 bg-slate-300" className="">
+        Cards con iconos?
+      </Heading>
+      <Heading level="h2" className="">
+        Quitar el map de proyectos
       </Heading>
 
       {/* Card grid */}
@@ -49,7 +61,7 @@ export default function Projects() {
               <div>{project.date}</div>
             </CardHeader>
 
-            <CardContent className="">
+            <CardContent className="flex flex-col gap-2">
               <CardTitle>{project.title}</CardTitle>
               <CardDescription>{project.subtitle}</CardDescription>
             </CardContent>

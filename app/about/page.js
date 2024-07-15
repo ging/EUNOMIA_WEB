@@ -1,12 +1,10 @@
 "use client";
 
-import Header from "@/components/Header";
+import Header from "@/components/core/Header";
 import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
+
+//  icons
 
 export default function About(props) {
   const { t, i18n } = useTranslation();
@@ -29,14 +27,13 @@ export default function About(props) {
             <div className="contact_title">
               <h4>{t("contact.title2")}</h4>
             </div>
-            <div className="contact_content ">
               <ul className="contact_info"  >
                 <li className="info_title">
                   <h3>UPM</h3>
                 </li>
                 <li>
-                  <h5>
-                    <FontAwesomeIcon className="icon" icon={faAt} />
+                  <h5 className="flex gap-2">
+                    <span className="font-bold">@</span>
                     <p>gi.internetng@upm.es</p>
                   </h5>
                   
@@ -44,51 +41,22 @@ export default function About(props) {
                 <li>
                   <h5>
                     {" "}
-                    <FontAwesomeIcon className="icon" icon={faPhone} />
+                    {/* <FontAwesomeIcon className="icon" icon={faPhone} /> */}
                     <p>91 336 73 31</p>
                   </h5>
                   
                 </li>
                 <li>
                   <h5>
-                    {" "}
-                    <FontAwesomeIcon className="icon" icon={faLocationDot} />
+                    {/* {" "} */}
+
                     <p>E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN
                   Av. Complutense, 30, 28040 Madrid Edificio B</p>
                   </h5>
                   
                 </li>
               </ul>
-              <ul className="contact_info"  >
-                <li className="info_title">
-                  <h3>UC3M</h3>
-                </li>
-                <li>
-                  <h5>
-                    <FontAwesomeIcon className="icon" icon={faAt} />
-                    <p>secre@inv.it.uc3m.es</p>
-                  </h5>
-                  
-                </li>
-                <li>
-                  <h5>
-                    {" "}
-                    <FontAwesomeIcon className="icon" icon={faPhone} />
-                    <p>91 624 87 78</p>
-                  </h5>
-                  
-                </li>
-                <li>
-                  <h5>
-                    {" "}
-                    <FontAwesomeIcon className="icon" icon={faLocationDot} />
-                    <p>Escuela Politécnica Superior, Avda. de la Universidad, 30. 28911 Leganés (Madrid) España</p>
 
-                  </h5>
-                </li>
-              </ul>
-
-            </div>
           </div>
           {/* <div className="location col2">
             <div className="location_title">

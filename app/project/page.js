@@ -1,17 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
+import Header from "@/components/core/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import ProjectCard from "@/components/projectCard";
 import { myprojectCards } from "@/constants/projectsCards.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleNodes } from "@fortawesome/free-solid-svg-icons";
-import { faGrip } from "@fortawesome/free-solid-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Projects() {
   // const [projects, setProjects] = useState(myprojectCards);
@@ -43,21 +38,21 @@ export default function Projects() {
         </h2>
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 md:gap-6">
           <div className="card_goals bg-black text-center padding_card_highlight">
-            <FontAwesomeIcon icon={faCircleNodes} className="icon_circle" />
+            {/* <FontAwesomeIcon icon={faCircleNodes} className="icon_circle" /> */}
             <div>
               <h3> {t("project.Goals.Goal1.GoalTitle")}</h3>
               <p className=""> {t("project.Goals.Goal1.GoalBody")}</p>
             </div>
           </div>
           <div className="card_goals bg-black text-center padding_card_highlight">
-            <FontAwesomeIcon icon={faGrip} className="icon_circle" />
+            {/* <FontAwesomeIcon icon={faGrip} className="icon_circle" /> */}
             <div>
               <h3> {t("project.Goals.Goal2.GoalTitle")}</h3>
               <p className=""> {t("project.Goals.Goal2.GoalBody")}</p>
             </div>
           </div>
           <div className="card_goals bg-black text-center padding_card_highlight">
-            <FontAwesomeIcon icon={faGrip} className="icon_circle" />
+            {/* <FontAwesomeIcon icon={faGrip} className="icon_circle" /> */}
             <div>
               <h3> {t("project.Goals.Goal2.GoalTitle")}</h3>
             </div>
@@ -75,22 +70,22 @@ export default function Projects() {
             </h3>
             <h5> {t("project.Subprojects.Subproject1.Subtitle")}</h5>
             <p> {t("project.Subprojects.Subproject1.Body")} </p>
-            <motion.button
+            <button
               className="action_button margin_top_button text-ffdGreen-300 border-ffdGreen-300"
               onHoverStart={() => setIsHovered1(true)}
               onHoverEnd={() => setIsHovered1(false)}
             >
               <Link rel="noopener noreferrer" target="_blank" href="#">
                 <span>{t("project.Subprojects.Subproject1.Button")}</span>
-                <motion.div
+                <div
                   animate={{ x: isHovered1 ? 10 : 0 }} // Adjust '10' to the desired amount of movement
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{ display: "inline-block", marginLeft: "8px" }} // Adjust 'marginLeft' for spacing
                 >
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </motion.div>
+                  {/* <FontAwesomeIcon icon={faArrowRight} /> */}
+                </div>
               </Link>
-            </motion.button>
+            </button>
           </div>
           {/* <div className="divisor-container basis-2/12">
             {/* <img
@@ -104,22 +99,22 @@ export default function Projects() {
             </h3>
             <h5> {t("project.Subprojects.Subproject2.Subtitle")}</h5>
             <p> {t("project.Subprojects.Subproject2.Body")} </p>
-            <motion.button
+            <button
               className="action_button margin_top_button text-ffdBlue-300 border-ffdBlue-300"
               onHoverStart={() => setIsHovered2(true)}
               onHoverEnd={() => setIsHovered2(false)}
             >
               <Link rel="noopener noreferrer" target="_blank" href="#">
                 <span>{t("project.Subprojects.Subproject2.Button")}</span>
-                <motion.div
+                <div
                   animate={{ x: isHovered2 ? 10 : 0 }} // Adjust '10' to the desired amount of movement
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{ display: "inline-block", marginLeft: "8px" }} // Adjust 'marginLeft' for spacing
                 >
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </motion.div>
+                  {/* <FontAwesomeIcon icon={faArrowRight} /> */}
+                </div>
               </Link>
-            </motion.button>
+            </button>
           </div>
         </div>
       </section>
