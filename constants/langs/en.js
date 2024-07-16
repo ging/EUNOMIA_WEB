@@ -10,24 +10,17 @@ export const en = {
         "publicationstab": "Publications",
     },
     "front": {
-        "title": "Future Networks for Datacenters and Telcos",
-        "description": "The project proposal is a holistic and comprehensive approach that requires the active involvement and collaboration of both experts in networking and computing.",
-        "action-button": "About the project",
-        "projectTitle": "Short description of the project",
-        "projectSubtitle": "FuN4DaTe aims at designing a cost-effective energy-efficient network architecture",
-        "projectDescription": "FuN4DaTe aims at designing a cost-effective energy-efficient network architecture that approaches the envisioned by the ITU FG-NET2030 network and the Hyperscale cloud providers to upgrade telco networks by boosting bandwidth, latency, security, manynets while incorporating AI/ML into the network operations, on attempts to deal with forthcoming challenging services like holographic-type communications, tactile Internet for remote operations, intelligent operations networks, network and computing convergence, digital twins, space-terrestrial integrated network and industrial IoT with cloudification.",
+        "title": "A secure data space",
+        "description": "Eunomia drives a secure data economy in Europe, supporting Gaia-X ISBL and DSBA. We develop solutions and open standards for secure and trusted data sharing. ",
+        "action-button": "About Eunomia",
+        "section1Title": "Short description of the project",
+        "section1Description": "For the Eunomia project, technical solutions, standards and open tools will be developed to enable secure data sharing, guaranteeing the sovereignty and trust of users. The project includes the implementation of FIWARE technologies and other standards to facilitate interoperability and data governance. Tutorials and support will also be provided so that any user can experiment with these technologies. ",
+        "section1Subtitle": "Eunomia is based on:",
         "latestPublicationsTitle": "Latest publications",
         "latestPublicationsButton": "See all publications",
         "sectionHomeTitle": "A collaborative project between UC3M and UPM",
         "sectionHomeBody": "The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions. Finally, the PI1 for the UPM subproject was part of UC3M team until a few months ago, with multipleshared projects and papers published with both PIs from UC3M, many of them related to the topics of this project. This will greatly facilitate the alignment of both subprojects and effective coordination.",
         "sectionHomeSubtitle": "“The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions”.",
-         },
-    "project": {
-        "Intro": {
-            "sectionTitle": "Introduction",
-            "sectionBody": "(Estado del arte) According to Cisco’s Visual Networking Index (VNI), data traffic has been continuously growing since the introduction of the Internet. While in the past the average overall growth seen in the operators’ networks has been around 35%, this trend seems to keep increasing towards a 45% growth rate [Cisco2018]. Video streaming is still the dominating type of traffic nowadays, but other applications and services have appeared in the past years to stress networks even more, for example Machine-2-Machine (M2M) applications and Online Gaming, with 46% CAGR and 59% CAGR respectively. In parallel, mobile traffic (5G and Beyond-5G) is expected to play a key role in the use of telco infrastructure. Indeed, global mobile traffic is expected to grow twice as fast as IP traffic.",
-            "sectionHighlight": "“Frase destacada del texto de la introducción un poco más larga y tal”",
-        },
         "Goals": {
             "sectionTitle": "Goals",
             "Goal1": {
@@ -37,8 +30,20 @@ export const en = {
             "Goal2": {
                 "GoalTitle": "A nivel de sistemas",
                 "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
-            }
+            },
+            "Goal3": {
+                "GoalTitle": "Joining data efficiently",
+                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+            },
         },
+    },
+    "project": {
+        "Intro": {
+            "sectionTitle": "Introduction",
+            "sectionBody": "(Estado del arte) According to Cisco’s Visual Networking Index (VNI), data traffic has been continuously growing since the introduction of the Internet. While in the past the average overall growth seen in the operators’ networks has been around 35%, this trend seems to keep increasing towards a 45% growth rate [Cisco2018]. Video streaming is still the dominating type of traffic nowadays, but other applications and services have appeared in the past years to stress networks even more, for example Machine-2-Machine (M2M) applications and Online Gaming, with 46% CAGR and 59% CAGR respectively. In parallel, mobile traffic (5G and Beyond-5G) is expected to play a key role in the use of telco infrastructure. Indeed, global mobile traffic is expected to grow twice as fast as IP traffic.",
+            "sectionHighlight": "“Frase destacada del texto de la introducción un poco más larga y tal”",
+        },
+      
         "Subprojects": {
             "sectionTitle": "Subprojects",
             "Subproject1": {

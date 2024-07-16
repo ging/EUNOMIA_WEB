@@ -47,6 +47,7 @@ export default function Header(props) {
   );
 
   return (
+    
     <header className={headerClasses} id="header_home">
       <a href="/">
         <div className="imagotype">

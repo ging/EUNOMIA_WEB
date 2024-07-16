@@ -10,17 +10,32 @@ export const es = {
         "publicationstab": "Publicaciones",
     },
     "front": {
-        "title": "Redes Futuras para Centros de Datos y Empresas de Telecomunicaciones",
-        "description": "La propuesta del proyecto es un enfoque holístico e integral que requiere la participación y colaboración activa de expertos en redes e informática.",
-        "action-button": "Sobre el proyecto",
-        "projectTitle": "Short description of the project",
-        "projectSubtitle": "FuN4DaTe aims at designing a cost-effective energy-efficient network architecture",
-        "projectDescription": "FuN4DaTe aims at designing a cost-effective energy-efficient network architecture that approaches the envisioned by the ITU FG-NET2030 network and the Hyperscale cloud providers to upgrade telco networks by boosting bandwidth, latency, security, manynets while incorporating AI/ML into the network operations, on attempts to deal with forthcoming challenging services like holographic-type communications, tactile Internet for remote operations, intelligent operations networks, network and computing convergence, digital twins, space-terrestrial integrated network and industrial IoT with cloudification.",
+        "title": "Espacios de datos seguros",
+        "description": "Eunomia impulsa una economía de datos segura en Europa, apoyando Gaia-X ISBL y DSBA. Desarrollamos soluciones y estándares abiertos para compartir datos con seguridad y confianza. ",
+        "action-button": "Sobre Eunomia",
+        "section1Title": "Sobre Eunomia",
+        "section1Description": "Para el proyecto de Eunomia, se desarrollarán soluciones técnicas, estándares y herramientas abiertas que permitan la compartición de datos de manera segura, garantizando la soberanía y confianza de los usuarios. El proyecto incluye la implementación de tecnologías FIWARE y otros estándares para facilitar la interoperabilidad y la gobernanza de datos. También se proporcionarán tutoriales y soporte para que cualquier usuario pueda experimentar con estas tecnologías.",
+        "section1Subtitle": "Eunomia se basa en:",
         "latestPublicationsTitle": "Últimas publicaciones",
         "latestPublicationsButton": "Ver todas las publicaciones",
         "sectionHomeTitle": "A collaborative project between UC3M and UPM",
         "sectionHomeBody": "The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions. Finally, the PI1 for the UPM subproject was part of UC3M team until a few months ago, with multipleshared projects and papers published with both PIs from UC3M, many of them related to the topics of this project. This will greatly facilitate the alignment of both subprojects and effective coordination.",
         "sectionHomeSubtitle": "“The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions”.",
+        "Goals": {
+            "sectionTitle": "Goals",
+            "Goal1": {
+                "GoalTitle": "Trust as commitment",
+                "GoalBody": ".",
+            },
+            "Goal2": {
+                "GoalTitle": "Exploring data space",
+                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+            },
+            "Goal3": {
+                "GoalTitle": "Uniendo datos de manera eficiente",
+                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+            },
+        },
     },
     "project": {
         "Intro": {
@@ -28,35 +43,26 @@ export const es = {
             "sectionBody": "(Estado del arte) According to Cisco’s Visual Networking Index (VNI), data traffic has been continuously growing since the introduction of the Internet. While in the past the average overall growth seen in the operators’ networks has been around 35%, this trend seems to keep increasing towards a 45% growth rate [Cisco2018]. Video streaming is still the dominating type of traffic nowadays, but other applications and services have appeared in the past years to stress networks even more, for example Machine-2-Machine (M2M) applications and Online Gaming, with 46% CAGR and 59% CAGR respectively. In parallel, mobile traffic (5G and Beyond-5G) is expected to play a key role in the use of telco infrastructure. Indeed, global mobile traffic is expected to grow twice as fast as IP traffic.",
             "sectionHighlight": "“Frase destacada del texto de la introducción un poco más larga y tal”",
         },
-        "Goals": {
-            "sectionTitle": "Goals",
-            "Goal1": {
-                "GoalTitle": "A nivel de red",
-                "GoalBody": "Innovaciones en conectividad, seguridad y operaciones autónomas.",
+      
+        "Subprojects": {
+            "sectionTitle": "Subprojects",
+            "Subproject1": {
+                "Title": "Subproject 1",
+                "Subtitle": "Networking technologies",
+                "Body": "The group at UC3M has a long track record on different networking technologies including telco architecture, optical WDM systems, support for 5G/5G+ integration, and AI/ML-based operations for an intelligent control plane.",
+                "Button": "See UC3M Team"
             },
-            "Goal2": {
-                "GoalTitle": "A nivel de sistemas",
-                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
-            },
-            "Subprojects": {
-                "sectionTitle": "Subprojects",
-                "Subproject1": {
-                    "Title": "Subproject 1",
-                    "Subtitle": "Networking technologies",
-                    "Body": "The group at UC3M has a long track record on different networking technologies including telco architecture, optical WDM systems, support for 5G/5G+ integration, and AI/ML-based operations for an intelligent control plane.",
-                    "Button": "See UC3M Team"
-                },
-                "Subproject2": {
-                    "Title": "Subproject 2",
-                    "Subtitle": "Computing systems",
-                    "Body": "The group at UPM has vast experience at implementing large computing systems both on premises and on the cloud focusing on big data and machine learning applications and both groups have experience at designing programmable network elements.",
-                    "Button": "See UPM Team"
-                }
-            },
+            "Subproject2": {
+                "Title": "Subproject 2",
+                "Subtitle": "Computing systems",
+                "Body": "The group at UPM has vast experience at implementing large computing systems both on premises and on the cloud focusing on big data and machine learning applications and both groups have experience at designing programmable network elements.",
+                "Button": "See UPM Team"
+            }
+        },
         "Impact": {
             "sectionTitle": "Impact",
             "sectionBody": "Contribución a la generación de conocimiento: Cómo el proyecto ayudará a avanzar en las áreas de redes y sistemas de computación. Relevancia estratégica: Alineación con estrategias nacionales y europeas como España Digital 2026 y Horizon Europe.",
-            }
+            
         }
     },
     "publications": {
