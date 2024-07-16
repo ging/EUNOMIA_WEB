@@ -14,8 +14,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/core/Heading";
 
-
-
 import {
   Card,
   CardContent,
@@ -40,13 +38,20 @@ export default function Projects() {
 
   return (
     <main>
-      <Header/>
+      <Header />
 
-      <div className="h-64 bg-slate-300">Imagen hero con logo etc</div>
+      <div className="h-64 bg-slate-300">
+        <p>Imagen hero con logo etc</p>
+        <img
+          alt={"background"}
+          src="/assets/fondos/eunomia_fondo_default.png"
+          className="object-cover"
+        />
+      </div>
       <div className="h-32 bg-slate-200">Párrafo/texto sobre el proyecto</div>
 
       {/* Card grid Heading*/}
-      <Heading level="h4 bg-slate-300" className="">
+      <Heading level="h4" className="">
         Cards con iconos?
       </Heading>
       <Heading level="h2" className="">
