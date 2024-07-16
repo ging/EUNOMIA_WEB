@@ -24,27 +24,39 @@ export default function Header(props) {
 
   // classes
   const headerClasses = clsx(
-    "px-8 py-4",
+    "px-8 py-4 relative",
     "flex justify-between items-center",
     "bg-primary text-white",
     `header_${currentLang}`,
     {
       "font-semibold": true,
-      "underlined": true,
+      underlined: true,
     }
   );
 
+  //
+
   const menuClasses = clsx(
-    "hidden",
-    "md:flex md:flex-col md:gap-4",
-    "lg:flex-row lg:gap-8",
-    { "responsive-shown": state.open, "responsive-hidden": !state.open }
+    "min-w-40",
+    "absolute top-7 right-0 md:static",
+    "flex flex-col lg:flex-row ",
+    "gap-4 md:gap-2 lg:gap-8",
+    "bg-primary md:bg-none",
+    {
+      "block md:flex": state.open,
+      "hidden md:flex": !state.open,
+    }
+  );
+
+  const menuItems = clsx(
+    "flex flex-col items-center md:flex-row",
+    "gap-0 md:gap-4"
   );
 
   const menuItemClasses = clsx(
-    "w-fit justify-end",
-    "hover:underline",
-  );
+    "w-full py-2 px-2 text-center md:p-0 md:w-fit",
+    "hover:underline"
+  )
 
   return (
     
@@ -62,42 +74,37 @@ export default function Header(props) {
         </div>
       </a>
 
-      {/* menu icons */}
-      <div className="block md:hidden">
-        {!state.open ? (
-          <HamburgerMenuIcon
-            className={clsx("show", {
-              "responsive-hidden": state.open,
-              "responsive-shown": !state.open,
-            })}
-            onClick={() => setState({ open: !state.open })}
-          />
-        ) : (
-          <Cross1Icon
-            className={clsx("close", {
-              "responsive-hidden": state.open, 
-              "responsive-shown": !state.open,
-            })}
-            onClick={() => setState({ open: !state.open })}
-          />
-        )}
-      </div>{/* /menu icons */}
+      {/* menu container */}
+      <div className="relative flex">
+        {/* menu icons */}
+        <div className="block md:hidden">
+          {!state.open ? (
+            <HamburgerMenuIcon
+              className="w-6 h-6"
+              onClick={() => setState({ open: !state.open })}
+            />
+          ) : (
+            <Cross1Icon
+              className="w-6 h-6"
+              onClick={() => setState({ open: !state.open })}
+            />
+          )}
+        </div>{/* /menu icons */}
 
-      <div className={menuClasses}>
-        <ul className="flex items-center gap-4">
-          {routes.map((route, index) => (
-            <li
-              key={index}
-              className={clsx(
-                menuItemClasses, 
-              )}
-            >
-              <Link href={route.route}>{t(route.key)}</Link>
-            </li>
-          ))}
-        </ul>
-        <LangSwitcher/>
-      </div>
+        {/* menu nav */}
+        <div className={menuClasses}>
+          <ul className={menuItems}>
+            {routes.map((route, index) => (
+              <li key={index} className={menuItemClasses}>
+                <Link href={route.route} onClick={() => setState({ open: false })}>{t(route.key)}</Link>
+              </li>
+            ))}
+          </ul>
+          <LangSwitcher/>
+        </div>{/* /menu nav */}
+
+      </div>{/* menu container */}
+
     </header>
   );
 }

@@ -18,7 +18,7 @@ const lngs = {
 export default function LangSwitcher() {
   const { i18n } = useTranslation();
   return (
-    <div className="flex flex-nowrap justify-end items-center gap-2">
+    <div className="flex flex-nowrap justify-end items-center gap-2 py-2 px-4 md:px-0 md:px-0">
       <GlobeIcon className="icon" />
       {Object.keys(lngs).map((lng) => (
         <a
