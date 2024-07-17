@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 // Components
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/core/Heading";
+import Text from "@/components/core/Text";
 
 import {
   Card,
@@ -40,23 +41,23 @@ export default function Projects() {
   return (
     <main>
       <Header />
-      <section>
+      <section className="standard_padding">
         <div className="h-64 bg-slate-300">
           Imagen hero con logo etc
           <Heading level="h2" className="">
             {t("front.title")}
           </Heading>
-          <p>{t("front.description")}</p>
+          <Text type="p">{t("front.description")}</Text>
         </div>
         <Link href="#" className={buttonVariants({ variant: "outline" })}>
           {t("front.action-button")}
         </Link>
       </section>
-      <section>
+      <section className="standard_margin">
         <Heading level="h2" className="">
           {t("front.section1Title")}
         </Heading>
-        <p>{t("front.section1Description")}</p>
+        <Text type="p"> {t("front.section1Description")}</Text>
         <Heading level="h4" className="">
           {t("front.section1Subtitle")}
         </Heading>
@@ -65,30 +66,29 @@ export default function Projects() {
           <Card cardType="normal">
             <img src="assets/img/footer/UPM-logo.png"></img>
             <CardTitle>  {t("front.Goals.Goal1.GoalTitle")}</CardTitle>
-            
-            <CardDescription> {t("front.section1Title")}</CardDescription>
+            <CardDescription> </CardDescription>
           </Card>
           <Card cardType="normal">
             <img src="assets/img/footer/UPM-logo.png"></img>
-            <CardTitle>  {t("front.Goals.Goal2.GoalTitle")}</CardTitle>
-            
-            <CardDescription> {t("front.section1Title")}</CardDescription>
+            <CardTitle>  {t("front.Goals.Goal2.GoalTitle")}</CardTitle>            
+            <CardDescription> </CardDescription>
           </Card>
           <Card cardType="normal">
             <img src="assets/img/footer/UPM-logo.png"></img>
             <CardTitle>  {t("front.Goals.Goal3.GoalTitle")}</CardTitle>
-            
-            <CardDescription> {t("front.section1Title")}</CardDescription>
+            <CardDescription> </CardDescription>
           </Card>
-  
         </div>
+        <Heading level="h2" className="bg-slate-300">
+          {t("front.latestPublicationsTitle")}
+        </Heading>
         {/* Card grid Heading*/}
-        <Heading level="h4 bg-slate-300" className="">
+        {/* <Heading level="h4 bg-slate-300" className="">
           Cards con iconos?
-        </Heading>
-        <Heading level="h2" className="">
+        </Heading> */}
+        {/* <Heading level="h2" className="">
           Quitar el map de proyectos
-        </Heading>
+        </Heading> */}
       </section>
       {/* Card grid */}
       <div className="h-full m-auto pt-16 max-w-[1080px] grid grid-cols-3 gap-8">

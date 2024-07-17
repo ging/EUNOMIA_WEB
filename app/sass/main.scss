@@ -30,8 +30,10 @@
 // // @import "partials/_home.sass";
 // // @import "partials/_recentPublications.sass";
 
-
-
+.standard_margin {
+    color: red;
+    @apply m-6 sm:my-6 sm:mx-8 md:my-8 md:mx-14 lg:my-12 lg:mx-36 xl:mx-44 2xl:mx-60
+}
 // * {
 //  // @apply border-2 border-primary; // no funciona :( <-- funciona en el globals.scss though
 //  // border: 1px solid pink

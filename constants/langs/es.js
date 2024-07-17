@@ -24,16 +24,16 @@ export const es = {
         "Goals": {
             "sectionTitle": "Goals",
             "Goal1": {
-                "GoalTitle": "Trust as commitment",
-                "GoalBody": ".",
+                "GoalTitle": "Confianza como compromiso",
+                "GoalBody": "",
             },
             "Goal2": {
-                "GoalTitle": "Exploring data space",
-                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+                "GoalTitle": "Explorando el espacio de datos",
+                "GoalBody": "",
             },
             "Goal3": {
                 "GoalTitle": "Uniendo datos de manera eficiente",
-                "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
+                "GoalBody": "",
             },
         },
     },

@@ -24,11 +24,11 @@ export const en = {
         "Goals": {
             "sectionTitle": "Goals",
             "Goal1": {
-                "GoalTitle": "A nivel de red",
+                "GoalTitle": "Trust as commitment",
                 "GoalBody": "Innovaciones en conectividad, seguridad y operaciones autónomas.",
             },
             "Goal2": {
-                "GoalTitle": "A nivel de sistemas",
+                "GoalTitle": "Exploring data space",
                 "GoalBody": "Innovaciones en nodos de red programables, offloading de funcionalidades y procesamiento distribuido.",
             },
             "Goal3": {
