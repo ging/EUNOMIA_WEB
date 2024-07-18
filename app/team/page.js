@@ -40,7 +40,7 @@ export default function Team(props) {
         const translatedRole = t(`${roleTranslationKey}`);
         const translatedPosition = t(position);
         return (
-          <div className="teammate" key={name}>
+          <div className="teammate flex flex-col" key={name}>
             <div className="mate_img h-60 rounded-t-xl bg-slate-600">
               <a href={github} target="_blank" rel="noopener noreferrer">
                 <img
@@ -50,7 +50,7 @@ export default function Team(props) {
                 />
               </a>
             </div>
-            <div className="mate_info h-40 p-6 pb-8 rounded-b-xl border shadow grow space-between flex flex-col text-center">
+            <div className="mate_info  p-6 pb-8 rounded-b-xl border shadow grow justify-between flex flex-col text-center">
               <div className="mate_name">
                 <Heading level="h3" className="font-regular">{name}</Heading>
         
