@@ -7,9 +7,8 @@ import { useState, useEffect } from "react";
 // import i18n (needs to be bundled ;))
 import "./i18n";
 
-
 const sourceSans = Source_Sans_3({ subsets: ["latin"] });
-const ubuntu = Ubuntu({subsets: ["latin"], weight: ["400", "700"]});
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function RootLayout({ children }) {
   //disable SSR whole project, this will make the project to be rendered only on client side
@@ -23,13 +22,13 @@ export default function RootLayout({ children }) {
     <html hola="bye">
       <body className={sourceSans.className}>
         {isClient ? (
-           <div className={ubuntu.className}>
-           <h1 className={ubuntu.className}></h1>
-           <h2 className={ubuntu.className}></h2>
-           <h3 className={ubuntu.className}></h3>
-           {children}
-         </div>
-        ): null}
+          <div className={ubuntu.className}>
+            <h1 className={ubuntu.className}></h1>
+            <h2 className={ubuntu.className}></h2>
+            <h3 className={ubuntu.className}></h3>
+            {children}
+          </div>
+        ) : null}
       </body>
     </html>
   );

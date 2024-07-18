@@ -7,7 +7,7 @@ import clsx from "clsx";
   ------------------------------------------------------------------
 */
 
-const Text = ({ type = "h1", children, className }) => {
+const Text = ({ type = "p", children, className }) => {
   // Determinar el componente HTML según el nivel
   let Component;
   switch (type) {
