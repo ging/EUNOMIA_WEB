@@ -24,11 +24,11 @@ export default function Header(props) {
 
   // classes
   const headerClasses = clsx(
-    "px-8 py-4 sticky -top-[1px] w-screen",
+    "px-8 py-4 sticky -top-[1px] w-full",
     "flex justify-between items-center",
     "bg-primary text-white",
     
-    `header_${currentLang}`,
+    `header_${currentLang} z-50`,
     {
       "font-semibold": true,
       underlined: true,

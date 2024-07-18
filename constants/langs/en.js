@@ -95,6 +95,7 @@ export const en = {
     },
     "team": {
         "title": "Team",
+        "professorCards": {
             "roles":{
                 "1":"Professor", // Profesor Titular de Universidad
                 "2":"Associate Professor", // Profesor Titular / Profesor contratado doctor
@@ -109,6 +110,7 @@ export const en = {
                 "1":"IP1",
                 "2":"IP2",
             },
+        },
     },
     "contact": {
         "title": "Contact",

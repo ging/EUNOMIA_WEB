@@ -43,14 +43,14 @@ export default function Projects() {
           </Heading>
           <Text type="p">{t("front.description")}</Text>
           <div className="h-14 sm:h-20 md:h-28"></div>
-          <Link
+         {/* <Link
             href="#"
             className={
               buttonVariants({ variant: "outline", size: "lg" })
             }
           >
             {t("front.action-button")}
-          </Link>
+          </Link>*/}
         </div>
         <div className="hidden md:block">
             <img

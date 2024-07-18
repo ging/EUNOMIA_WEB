@@ -23,7 +23,8 @@ export default function LangSwitcher() {
       {Object.keys(lngs).map((lng) => (
         <a
           key={lng}
-          className={clsx("lang-link", {
+          className={clsx("lang-link", "cursor-pointer", {
+            
             "font-bold": i18n.language === lng,
             "font-light": i18n.language !== lng,
           })}
