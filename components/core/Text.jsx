@@ -27,9 +27,9 @@ const Text = ({ type = "h1", children, className }) => {
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "underlined",
+    "underlined  text-balance",
     {
-      "text-base mb-6": type === "p", // Aplicar "adasd" si el nivel es h1
+      "text-base mb-6 max-w-[75ch]": type === "p",
       "text-sm mb-4": type === "small",
       "text-xs mb-4": type === "button", 
     },

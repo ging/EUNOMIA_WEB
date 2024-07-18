@@ -41,29 +41,32 @@ export default function Projects() {
   return (
     <main>
       <Header />
-      <section className="standard_padding bg-slate-600 text-white">
-        <div className="h-64">
-          Imagen hero con logo etc
-          <Heading level="h2" className="text-whiteFull">
+      <section className="standard_padding text-white bg-main">
+        <div className="min-h-[300px]">
+          <Heading level="h1" className="text-snow">
             {t("front.title")}
           </Heading>
           <Text type="p">{t("front.description")}</Text>
         </div>
-        <Link href="#" className={buttonVariants({ variant: "outline" })}>
+        <Link
+          href="#"
+          className={buttonVariants({ variant: "outline", size: "lg" })}
+        >
           {t("front.action-button")}
         </Link>
       </section>
-      <section className="standard_padding bg-slate-200">
-        <Heading level="h2">
-          {t("front.section1Title")}
-        </Heading>
+      <section className="standard_padding bg-snow">
+        <Heading level="h2">{t("front.section1Title")}</Heading>
         <Text type="p"> {t("front.section1Description")}</Text>
         <Heading level="h4" className="mb-8">
           {t("front.section1Subtitle")}
         </Heading>
         {/* Cards con iconos */}
         <div className="flex flex-col md:grid md:grid-cols-3 gap-6">
-          <Card cardType="normal" className="text-center content-center bg-whiteFull p-10">
+          <Card
+            cardType="normal"
+            className="text-center content-center bg-white p-10"
+          >
             <div className="icon pb-8 flex justify-center items-center">
               <svg
                 width="108"
@@ -87,7 +90,10 @@ export default function Projects() {
 
             <CardDescription> </CardDescription>
           </Card>
-          <Card cardType="normal" className="text-center content-center bg-whiteFull p-10">
+          <Card
+            cardType="normal"
+            className="text-center content-center bg-white p-10"
+          >
             <div className="icon pb-8 flex justify-center items-center ">
               <svg
                 width="116"
@@ -112,10 +118,11 @@ export default function Projects() {
               </svg>
             </div>
             <CardTitle> {t("front.Goals.Goal2.GoalTitle")}</CardTitle>
-
-            <CardDescription></CardDescription>
           </Card>
-          <Card cardType="normal" className="text-center content-center bg-whiteFull p-10">
+          <Card
+            cardType="normal"
+            className="text-center content-center bg-white p-10"
+          >
             <div className="icon pb-8 content-center flex justify-center items-center">
               <svg
                 width="140"
@@ -163,43 +170,41 @@ export default function Projects() {
                 />
               </svg>
             </div>
-            <CardTitle> {t("front.Goals.Goal3.GoalTitle")}</CardTitle>
-
-            <CardDescription> </CardDescription>
+            <CardTitle className="text-primary"> {t("front.Goals.Goal3.GoalTitle")}</CardTitle>
           </Card>
         </div>
-  
-
       </section>
+
       {/* Card grid */}
       <section className="standard_margin">
-      <Heading level="h2" className="">
+        <Heading level="h2" className="">
           {t("front.latestPublicationsTitle")}
         </Heading>
-      <div className="h-full m-auto pt-16 max-w-[1080px] grid grid-cols-3 gap-8">
-        {myProjectCards.map((project) => (
-          <Card key={project.id} className="flex flex-col min-h-[200px]">
-            <CardHeader>
-              <div>{project.date}</div>
-            </CardHeader>
+        <div className="h-full m-auto pt-16 max-w-[1080px] grid grid-cols-3 gap-8">
+          {myProjectCards.map((project) => (
+            <Card key={project.id} className="flex flex-col min-h-[200px]">
+              <CardHeader>
+                <div>{project.date}</div>
+              </CardHeader>
 
-            <CardContent className="flex flex-col gap-2">
-              <CardTitle>{project.title}</CardTitle>
-              <CardDescription>{project.subtitle}</CardDescription>
-            </CardContent>
+              <CardContent className="flex flex-col gap-2">
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>{project.subtitle}</CardDescription>
+              </CardContent>
 
-            <CardFooter>
-              <Button variant="" size="sm" className="capitalize">
-                {project.category}
-                <a href={project.route} target="blank">
-                  Enlace
-                </a>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
+              <CardFooter>
+                <Button variant="" size="sm" className="capitalize">
+                  {project.category}
+                  <a href={project.route} target="blank">
+                    Enlace
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </section>
+      {/* /Card grid */}
     </main>
   );
 }

@@ -10,27 +10,27 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'main-font': ['"Ubuntu"'],
-        'main-font': ['"Ubuntu"'],
+        'font-main': ['"Ubuntu"'],
+        'font-body': ['"Source Sans"'],
       },
       fontSize: {
-        'xs': ['0.75rem', { lineHeight: '1.4' }],
-        'sm': ['0.875rem', { lineHeight: '1.4' }],
-        'base': ['1rem', { lineHeight: '1.4' }],
-        'lg': ['1.125rem', { lineHeight: '1.4' }],
-        'xl': ['1.25rem', { lineHeight: '1.4' }],
-        '2xl': ['1.5rem', { lineHeight: '1.4' }],
-        '3xl': ['1.875rem', { lineHeight: '1.4' }],
-        '4xl': ['2.25rem', { lineHeight: '1.4' }],
-        '5xl': ['3rem', { lineHeight: '1.4' }],
-        '6xl': ['3.75rem', { lineHeight: '1.4' }],
-        '7xl': ['4.5rem', { lineHeight: '1.4' }],
-        '8xl': ['6rem', { lineHeight: '1.4' }],
-        '9xl': ['8rem', { lineHeight: '1.4' }],
+        // 'xs': ['0.75rem', { lineHeight: '1.4' }],
+        'sm': ['0.75rem', { lineHeight: '1.4' }],
+        'base': ['1rem', { lineHeight: '1.4' }], // body
+        'lg': ['1.125rem', { lineHeight: '1.4' }], // --> h6
+        'xl': ['1.25rem', { lineHeight: '1.4' }], // --> h5
+        '2xl': ['1.5rem', { lineHeight: '1.4' }],  // h4
+        '3xl': ['2rem', { lineHeight: '1.4' }], // h3, 
+        '4xl': ['2.5rem', { lineHeight: '1.4' }],  // h2
+        '5xl': ['3rem', { lineHeight: '1.4' }], // h1
+        '6xl': ['3.5rem', { lineHeight: '1.4' }],
+        // '7xl': ['4.5rem', { lineHeight: '1.4' }],
+        // '8xl': ['6rem', { lineHeight: '1.4' }],
+        // '9xl': ['8rem', { lineHeight: '1.4' }],
       },
       colors: {
-        whiteFull: "#ffffff",
-        white: "#EFF7FB",
+        // whiteFull: "#ffffff",
+        snow: "#EFF7FB",
         black: "#0D0D1C",
         primary: { // azul oscuro
           DEFAULT: "#24234C",
@@ -68,19 +68,13 @@ module.exports = {
     },
     screens: {
       'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
       'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
       'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
       'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      '2xl': '1536px',    
+    },
+    backgroundImage: {
+      'main': "url('/assets/fondos/eunomia_fondo_default.png')",
     }
   },
   plugins: [],

@@ -36,7 +36,7 @@ const Heading = ({ level = "h1", children, className }) => {
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "underlined",
+    "underlined text-pretty",
     {
       "text-4xl font-semibold text-primary mb-6": level === "h1", // Aplicar "adasd" si el nivel es h1
       "text-3xl font-semibold text-primary mb-4": level === "h2",

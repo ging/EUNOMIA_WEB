@@ -16,9 +16,9 @@ export default function Header(props) {
 
   const routes = [
     { route: "/", key: "nav.item1" },
-    { route: "/project", key: "nav.item2" },
+    // { route: "/project", key: "nav.item2" },
     { route: "/team", key: "nav.item3" },
-    { route: "/research", key: "nav.item4" },
+    // { route: "/research", key: "nav.item4" },
     { route: "/about", key: "nav.item5" },
   ];
 
@@ -37,8 +37,8 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "min-w-40",
-    "absolute top-7 right-0 md:static",
+    "w-[100vw] md:w-fit",
+    "absolute top-14 -right-10 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
     "bg-primary md:bg-none",
@@ -49,33 +49,30 @@ export default function Header(props) {
   );
 
   const menuItems = clsx(
-    "flex flex-col items-center md:flex-row",
+    "flex flex-col justify-end items-center md:flex-row",
     "gap-0 md:gap-4"
   );
 
   const menuItemClasses = clsx(
-    "w-full py-2 px-2 text-center md:p-0 md:w-fit",
+    "w-full py-4 px-4 text-center md:p-0 md:w-fit",
+    "text-lg font-medium md:text-base",
     "hover:underline"
-  )
+  );
 
   return (
-    
     <header className={headerClasses} id="header_home">
       <a href="/">
-        <div className="imagotype">
-          <div className="isotype"></div>
-          <div className="logotype h-10 flex">
-            <img
-              className="object-contain"
-              src="eunomia_logo_white.svg"
-              alt="logo"
-            />
-          </div>
+        <div className="logotype h-12 md:h-10 h-full flex">
+          <img
+            className="object-contain"
+            src="eunomia_logo_white.svg"
+            alt="logo"
+          />
         </div>
       </a>
 
       {/* menu container */}
-      <div className="relative flex">
+      <div className="relative w-fit flex">
         {/* menu icons */}
         <div className="block md:hidden">
           {!state.open ? (
@@ -89,22 +86,28 @@ export default function Header(props) {
               onClick={() => setState({ open: !state.open })}
             />
           )}
-        </div>{/* /menu icons */}
+        </div>
+        {/* /menu icons */}
 
         {/* menu nav */}
         <div className={menuClasses}>
           <ul className={menuItems}>
             {routes.map((route, index) => (
               <li key={index} className={menuItemClasses}>
-                <Link href={route.route} onClick={() => setState({ open: false })}>{t(route.key)}</Link>
+                <Link
+                  href={route.route}
+                  onClick={() => setState({ open: false })}
+                >
+                  {t(route.key)}
+                </Link>
               </li>
             ))}
           </ul>
-          <LangSwitcher/>
-        </div>{/* /menu nav */}
-
-      </div>{/* menu container */}
-
+          <LangSwitcher />
+        </div>
+        {/* /menu nav */}
+      </div>
+      {/* menu container */}
     </header>
   );
 }
