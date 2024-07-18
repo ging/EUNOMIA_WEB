@@ -43,10 +43,10 @@ export default function Team(props) {
           <div className="teammate flex flex-col" key={name}>
             <div className="mate_img h-60 rounded-t-xl bg-slate-600">
               <a href={github} target="_blank" rel="noopener noreferrer">
-                <img
+                <img 
                   alt={"Team member"}
-                  src={process.env.PUBLIC_URL + photo}
-                  className="grayscale "
+                  src={process.env.PUBLIC_URL +  photo}
+                  className="grayscale rounded-t-xl h-60 w-full object-cover"
                 />
               </a>
             </div>
@@ -90,16 +90,15 @@ export default function Team(props) {
   };
 
   return (
-    <div className={"team page_" + currentLang }>
+    <main className={"team page_" + currentLang }>
       <Header route={"/team"} />  
       <main className="standard_margin ">
         <Heading level="h1">{t("team.title")}</Heading>
-       
         <section className="teammates flex flex-col gap-x-6 gap-y-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>
       </main>
       <Footer />
-    </div>
+    </main>
   );
 }
