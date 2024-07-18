@@ -8,6 +8,12 @@ import { myteam } from "@/constants/team";
 // import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
+// Components
+import { Button } from "@/components/ui/button";
+import Heading from "@/components/core/Heading";
+import Text from "@/components/core/Text";
+
+
 export default function Team(props) {
   const [team, setTeam] = useState(myteam);
   const { t, i18n } = useTranslation();
@@ -28,25 +34,26 @@ export default function Team(props) {
         github,
         email,
         center,
-        translationKey,
+        roleTranslationKey,
       }) => {
         const emailAddress = email ? email.split("@") : null;
-        const translatedRole = t(`${translationKey}`);
+        const translatedRole = t(`${roleTranslationKey}`);
         const translatedPosition = t(position);
         return (
           <div className="teammate" key={name}>
-            <div className="mate_img">
+            <div className="mate_img h-60 rounded-t-xl bg-slate-600">
               <a href={github} target="_blank" rel="noopener noreferrer">
                 <img
                   alt={"Team member"}
                   src={process.env.PUBLIC_URL + photo}
-                  className="grayscale"
+                  className="grayscale "
                 />
               </a>
             </div>
-            <div className="mate_info">
+            <div className="mate_info h-40 p-6 pb-8 rounded-b-xl border shadow grow space-between flex flex-col text-center">
               <div className="mate_name">
-                <h5>{name}</h5>
+                <Heading level="h3" className="font-regular">{name}</Heading>
+        
               </div>
               {/* <div className="mate_role">
                 <span>
@@ -66,7 +73,7 @@ export default function Team(props) {
               {/* description */}
               <div className="mate_coordination">
                 <span className={position === "Coordinator" ? "coordinator" : ""}>
-                  {translatedPosition}
+                  {translatedRole} {translatedPosition}
                 </span>
               </div>
               {/* description */}
@@ -83,18 +90,12 @@ export default function Team(props) {
   };
 
   return (
-    <div className={"team page_" + currentLang}>
-      <Header route={"/team"} />
-      <div className="banner">
-        <h1>{t("team.title")}</h1>
-      </div>
-      <main>
-        <h2 className="teammates__title">UC3M</h2>
-        <section className="teammates">
-          {team["UC3M Team"]?.members ? renderMembers(team["UC3M Team"].members) : <p>No members found.</p>}
-        </section>
-        <h2 className="teammates__title">UPM</h2>
-        <section className="teammates">
+    <div className={"team page_" + currentLang }>
+      <Header route={"/team"} />  
+      <main className="standard_margin ">
+        <Heading level="h1">{t("team.title")}</Heading>
+       
+        <section className="teammates flex flex-col gap-x-6 gap-y-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>
       </main>
