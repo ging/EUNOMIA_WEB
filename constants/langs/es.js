@@ -98,13 +98,18 @@ export const es = {
         "title": "Equipo",
         "professorCards":{
             "roles":{
-                "1":"IP1",
-                "2":"IP2",
+                "1":"Profesor Titular de Universidad",
+                "2":"Profesor contratado doctor",
                 "3":"Candidato de doctorado",
                 "4":"Técnico a tiempo completo",
+                "5":"Profesor Titular de Universidad", // Full Professor
+                "6":"Profesor ayudante doctor", 
+                "7":"Investigador",
+                "8":"Personal externo"
             },
             "positions":{
-                "1":"Coordinador",
+                "1":"IP1",
+                "2":"IP2",
             },
         },
     },

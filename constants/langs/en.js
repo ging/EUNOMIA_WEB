@@ -95,16 +95,19 @@ export const en = {
     },
     "team": {
         "title": "Team",
-            "professorCards":{
-               "roles":{
+            "roles":{
+                "1":"Professor", // Profesor Titular de Universidad
+                "2":"Associate Professor", // Profesor Titular / Profesor contratado doctor
+                "3":"PhD candidate", // Estudiante de doctorado
+                "4":"Full-Time Technician",
+                "5":"Full Professor", // Profesor Titular de Universidad
+                "6":"Assistant Professor",
+                "7":"Researcher",
+                "8":"External staff"
+            },
+            "positions":{
                 "1":"IP1",
                 "2":"IP2",
-                "3":"PhD candidate",
-                "4":"Full-Time Technician",
-            },
-                "positions":{
-                    "1":"Coordinator",
-                },
             },
     },
     "contact": {
