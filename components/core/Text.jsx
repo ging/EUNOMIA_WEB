@@ -7,7 +7,7 @@ import clsx from "clsx";
   ------------------------------------------------------------------
 */
 
-const Text = ({ type = "h1", children, className }) => {
+const Text = ({ type = "p", children, className }) => {
   // Determinar el componente HTML según el nivel
   let Component;
   switch (type) {
@@ -27,7 +27,7 @@ const Text = ({ type = "h1", children, className }) => {
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "underlined  text-balance",
+    "underlined",
     {
       "text-base mb-6 max-w-[75ch]": type === "p",
       "text-sm mb-4": type === "small",

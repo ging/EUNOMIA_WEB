@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 // Layout
 import Header from "@/components/core/Header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/core/Footer";
 
 // Components
 import { Button } from "@/components/ui/button";
@@ -87,8 +87,6 @@ export default function Projects() {
               </svg>
             </div>
             <CardTitle> {t("front.Goals.Goal1.GoalTitle")}</CardTitle>
-
-            <CardDescription> </CardDescription>
           </Card>
           <Card
             cardType="normal"
@@ -175,8 +173,8 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Card grid */}
-      <section className="standard_margin">
+      {/* Card grid sample */}
+      {/* <section className="standard_margin">
         <Heading level="h2" className="">
           {t("front.latestPublicationsTitle")}
         </Heading>
@@ -203,8 +201,11 @@ export default function Projects() {
             </Card>
           ))}
         </div>
-      </section>
-      {/* /Card grid */}
+      </section> */}
+      {/* /Card grid sample */}
+
+
+      <Footer />
     </main>
   );
 }
