@@ -11,14 +11,19 @@
 
 /*PADDINGS*/
 .standard_padding {
-    @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-36 xl:px-44 2xl:px-60
-  }
+  @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-36 xl:px-44 2xl:px-60;
+}
 .padding_home {
-    @apply py-8 sm:py-12 md:py-20 lg:py-24 2xl:py-32
-  }
+  @apply py-8 sm:py-12 md:py-20 lg:py-24 2xl:py-32;
+}
 .padding_footer {
-    @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-16 2xl:px-20
-  }
+  @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-10 xl:px-16 2xl:px-20;
+}
+
+
+main {
+  min-height: 80dvh;
+}
   
 @layer base {
   :root {

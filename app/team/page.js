@@ -91,14 +91,13 @@ export default function Team(props) {
 
   return (
     <main className={"team page_" + currentLang }>
-      <Header route={"/team"} />  
+      {/* <Header route={"/team"} />   */}
       <main className="standard_margin ">
         <Heading level="h1">{t("team.title")}</Heading>
         <section className="teammates flex flex-col gap-x-6 gap-y-10 sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
         </section>
       </main>
-      <Footer />
     </main>
   );
 }

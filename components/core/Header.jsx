@@ -24,7 +24,7 @@ export default function Header(props) {
 
   // classes
   const headerClasses = clsx(
-    "px-8 py-4 fixed w-screen",
+    "px-8 py-4 sticky -top-[1px] w-screen",
     "flex justify-between items-center",
     "bg-primary text-white",
     
@@ -38,11 +38,12 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "w-[100vw] md:w-fit",
-    "absolute top-14 -right-10 md:static",
+    "w-screen px-8 py-4 md:p-0 md:w-fit",
+    "absolute top-[52px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
-    "bg-primary md:bg-none",
+    "bg-primary bg-blend-darken md:bg-none",
+    "border-t-[1px] border-t-snow md:border-none",
     {
       "block md:flex": state.open,
       "hidden md:flex": !state.open,
@@ -61,12 +62,12 @@ export default function Header(props) {
   );
 
   return (
-    <header className={headerClasses} id="header_home">
+    <header className={headerClasses + "z-50"} id="header_home">
       <a href="/">
-        <div className="logotype h-12 md:h-10 h-full flex">
+        <div className="max-h-12 flex">
           <img
             className="object-contain"
-            src="eunomia_logo_white.svg"
+            src="eunomia_logo_light.svg"
             alt="logo"
           />
         </div>

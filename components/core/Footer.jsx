@@ -25,7 +25,7 @@ export default function Footer(props) {
   );
 
   return (
-    <footer className=" padding_footer flex flex-col gap-4 justify-center md:flex-row bg-primary">
+    <footer className="padding_footer flex flex-col gap-8 justify-center items-center md:flex-row bg-primary">
       {/* <div className="copyright">
             {" "}
             <a
@@ -37,7 +37,7 @@ export default function Footer(props) {
             {t("footer.titleRight")}
             </a>
         </div> */}
-      <div className={logoClasses}>
+      <div className={logoClasses + " mt-10"}>
         <img
         className={imgClasses}
           src="assets/logos/eunomia_logo_lg_light.svg"
@@ -47,12 +47,12 @@ export default function Footer(props) {
       <div className={logoClasses}></div> 
       <div className={logoClasses}>
         <img
-        className={imgClasses + " max-w-[80%] md:max-h-[80%]"}
+        className={imgClasses + " max-w-[75%] md:max-h-[90%]"}
           src="assets/logos/upm_logo_light.svg"
           alt="logo UPM"
         />
       </div>
-      <div className={logoClasses}>
+      <div className={logoClasses + " mb-6"}>
         <img
         className={imgClasses}
           src="assets/logos/incibe_logo_white.png"

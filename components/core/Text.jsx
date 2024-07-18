@@ -30,7 +30,7 @@ const Text = ({ type = "p", children, className }) => {
     "underlined ",
     {/*"text-balance"*/},
     {
-      "text-base mb-6 max-w-[75ch]": type === "p",
+      "text-base mb-6 max-w-[66ch]": type === "p",
       "text-sm mb-4": type === "small",
       "text-xs mb-4": type === "button", 
     },

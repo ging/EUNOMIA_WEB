@@ -7,6 +7,10 @@ import { useState, useEffect } from "react";
 // import i18n (needs to be bundled ;))
 import "./i18n";
 
+import Header from "@/components/core/Header";
+import Footer from "@/components/core/Footer";
+
+
 const sourceSans = Source_Sans_3({ subsets: ["latin"] });
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -21,6 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html hola="bye">
       <body className={sourceSans.className}>
+        <Header/>
         {isClient ? (
           <div className={ubuntu.className}>
             <h1 className={ubuntu.className}></h1>
@@ -29,6 +34,7 @@ export default function RootLayout({ children }) {
             {children}
           </div>
         ) : null}
+        <Footer />
       </body>
     </html>
   );
