@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
+import Header from "@/components/core/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 // aquí habría que importar los cursos
