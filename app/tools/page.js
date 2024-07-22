@@ -15,7 +15,7 @@ import { mytools } from "@/constants/tools";
 //   faGithub,
 //   faTwitter,
 //   faYoutube,
-// } from "@fortawesome/free-brands-svg-icons";
+// } from "@fontawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 
 export default function Tools(props) {
