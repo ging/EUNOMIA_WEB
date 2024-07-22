@@ -1,6 +1,6 @@
 "use client";
 
-import Header from "@/components/Header";
+import Header from "@/components/core/Header";
 import Footer from "@/components/Footer";
 import React from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -10,12 +10,12 @@ import { useState, useEffect } from "react";
 import { mytools } from "@/constants/tools";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGit,
-  faGithub,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+// import {
+//   faGit,
+//   faGithub,
+//   faTwitter,
+//   faYoutube,
+// } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 
 export default function Tools(props) {
