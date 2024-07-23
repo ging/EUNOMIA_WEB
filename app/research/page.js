@@ -78,7 +78,7 @@ export default function Research() {
 
   return (
     <div className={"research page_" + currentLang}>
-      <Header route={"/research"} />
+
 
       <div
         className="banner"
@@ -159,7 +159,6 @@ export default function Research() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
