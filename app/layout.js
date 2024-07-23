@@ -4,6 +4,8 @@ import { Source_Sans_3, Ubuntu } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
 
+
+
 // import i18n (needs to be bundled ;))
 import "./i18n";
 

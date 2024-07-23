@@ -1,3 +1,5 @@
+"use client"
+
 export const es = {
     "nav":{
         "item1":"Home",

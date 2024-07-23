@@ -96,7 +96,7 @@ export default function Header(props) {
           <ul className={menuItems}>
             {routes.map((route, index) => (
               <li key={index} className={menuItemClasses}>
-                <Link
+                <Link suppressHydrationWarning
                   href={route.route}
                   onClick={() => setState({ open: false })}
                 >
