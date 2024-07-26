@@ -93,8 +93,9 @@ export default function Research() {
         </p>
       </div>
       <main>
-        <section className="research standard_margin">
+        <section className="research">
           <Filters
+            
             search={search}
             year={year}
             type={type}
@@ -106,7 +107,7 @@ export default function Research() {
               papersFiltered instanceof Array ? papersFiltered.length : 0
             }
           />
-          <div className="papers ">
+          <div className="papers standard_margin">
             {papersFiltered
               .slice(0, papersToShow)
               .map(({ date, doi, author, title, journal }, ind) => {

@@ -52,11 +52,11 @@ module.exports = {
           // 700: "#4F1BE4",
           // 600: "#5441FF",
           // 500: "#6E76FF",
-          // 400: "#97A7FF",
-          // 300: "#BECAFF",
-          // 200: "#DBE2FF",
-          // 100: "#EBF0FF",
-          // 50: "#F5F8FF",
+          400: "#9CD7F5",
+          300: "#B0DFF7",
+          200: "#C4E7F9",
+          100: "#D7EFFB",
+          50: "#EBF7FD",
         },
         accent: { // morado
           DEFAULT: "#62388E",
@@ -64,6 +64,7 @@ module.exports = {
           // 200: "#FFBD1B",
           // 100: "#FFE685",
         },
+        
       },
     },
     screens: {
