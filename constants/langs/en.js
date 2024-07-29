@@ -5,6 +5,7 @@ export const en = {
         "item3":"Team",
         "item4":"Research",
         "item5":"Contact",
+        "item6":"Design system"
     },
     "header": {
         "publicationstab": "Publications",

@@ -7,6 +7,7 @@ export const es = {
         "item3":"Equipo",
         "item4":"Publicaciones",
         "item5":"Contacto",
+        "item6":"Sistema de diseño"
     },
     "header": {
         "publicationstab": "Publicaciones",

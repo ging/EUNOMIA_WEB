@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { myProjectCards } from "@/constants/projectsCards.js";
 import { useTranslation } from "react-i18next";
-import { buttonVariants } from "@/components/ui/button";
 
-// Components
-import { Button } from "@/components/ui/button";
+// Simple components
+import { Button, ButtonVariants  } from "@/components/ui/button";
 import Heading from "@/components/core/Heading";
 import Text from "@/components/core/Text";
 
+//Card
 import {
   Card,
   CardContent,
@@ -21,6 +21,16 @@ import {
   CardTitle,
   CardSubtitle,
 } from "@/components/ui/card";
+
+//Banner
+import {
+  Banner,
+  BannerTitle,
+  BannerDescription,
+  BannerButton,
+  BannerContent,
+  BannerImg,
+} from "@/components/core/Banner";
 
 // UI
 export default function Projects() {
@@ -36,6 +46,15 @@ export default function Projects() {
 
   return (
     <main>
+      <Banner>
+        <BannerContent>
+          <BannerTitle>{t("front.title")}</BannerTitle>
+          <BannerDescription>{t("front.description")}</BannerDescription>
+          <BannerButton>  {t("front.action-button")}</BannerButton>
+        </BannerContent>
+        <BannerImg/>
+      </Banner>
+
       <section className="standard_padding text-white bg-main bg-cover bg-center flex gap-8 justify-between items-center">
         <div className="h-fit md:min-h-[350px] my-12">
           <Heading level="h1" className="text-snow">
@@ -43,22 +62,15 @@ export default function Projects() {
           </Heading>
           <Text type="p">{t("front.description")}</Text>
           <div className="h-14 sm:h-20 md:h-28"></div>
-         {/* <Link
-            href="#"
-            className={
-              buttonVariants({ variant: "outline", size: "lg" })
-            }
-          >
-            {t("front.action-button")}
-          </Link>*/}
+         
         </div>
         <div className="hidden md:block">
-            <img
-              className="object-contain"
-              src="assets/logos/eunomia_icon_light.svg"
-              alt="icon"
-            />
-          </div>
+          <img
+            className="object-contain"
+            src="assets/logos/eunomia_icon_light.svg"
+            alt="icon"
+          />
+        </div>
       </section>
       <section className="standard_padding bg-snow">
         <Heading level="h2">{t("front.section1Title")}</Heading>
