@@ -45,6 +45,7 @@
 }
 
 /*GAPS*/
+/* Esto no se puede incluir en una clase grid y que ya tenga configurada la rejilla también????????? */
 .gap_text {
     @apply gap-0 sm:gap-2 md:gap-4
 }

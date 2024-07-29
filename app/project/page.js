@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/core/Header";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import ProjectCard from "@/components/projectCard";
 import { myprojectCards } from "@/constants/projectsCards.js";
 import { useTranslation } from "react-i18next";
+import { FaceIcon } from "@radix-ui/react-icons";
 
 export default function Projects() {
   // const [projects, setProjects] = useState(myprojectCards);
@@ -38,21 +37,23 @@ export default function Projects() {
         </h2>
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 md:gap-6">
           <div className="card_goals bg-black text-center padding_card_highlight">
-            {/* <FontAwesomeIcon icon={faCircleNodes} className="icon_circle" /> */}
+            
+            <FaceIcon />
             <div>
               <h3> {t("project.Goals.Goal1.GoalTitle")}</h3>
               <p className=""> {t("project.Goals.Goal1.GoalBody")}</p>
             </div>
           </div>
           <div className="card_goals bg-black text-center padding_card_highlight">
-            {/* <FontAwesomeIcon icon={faGrip} className="icon_circle" /> */}
+            <FaceIcon />
             <div>
               <h3> {t("project.Goals.Goal2.GoalTitle")}</h3>
               <p className=""> {t("project.Goals.Goal2.GoalBody")}</p>
             </div>
           </div>
           <div className="card_goals bg-black text-center padding_card_highlight">
-            {/* <FontAwesomeIcon icon={faGrip} className="icon_circle" /> */}
+            <FaceIcon />
+
             <div>
               <h3> {t("project.Goals.Goal2.GoalTitle")}</h3>
             </div>
@@ -82,7 +83,7 @@ export default function Projects() {
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{ display: "inline-block", marginLeft: "8px" }} // Adjust 'marginLeft' for spacing
                 >
-                  {/* <FontAwesomeIcon icon={faArrowRight} /> */}
+                  <FaceIcon />
                 </div>
               </Link>
             </button>
@@ -111,7 +112,7 @@ export default function Projects() {
                   transition={{ type: "spring", stiffness: 300 }}
                   style={{ display: "inline-block", marginLeft: "8px" }} // Adjust 'marginLeft' for spacing
                 >
-                  {/* <FontAwesomeIcon icon={faArrowRight} /> */}
+                  <FaceIcon />
                 </div>
               </Link>
             </button>
@@ -126,8 +127,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

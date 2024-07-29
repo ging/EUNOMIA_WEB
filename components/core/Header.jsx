@@ -63,9 +63,9 @@ export default function Header(props) {
   );
 
   return (
-    <header className={headerClasses + "z-50"} id="header_home">
+    <header className={headerClasses + "z-50"} id="header_home"> {/* route={routes.route} ?????*/}
       <a href="/">
-        <div className="max-h-12 flex">
+        <div className="max-h-10 flex">
           <img
             className="object-contain"
             src="eunomia_logo_light.svg"

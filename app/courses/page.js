@@ -1,14 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/core/Header";
-import Footer from "@/components/Footer";
 import Link from "next/link";
-// aquí habría que importar los cursos
 import { mycourses } from "@/constants/courses.js";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import { FaceIcon } from "@radix-ui/react-icons";
+
 
 export default function Courses() {
   const { t, i18n } = useTranslation();
@@ -20,7 +17,7 @@ export default function Courses() {
 
   return (
     <div className={"courses page_"+ currentLang}>
-      <Header route={"/courses"} />
+      {/* <Header route={"/courses"} /> */}
       <div className="banner px-4 sm:px-8 md:px-14 md:py-2 lg:px-24 lg:py-4 xl:px-28 xl:py-4 2xl:px-32 2xl:py-6">
         <h1>{t('courses.title')}</h1>
       </div>
@@ -49,7 +46,7 @@ export default function Courses() {
                         </div>
                         <button className="course_route">
                         <CreateLink route={route}>
-                        {/* <FontAwesomeIcon className="award_icon" icon={faArrowRight} /> */}
+                        <FaceIcon />
                           <span>{t('courses.button')}</span>
                         </CreateLink>
                         </button>
@@ -70,7 +67,6 @@ export default function Courses() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

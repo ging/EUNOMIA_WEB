@@ -3,7 +3,6 @@ import * as React from "react";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { myProjectCards } from "@/constants/projectsCards.js";
 import { useTranslation } from "react-i18next";
 
 // Simple components
@@ -56,7 +55,7 @@ export default function Projects() {
       </Banner>
 
       <section className="standard_padding text-white bg-main bg-cover bg-center flex gap-8 justify-between items-center">
-        <div className="h-fit md:min-h-[350px] my-12">
+        <div className="h-fit md:min-h-[350px] my-12 flex flex-col justify-center items-start max-w-[60%]">
           <Heading level="h1" className="text-snow">
             {t("front.title")}
           </Heading>
