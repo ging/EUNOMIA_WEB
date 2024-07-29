@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next";
 
 // Simple components
 import { Button, ButtonVariants  } from "@/components/ui/button";
-import Heading from "@/components/core/Heading";
-import Text from "@/components/core/Text";
+import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
 
 //Card
 import {
@@ -54,23 +54,6 @@ export default function Projects() {
         <BannerImg/>
       </Banner>
 
-      <section className="standard_padding text-white bg-main bg-cover bg-center flex gap-8 justify-between items-center">
-        <div className="h-fit md:min-h-[350px] my-12 flex flex-col justify-center items-start max-w-[60%]">
-          <Heading level="h1" className="text-snow">
-            {t("front.title")}
-          </Heading>
-          <Text type="p">{t("front.description")}</Text>
-          <div className="h-14 sm:h-20 md:h-28"></div>
-         
-        </div>
-        <div className="hidden md:block">
-          <img
-            className="object-contain"
-            src="assets/logos/eunomia_icon_light.svg"
-            alt="icon"
-          />
-        </div>
-      </section>
       <section className="standard_padding bg-snow">
         <Heading level="h2">{t("front.section1Title")}</Heading>
         <Text type="p"> {t("front.section1Description")}</Text>

@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Header from "@/components/core/Header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/core/Footer";
 import { useTranslation } from "react-i18next";
 
 // Components
 import { Button, ButtonVariants } from "@/components/ui/button";
-import Heading from "@/components/core/Heading";
-import Text from "@/components/core/Text";
+import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
 
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
