@@ -1,17 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/core/Header";
-import Footer from "@/components/Footer";
 import { myteam } from "@/constants/team";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 // Components
 import { Button } from "@/components/ui/button";
-import Heading from "@/components/core/Heading";
-import Text from "@/components/core/Text";
+import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
 
 
 export default function Team(props) {

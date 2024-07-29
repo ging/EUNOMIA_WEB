@@ -2,35 +2,42 @@
 
 import clsx from "clsx";
 import React from "react";
-import Heading from "./Heading";
-import button from "../ui/button";
-import { FaceIcon } from "@radix-ui/react-icons";
-import { LapTimerIcon } from "@radix-ui/react-icons";
 
-const Card = ({ cardType = "normal" }) => {
+import Heading from "../ui/Heading";
+import { Button } from "../ui/button";
+import { FaceIcon } from "@radix-ui/react-icons";
+
+const Card = ({ cardType = "normal", title, buttonText }) => {
   const commonCardClasses = clsx([
-    "p-4 rounded bg-primary border-1 border-primary"
+    "p-4 rounded bg-snow border-1 border-primary"
   ]);
 
   const classesForCardNormal = clsx([commonCardClasses, "card_normal"]);
   const normalCard = (
-    <div className={classesForCardNormal}>
-      <Heading>asdasdas</Heading>
-      <button>
-        <LapTimerIcon />
-      </button>
-    </div>
+    <article className={classesForCardNormal}>
+      <div className="cardBody">
+        <Heading level="h3">
+          {title}
+        </Heading>
+      </div>
+      <footer className="cardFooter">
+        <Button variant="secondary" size="">
+          <FaceIcon />
+          {buttonText}
+        </Button>
+      </footer>
+    </article>
   );
 
   const classesForCardSpecial = clsx([commonCardClasses, "card_special"]);
   const specialCard = (
-    <div className={classesForCardSpecial}>
-      <Heading>asdasdas</Heading>
-      <button className="m-auto" variant="">
+    <article className={classesForCardSpecial}>
+      <Heading>{title}</Heading>
+      <Button className="m-auto" variant="">
         <FaceIcon className="" variant="destructive" />
         asdasdasdas
-      </button>
-    </div>
+      </Button>
+    </article>
   );
 
   switch (cardType) {

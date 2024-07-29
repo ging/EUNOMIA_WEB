@@ -1,15 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/core/Header";
-import Footer from "@/components/Footer";
 import Filters from "@/components/ResearchFilter";
 import Link from "next/link";
 import { mypublications } from "@/constants/publications";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-// import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import Card from "@/components/core/Card";
+import { FaceIcon } from "@radix-ui/react-icons";
+
 
 export default function Research() {
   const { t, i18n } = useTranslation();
@@ -107,12 +105,12 @@ export default function Research() {
               papersFiltered instanceof Array ? papersFiltered.length : 0
             }
           />
-          <div className="papers standard_margin">
+          <div className="flex flex-col gap-4 standard_margin">
             {papersFiltered
               .slice(0, papersToShow)
               .map(({ date, doi, author, title, journal }, ind) => {
                 return (
-                  <div key={ind} className="paper">
+                  <Card key={ind} className="paper" title={title} buttonText={"leer publicación"}>
                     <div className="paper_main">
                       <div className="paper_date">
                         <p className="year">{date ? date[0] : ""}</p>
@@ -138,16 +136,14 @@ export default function Research() {
                                 href={doi}
                               >
                                 <span>{t("publications.button")}</span>
-                                {/* <FontAwesomeIcon */}
-                                  {/* icon={faArrowUpRightFromSquare}
-                                /> */}
+                                <FaceIcon />
                               </Link>
                             </button>
                           ) : null}
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Card>
                 );
               })}
           </div>

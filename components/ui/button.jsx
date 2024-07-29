@@ -1,14 +1,14 @@
 "use client";
 
-import * as React from "react"
+import * as React from "react";
 import clsx from "clsx";
-import { Slot } from "@radix-ui/react-slot"
+import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-const buttonVariants = cva(
-  "mt-2 min-w-20 inline-flex gap-4 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 rounded-full",
+const ButtonVariants = cva(
+  "mt-2 min-w-20 inline-flex gap-2 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 rounded-full",
   {
     variants: {
       variant: {
@@ -26,7 +26,7 @@ const buttonVariants = cva(
       size: {
         default: "px-4 py-2",
         sm: "h-6 rounded-md px-3 text-base",
-        lg: "h-10 rounded-md px-8 text-lg",
+        lg: "h-8 rounded-md px-8 text-lg",
         icon: "h-8 w-8",
       },
     },
@@ -35,17 +35,20 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
-const Button = React.forwardRef(({ className, variant, size, asChild = false, ...props }, ref) => {
-  const Comp = asChild ? Slot : "button"
-  return (
-    (<Comp
-      className={cn(buttonVariants({ variant, size, className }))}
-      ref={ref}
-      {...props} />)
-  );
-})
-Button.displayName = "Button"
+const Button = React.forwardRef(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(ButtonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, ButtonVariants };

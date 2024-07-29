@@ -3,14 +3,12 @@ import * as React from "react";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { myProjectCards } from "@/constants/projectsCards.js";
 import { useTranslation } from "react-i18next";
-import { buttonVariants } from "@/components/ui/button";
 
 // Components
-import { Button } from "@/components/ui/button";
-import Heading from "@/components/core/Heading";
-import Text from "@/components/core/Text";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
 
 import {
   Card,
@@ -37,12 +35,12 @@ export default function Projects() {
   return (
     <main>
       <section className="standard_padding text-white bg-main bg-cover bg-center flex gap-8 justify-between items-center">
-        <div className="h-fit md:min-h-[350px] my-12">
+        <div className="h-fit md:min-h-[350px] my-12 flex flex-col justify-center items-start max-w-[60%]">
           <Heading level="h1" className="text-snow">
             {t("front.title")}
           </Heading>
           <Text type="p">{t("front.description")}</Text>
-          <div className="h-14 sm:h-20 md:h-28"></div>
+          {/* <div className="h-14 sm:h-20 md:h-28"></div> */}
          {/* <Link
             href="#"
             className={

@@ -2,10 +2,11 @@
 
 import { useTranslation } from "react-i18next";
 
-import Heading from "@/components/core/Heading";
-import Text from "@/components/core/Text";
+import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
 
-//  icons
+import { FaceIcon } from "@radix-ui/react-icons";
+
 
 export default function About(props) {
   const { t, i18n } = useTranslation();
@@ -81,7 +82,6 @@ export default function About(props) {
                       </defs>
                     </svg>
                   </span>
-                  {/* <FontAwesomeIcon className="icon" icon={faPhone} /> */}
                   <p>91 336 73 31</p>
                 </h5>
               </li>
