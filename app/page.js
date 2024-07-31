@@ -103,7 +103,7 @@ export default function Projects() {
           </Card>
           <Card
             cardType="normal"
-            className="text-center content-center bg-white p-10"
+            className="text-center content-center bg-s p-10"
           >
             <div className="icon pb-8 content-center flex justify-center items-center">
               <svg
@@ -132,37 +132,6 @@ export default function Projects() {
           </Card>
         </div>
       </section>
-
-      {/* Card grid sample */}
-      {/* <section className="standard_margin">
-        <Heading level="h2" className="">
-          {t("front.latestPublicationsTitle")}
-        </Heading>
-        <div className="h-full m-auto pt-16 max-w-[1080px] grid grid-cols-3 gap-8">
-          {myProjectCards.map((project) => (
-            <Card key={project.id} className="flex flex-col min-h-[200px]">
-              <CardHeader>
-                <div>{project.date}</div>
-              </CardHeader>
-
-              <CardContent className="flex flex-col gap-2">
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.subtitle}</CardDescription>
-              </CardContent>
-
-              <CardFooter>
-                <Button variant="" size="sm" className="capitalize">
-                  {project.category}
-                  <a href={project.route} target="blank">
-                    Enlace
-                  </a>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </section> */}
-      {/* /Card grid sample */}
     </main>
   );
 }

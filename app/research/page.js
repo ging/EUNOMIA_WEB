@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import Card from "@/components/core/Card";
 import { FaceIcon } from "@radix-ui/react-icons";
 
-
 export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -76,12 +75,7 @@ export default function Research() {
 
   return (
     <div className={"research page_" + currentLang}>
-
-
-      <div
-        className="banner"
-        id="banner-publications"
-      >
+      <div className="banner" id="banner-publications">
         <h1>{t("publications.title")}</h1>
         <p>
           Este apartado es una recopilación de las publicaciones del equipo de
@@ -93,7 +87,6 @@ export default function Research() {
       <main>
         <section className="research">
           <Filters
-            
             search={search}
             year={year}
             type={type}
@@ -110,22 +103,26 @@ export default function Research() {
               .slice(0, papersToShow)
               .map(({ date, doi, author, title, journal }, ind) => {
                 return (
-                  <Card key={ind} className="paper" title={title} buttonText={"leer publicación"}>
+                  <Card
+                    key={ind}
+                    className="paper"
+                    title={t(title)}
+                    buttonText={"leer publicación"}
+                  >
                     <div className="paper_main">
                       <div className="paper_date">
                         <p className="year">{date ? date[0] : ""}</p>
-                        <span className="gradient_bg"></span>
                       </div>
                       <div className="paper_content justify-between">
                         <div className="">
-                        <div className="paper_title">
-                          <h4>{title}</h4>
-                        </div>
-                        <div className="paper_subtitle">
-                          <p>
-                            {author}. {journal}
-                          </p>
-                        </div>
+                          <div className="paper_title">
+                            <h4>{title}</h4>
+                          </div>
+                          <div className="paper_subtitle">
+                            <p>
+                              {author}. {journal}
+                            </p>
+                          </div>
                         </div>
                         <div className="button_container">
                           {doi ? (

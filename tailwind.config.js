@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'font-main': ['"Ubuntu"'],
-        'font-body': ['"Source Sans"'],
+        'font-body': ['"Source Sans 3","__Source_Sans_3_32aa65", "__Source_Sans_3_Fallback_32"'],
       },
       fontSize: {
         // 'xs': ['0.75rem', { lineHeight: '1.4' }],

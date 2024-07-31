@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 /* 
   ------------------------------------------------------------------
-  Componente para los titulos y etiquetas <h> -> jerarquías de texto 
+  Componente para los titulos y etiquetas <h> -> jerarquías de texto // para esto se usa el Heading, este para bloques de texto
   ------------------------------------------------------------------
 */
 
@@ -19,9 +19,6 @@ const Text = ({ type = "p", children, className }) => {
     case "small":
       Component = "small";
       break;
-    case "button":
-      Component = "button";
-      break;
     default:
       Component = "p"; // Por defecto, usar h1 si no se especifica nivel válido
       break;
@@ -29,12 +26,11 @@ const Text = ({ type = "p", children, className }) => {
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "underlined ",
+    "font-body ",
     {/*"text-balance"*/},
     {
       "text-base mb-6 max-w-[66ch]": type === "p",
       "text-sm mb-4": type === "small",
-      "text-xs mb-4": type === "button", 
     },
     className
   ])
