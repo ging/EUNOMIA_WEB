@@ -10,6 +10,8 @@ import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import Card from "@/components/core/Card";
 import { Label } from "@radix-ui/react-label";
+import { Badge, badgeVariants } from "@/components/ui/badge";
+
 
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
@@ -120,17 +122,7 @@ export default function DesignSystem(props) {
         >
           Botón sm
         </Button>
-        <Button
-          href="#"
-          className={ButtonVariants({
-            variant: "default",
-            size: "sm",
-            radius: "rounded_sm",
-          })}
-          {...props}
-        >
-          Botón icon
-        </Button>
+       
       </div>
 
       {/* RADIUS */}
@@ -140,7 +132,7 @@ export default function DesignSystem(props) {
           href="#"
           className={ButtonVariants({
             variant: "default",
-            size: "lg",
+            size: "default",
             radius: "rounded_sm",
           })}
           {...props}
@@ -162,7 +154,7 @@ export default function DesignSystem(props) {
           href="#"
           className={ButtonVariants({
             variant: "default",
-            size: "sm",
+            size: "default",
             radius: "rounded_lg",
           })}
           {...props}
@@ -173,7 +165,7 @@ export default function DesignSystem(props) {
           href="#"
           className={ButtonVariants({
             variant: "default",
-            size: "sm",
+            size: "default",
             radius: "rounded_full",
           })}
           {...props}
@@ -181,7 +173,38 @@ export default function DesignSystem(props) {
           Radius full
         </Button>
       </div>
-
+      <Heading level="h3">Badges</Heading>
+      <div className="flex gap-4 pb-8">
+      <Badge
+          href="#"
+          className={badgeVariants({
+            variant: "default",
+            
+          })}
+          {...props}>
+         badge default
+      </Badge>
+      <Badge
+          href="#"
+          className={badgeVariants({
+            variant: "secondary",
+            
+          })}
+          {...props}>
+         badge secondary
+      </Badge>
+      <Badge
+          href="#"
+          className={badgeVariants({
+            variant: "outline",
+            
+          })}
+          {...props}>
+         badge outline
+      </Badge>
+      
+      
+        </div>
       <Heading level="h3">Cards</Heading>
       <section className="cards grid grid-cols-2 gap-4">
         {myProjectCards.map(

@@ -8,26 +8,30 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const ButtonVariants = cva(
-  "min-w-20 inline-flex gap-4 items-center justify-center whitespace-nowrap rounded-md text-sm font-body transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "min-w-20 inline-flex gap-2 items-center justify-center whitespace-nowrap rounded-md text-sm font-body transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "bg-primary/25 text-primary-foreground shadow hover:bg-primary/40",
+          "bg-primary/75 text-primary-foreground shadow hover:bg-primary/40",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border border-input border-secondary text-secondary-foreground bg-background shadow-sm hover:bg-secondary-100 hover:text-accent-foreground",
+        outlineForeground: //for outline buttons over dark backgrounds
+          "border border-input border-secondary text-secondary-100 bg-background shadow-sm hover:bg-primary/30 hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent/25 hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary-200",
+        ghost: "text-secondary-foreground bg-transparent hover:bg-accent/10 hover:text-accent-foreground shadow-none",
+        ghostForeground: "text-primary-foreground bg-transparent hover:bg-accent/10 hover:text-accent-foreground shadow-none",
+        link: "bg-transparent text-primary underline-offset-4 underline hover:bg-secondary-100/60 shadow-none",
+        linkForeground: "bg-transparent text-primary-foreground underline-offset-4 underline hover:bg-secondary-100/60 shadow-none", 
       },
       size: {
-        default: "h-8 px-4 py-2",
-        sm: "h-6 rounded-md px-3 text-base",
-        lg: "h-8 rounded-md px-8 text-lg",
-        icon: "h-8 w-8",
+        default: "h-8 px-4 py-2 text-sm",
+        sm: "h-6 rounded-md px-3 text-sm",
+        lg: "h-10 rounded-md px-8 text-base",
+        icon: "h-8 w-8 text-sm",
       },
       radius: {
         rounded_sm: "rounded-sm",

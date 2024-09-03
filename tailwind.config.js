@@ -44,19 +44,21 @@ module.exports = {
           // 200: "#DBE2FF",
           // 100: "#EBF0FF",
           // 50: "#F5F8FF",
+          foreground: "#FFFFFF"
         },
         secondary: { // azul claro
           DEFAULT: "#9CD7F5",
           // 900: "#3302BF",
           // 800: "#4507C9",
-          // 700: "#4F1BE4",
-          // 600: "#5441FF",
-          // 500: "#6E76FF",
+          700: "#45bbf7",
+          600: "#56b9ea",
+          500: "#76c9f2",
           400: "#9CD7F5",
           300: "#B0DFF7",
           200: "#C4E7F9",
           100: "#D7EFFB",
           50: "#EBF7FD",
+          foreground: "#24234C"
         },
         accent: { // morado
           DEFAULT: "#62388E",

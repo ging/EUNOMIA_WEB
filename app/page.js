@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { Button, ButtonVariants  } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
+import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons"
 
 //Card
 import {
@@ -49,7 +50,9 @@ export default function Projects() {
         <BannerContent>
           <BannerTitle>{t("front.title")}</BannerTitle>
           <BannerDescription>{t("front.description")}</BannerDescription>
-          <BannerButton>  {t("front.action-button")}</BannerButton>
+          <BannerButton>  {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
+
+          </BannerButton>
         </BannerContent>
         <BannerImg/>
       </Banner>
@@ -103,7 +106,7 @@ export default function Projects() {
           </Card>
           <Card
             cardType="normal"
-            className="text-center content-center bg-s p-10"
+            className="text-center content-center bg-white p-10"
           >
             <div className="icon pb-8 content-center flex justify-center items-center">
               <svg

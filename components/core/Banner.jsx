@@ -55,10 +55,11 @@ const BannerButton = React.forwardRef(({ className, ...props }, ref) => (
     <Button
         href="#"
         className={
-            ButtonVariants({ variant: "outline", size: "default", radius: "rounded_sm" })
+            `${ButtonVariants({ variant: "outlineForeground", size: "default", radius: "rounded_sm" })}text-white`
         }
-        {...props} 
-       />
+{...props}
+    >
+        </Button>
     ))
 BannerButton.displayName = "BannerButton"
 
