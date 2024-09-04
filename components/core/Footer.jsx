@@ -18,10 +18,10 @@ export default function Footer(props) {
   ];
 
   const logoClasses = clsx(
-    "w-full flex justify-center items-center img-contain",
+    "w-full flex justify-center items-center",
   );
   const imgClasses = clsx(
-    "min-h-10 max-w-[300px] md:max-w-full",
+    "min-h-10 max-w-[300px] md:max-w-full img-contain",
   );
 
   return (
@@ -37,7 +37,7 @@ export default function Footer(props) {
             {t("footer.titleRight")}
             </a>
         </div> */}
-      <div className={logoClasses + " mt-10"}>
+      <div className={logoClasses}> 
         <img
         className={imgClasses}
           src="assets/logos/eunomia_logo_lg_light.svg"
@@ -52,7 +52,7 @@ export default function Footer(props) {
           alt="logo UPM"
         />
       </div>
-      <div className={logoClasses + " mb-6"}>
+      <div className={logoClasses}>
         <img
         className={imgClasses}
           src="assets/logos/incibe_logo_white.png"

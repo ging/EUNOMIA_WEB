@@ -8,7 +8,7 @@ import { myProjectCards } from "@/constants/projectsCards";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-import Card from "@/components/core/Card";
+import { Card, CardVariants} from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
 
@@ -212,7 +212,9 @@ export default function DesignSystem(props) {
             return (
               <Card                    
                 key={id}
-                className="card"
+                className={CardVariants({
+                  variant: "",
+                })}
                 date={date}
                 title={t(title)}
                 subtitle={t(subtitle)}
@@ -224,6 +226,81 @@ export default function DesignSystem(props) {
             )
           }
         )}
+      </section>
+
+      <Heading level="h3" className={'mt-8'}>Card variants predefinidas</Heading>
+      <section className="cards grid grid-cols-2 gap-4 mt-4">
+        <Card   
+          cardType={"project"}                 
+          className={CardVariants({
+            variant: "project",
+          })}
+          date={'fecha'}
+          title={'ViSH: Open source e-Learning platform'}
+          subtitle={"ViSH is a social and collaborative platform focused on the creation and sharing of open educational resources. ViSH provides a collection of tools and services to facilitate the creation, distribution and use of high quality educational materials and to foster technology enhanced learning both in the classroom as well as in Virtual Learning Environments."}
+          tags={"tag, tag, tag, tag"}
+          category={"categoría"}
+          buttonText={"proyecto"}
+        >
+        </Card>
+
+        <Card       
+          cardType={"course"}                 
+          className={CardVariants({
+            variant: "course",
+          })}
+          date={'2023'}
+          title={'Desarrollo de aplicaciones con React y React Native'}
+          subtitle={"Las tecnologías de React y React Native son una manera novedosa y muy potente de desarrollar aplicaciones de cliente, tanto aplicaciones web como aplicaciones nativas Android e iOS. Son una de las tecnologías más demandadas en el mercado laboral hoy en día, y este curso te permitirá dominarlas y hacer tus propias aplicaciones de forma autónoma."}
+          description={"2nd Edition"}
+          tags={"React, Desarrollo web, Front-End"}
+          category={"categoría"}
+          buttonText={"curso"}
+        >
+        </Card>
+
+        <Card           
+          cardType={"publication"}                 
+          className={CardVariants({
+            variant: "publication",
+          })}
+          date={'2024'}
+          title={'Empowering Database Learning through Remote Educational Escape Rooms'}
+          subtitle={"Enrique Barra, Sonsoles López-Pernas, Aldo Gordillo, Alejandro Pozo Huertas, Jose Muñoz, and Javier Conde"}
+          // tags={"tag, tag, tag, tag"}
+          category={"article-journal"}
+          buttonText={"leer publicación"}
+        >
+        </Card>
+
+        <Card              
+          cardType={"team"}                 
+          className={CardVariants({
+            variant: "team",
+          })}
+          img={"./assets/img/courses/fondo-cursos.png"}
+          date={'fecha'}
+          title={'título'}
+          subtitle={"subtñitulo"}
+          tags={"tag, tag, tag, tag"}
+          category={"categoría"}
+          buttonText={"proyecto"}
+        >
+        </Card>
+
+        <Card           
+          cardType={"tool"}                 
+          className={CardVariants({
+            variant: "tool",
+          })}
+          date={'fecha'}
+          title={'título'}
+          subtitle={"subtñitulo"}
+          tags={"tag, tag, tag, tag"}
+          category={"categoría"}
+          buttonText={"proyecto"}
+        >
+        </Card>
       </section>
     </main>
   );

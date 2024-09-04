@@ -5,7 +5,7 @@ import Filters from "@/components/ResearchFilter";
 import Link from "next/link";
 import { mypublications } from "@/constants/publications";
 import { useTranslation } from "react-i18next";
-import Card from "@/components/core/Card";
+import Card from "@/components/core/Cards";
 import { FaceIcon } from "@radix-ui/react-icons";
 
 export default function Research() {
@@ -109,35 +109,33 @@ export default function Research() {
                     title={t(title)}
                     buttonText={"leer publicación"}
                   >
-                    <div className="paper_main">
-                      <div className="paper_date">
-                        <p className="year">{date ? date[0] : ""}</p>
+                    <div className="paper_date">
+                      <p className="year">{date ? date[0] : ""}</p>
+                    </div>
+                    <div className="paper_content justify-between">
+                      <div className="">
+                        <div className="paper_title">
+                          <h4>{title}</h4>
+                        </div>
+                        <div className="paper_subtitle">
+                          <p>
+                            {author}. {journal}
+                          </p>
+                        </div>
                       </div>
-                      <div className="paper_content justify-between">
-                        <div className="">
-                          <div className="paper_title">
-                            <h4>{title}</h4>
-                          </div>
-                          <div className="paper_subtitle">
-                            <p>
-                              {author}. {journal}
-                            </p>
-                          </div>
-                        </div>
-                        <div className="button_container">
-                          {doi ? (
-                            <button className="paper_link text-nowrap">
-                              <Link
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                href={doi}
-                              >
-                                <span>{t("publications.button")}</span>
-                                <FaceIcon />
-                              </Link>
-                            </button>
-                          ) : null}
-                        </div>
+                      <div className="button_container">
+                        {doi ? (
+                          <button className="paper_link text-nowrap">
+                            <Link
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              href={doi}
+                            >
+                              <span>{t("publications.button")}</span>
+                              <FaceIcon />
+                            </Link>
+                          </button>
+                        ) : null}
                       </div>
                     </div>
                   </Card>
