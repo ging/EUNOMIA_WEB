@@ -128,7 +128,7 @@ export const es = {
         
     },
     "footer": {
-        "title1":"secciones",
+        "title1":"Secciones",
         "title2": "Proyecto financiado por:",
         "title3": "Colaboran:",
         "logoSub": "Redes Futuras para Centros de Datos y Empresas de Telecomunicaciones",

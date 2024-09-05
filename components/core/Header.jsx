@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import LangSwitcher from "./../LangSwitcher";
+import { routes } from "@/constants/routes";
 
 // icons
 import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
@@ -14,15 +15,7 @@ export default function Header(props) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const routes = [
-    { route: "/", key: "nav.item1" },
-    // { route: "/project", key: "nav.item2" },
-    { route: "/team", key: "nav.item3" },
-    // { route: "/research", key: "nav.item4" },
-    { route: "/about", key: "nav.item5" },
-    // { route: "/design-system", key: "nav.item6" },
-  ];
-
+ 
   // classes
   const headerClasses = clsx(
     "px-8 py-4 sticky -top-[1px] w-full",
