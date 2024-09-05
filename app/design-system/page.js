@@ -281,7 +281,7 @@ export default function DesignSystem(props) {
           img={"./assets/img/courses/fondo-cursos.png"}
           date={'fecha'}
           title={'título'}
-          subtitle={"subtñitulo"}
+          subtitle={"subtitulo"}
           tags={"tag, tag, tag, tag"}
           category={"categoría"}
           buttonText={"proyecto"}
