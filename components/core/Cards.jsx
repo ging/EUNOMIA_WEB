@@ -5,7 +5,6 @@ import * as React from "react";
 
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
-
 import { cn } from "@/lib/utils";
 
 import Heading from "../ui/Heading";
@@ -13,9 +12,10 @@ import { Badge } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import { FaceIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 const CardVariants = cva(
-  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-105 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -23,8 +23,8 @@ const CardVariants = cva(
         project: "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
         course: "bg-purple-50",
         publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "bg-orange-50 border border-input shadow-sm hover:bg-accent hover:text-white",
-        tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/80",
+        team: "bg-snow border border-input shadow-sm hover:scale-105",
+        tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
       },
       direction: {
         default: "flex flex-col", // horizontal
@@ -56,6 +56,7 @@ const Card = React.forwardRef(
       variant, direction, className,
       title, subtitle, description, img, tags, date, category, route,
       name, position, center, mail,
+      author, doi,
       buttonText,
       cardType,
     }, ref
@@ -65,13 +66,13 @@ const Card = React.forwardRef(
         {/* card header */}
         {( (date || category) &&
           <header className="w-full flex gap-4 justify-start">
-            <Badge>{date}</Badge>
-            <Badge>{category}</Badge>
+            <Badge size="lg">{date}</Badge>
+            <Badge size="lg">{category}</Badge>
           </header>
         )}
         {/* card image */}
         {( img && 
-          <img src={img} alt={img} className={classesImg}/>
+          <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>
         )}
         {/* card body */}
         {( (title || subtitle || description || tags) &&
@@ -101,8 +102,8 @@ const Card = React.forwardRef(
     const projectCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
-          <Badge>{date}</Badge>
-          <Badge>{category}</Badge>
+          <Badge size="lg">{date}</Badge>
+          <Badge size="lg">{category}</Badge>
         </header>
         <div className="h-full w-full flex flex-col justify-between">
           <Heading level="h3">{title}</Heading>
@@ -120,8 +121,8 @@ const Card = React.forwardRef(
     const courseCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="flex gap-4">
-          <Badge>{date}</Badge>
-          <Badge>{category}</Badge>
+          <Badge size="lg">{date}</Badge>
+          <Badge size="lg">{category}</Badge>
         </header>
         <div className="h-full w-full flex flex-col justify-between">
           <Heading level="h3">{title}</Heading>
@@ -137,18 +138,31 @@ const Card = React.forwardRef(
     const publicationCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
-          <Badge>{date}</Badge>
-          <Badge>{category}</Badge>
+          <Badge size="lg">{date}</Badge>
+          <Badge size="lg">{category}</Badge>
         </header>
         <div className="h-full w-full flex flex-col justify-between">
           <Heading level="h3"><i>{title}</i></Heading>
-          <Heading level="h5">{subtitle}</Heading>
+          <Heading level="h5">{author}</Heading>
         </div>
         <footer className="w-full flex gap-4 justify-end">
           <Button variant="secondary">
             leer publicación
             <ArrowRightIcon />
           </Button>
+
+          {doi ? (
+            <Button asChild variant="secondary" size="md" radius="rounded_md">
+              <Link
+                rel="noopener noreferrer"
+                target="_blank"
+                href={doi}
+              >
+                DOI btn test
+                {/* {t("publications.button")} */}
+              </Link>
+            </Button>
+          ) : null}
         </footer>
       </article>
     );
@@ -156,10 +170,10 @@ const Card = React.forwardRef(
     // TEAM - ok
     const teamCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
-        {(img && <img src={img} alt={img} className={classesImg}/>)}
+        {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>)}
         {( (name || position || description || tags) &&
           <div className="h-full w-full flex flex-col justify-between items-center">
-            <Heading level="h3" className={"text-inherit"}>{name}</Heading>
+            <Heading level="h3" className={"text-inherit text-center"}>{name}</Heading>
             <Heading level="h5">{position}</Heading>
             <Text>{mail}</Text>
           </div>
@@ -174,7 +188,7 @@ const Card = React.forwardRef(
     // TOOL - ok
     const toolCard = (
       <article className={cn(CardVariants({ variant, direction, className}))}>
-        {(img && <img src={img} alt={img} className={classesImg}/>)}
+        {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>)}
         <div className="p-4 h-full w-full flex flex-col justify-between">
           <Heading level="h3">{title}</Heading>
           <Text>{description}</Text>

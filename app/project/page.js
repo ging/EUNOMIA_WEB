@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import ProjectCard from "@/components/projectCard";
-import { myprojectCards } from "@/constants/projectsCards.js";
+import { projects } from "@/constants/projects.js";
 import { useTranslation } from "react-i18next";
 import { FaceIcon } from "@radix-ui/react-icons";
 
@@ -19,7 +18,6 @@ export default function Projects() {
 
   return (
     <div className={"projects page_" + currentLang}>
-      <Header route={"/project"} />
       <section className="parallax__layer standard_margin">
         <div className="flex flex-col sm:gap-4 md:gap-4">
           <h2 className="text-left">{t("project.Intro.sectionTitle")}</h2>
@@ -31,13 +29,13 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
       <section className="standard_margin">
         <h2 className="text-left text-white">
           {t("project.Goals.sectionTitle")}
         </h2>
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 md:gap-6">
           <div className="card_goals bg-black text-center padding_card_highlight">
-            
             <FaceIcon />
             <div>
               <h3> {t("project.Goals.Goal1.GoalTitle")}</h3>
@@ -60,6 +58,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
       <section className="subprojects standard_margin-y">
         <h2 className="text-left standard_margin-x mb-4 ">
           {t("project.Subprojects.sectionTitle")}
@@ -119,6 +118,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      
       <section className="highlight-section">
         <div className="standard_padding">
           <div className="flex flex-col sm:gap-4 md:gap-4">

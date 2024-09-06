@@ -5,8 +5,8 @@ import Filters from "@/components/ResearchFilter";
 import Link from "next/link";
 import { mypublications } from "@/constants/publications";
 import { useTranslation } from "react-i18next";
-import Card from "@/components/core/Cards";
-import { FaceIcon } from "@radix-ui/react-icons";
+import { Card, CardVariants } from "@/components/core/Cards";
+import { Button } from "@/components/ui/button";
 
 export default function Research() {
   const { t, i18n } = useTranslation();
@@ -84,72 +84,50 @@ export default function Research() {
           sistemas de redes de no se cuantitos.
         </p>
       </div>
-      <main>
-        <section className="research">
-          <Filters
-            search={search}
-            year={year}
-            type={type}
-            papers={papers}
-            changeSearch={(search) => setState({ ...state, search: search })}
-            changeYear={(year) => setState({ ...state, year: year })}
-            changeType={(type) => setState({ ...state, type: type })}
-            results={
-              papersFiltered instanceof Array ? papersFiltered.length : 0
-            }
-          />
-          <div className="flex flex-col gap-4 standard_margin">
-            {papersFiltered
-              .slice(0, papersToShow)
-              .map(({ date, doi, author, title, journal }, ind) => {
-                return (
-                  <Card
-                    key={ind}
-                    className="paper"
-                    title={t(title)}
-                    buttonText={"leer publicación"}
-                  >
-                    <div className="paper_date">
-                      <p className="year">{date ? date[0] : ""}</p>
-                    </div>
-                    <div className="paper_content justify-between">
-                      <div className="">
-                        <div className="paper_title">
-                          <h4>{title}</h4>
-                        </div>
-                        <div className="paper_subtitle">
-                          <p>
-                            {author}. {journal}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="button_container">
-                        {doi ? (
-                          <button className="paper_link text-nowrap">
-                            <Link
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              href={doi}
-                            >
-                              <span>{t("publications.button")}</span>
-                              <FaceIcon />
-                            </Link>
-                          </button>
-                        ) : null}
-                      </div>
-                    </div>
-                  </Card>
-                );
-              })}
-          </div>
-          <div className="load_more">
-            {papersFiltered.length > papersToShow && (
-              <button onClick={handleLoadMore}>
-                {t("publications.button2")}
-              </button>
-            )}
-          </div>
+      <main  className="research">
+        <Filters
+          search={search}
+          year={year}
+          type={type}
+          papers={papers}
+          changeSearch={(search) => setState({ ...state, search: search })}
+          changeYear={(year) => setState({ ...state, year: year })}
+          changeType={(type) => setState({ ...state, type: type })}
+          results={
+            papersFiltered instanceof Array ? papersFiltered.length : 0
+          }
+        />
+        <section className="flex flex-col gap-4 standard_margin">
+          {papersFiltered
+            .slice(0, papersToShow)
+            .map(({ date, type, doi, author, title, journal }, ind) => {
+              return (
+                <Card
+                cardType={"publication"}
+                className={CardVariants({
+                  variant: "publication",
+                })}
+                date={date}
+                category={type}
+                title={title}
+                author={author}
+                doi={doi}
+              ></Card>                
+              );
+            })}
         </section>
+
+        <div className="mb-4 w-full flex justify-center">
+        {papersFiltered.length > papersToShow && (
+            <Button onClick={handleLoadMore}
+              variant="secondary"
+              size="lg"
+            >
+              {t("publications.button2")}
+            </Button>
+          )}
+        </div>
+
       </main>
     </div>
   );

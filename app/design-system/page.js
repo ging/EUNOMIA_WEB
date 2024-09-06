@@ -215,6 +215,7 @@ export default function DesignSystem(props) {
             name,
             position,
             center,
+            author, doi,
             mail,
           }) => {
             return (
@@ -279,11 +280,12 @@ export default function DesignSystem(props) {
           title={
             "Empowering Database Learning through Remote Educational Escape Rooms"
           }
-          subtitle={
+          author={
             "Enrique Barra, Sonsoles López-Pernas, Aldo Gordillo, Alejandro Pozo Huertas, Jose Muñoz, and Javier Conde"
           }
           tags={"tag, tag, tag, tag"}
           category={"article-journal"}
+          doi={"https://doi.org/10.1016/j.entcom.2023.100588"}
           buttonText={"leer publicación"}
         ></Card>
 
@@ -294,7 +296,6 @@ export default function DesignSystem(props) {
           })}
           img={"/assets/img/courses/fondo-cursos.png"}
           name={"Nombre Apellidos"}
-          // description={"napellidos@upm.es"}
           position={"Profesor Titular"}
           center={"E.T.S. de ingenieros de telecomunicacion"}
           mail={"napellidos@upm.es"}
