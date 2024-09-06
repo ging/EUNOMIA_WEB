@@ -2,16 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { myProjectCards } from "@/constants/projectsCards";
+import { projects } from "@/constants/projects";
 
 // Components
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-import { Card, CardVariants} from "@/components/core/Cards";
+import { Card, CardVariants } from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
-
 
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
@@ -122,7 +121,6 @@ export default function DesignSystem(props) {
         >
           Botón sm
         </Button>
-       
       </div>
 
       {/* RADIUS */}
@@ -175,42 +173,52 @@ export default function DesignSystem(props) {
       </div>
       <Heading level="h3">Badges</Heading>
       <div className="flex gap-4 pb-8">
-      <Badge
+        <Badge
           href="#"
           className={badgeVariants({
             variant: "default",
-            
           })}
-          {...props}>
-         badge default
-      </Badge>
-      <Badge
+          {...props}
+        >
+          badge default
+        </Badge>
+        <Badge
           href="#"
           className={badgeVariants({
             variant: "secondary",
-            
           })}
-          {...props}>
-         badge secondary
-      </Badge>
-      <Badge
+          {...props}
+        >
+          badge secondary
+        </Badge>
+        <Badge
           href="#"
           className={badgeVariants({
             variant: "outline",
-            
           })}
-          {...props}>
-         badge outline
-      </Badge>
-      
-      
-        </div>
+          {...props}
+        >
+          badge outline
+        </Badge>
+      </div>
       <Heading level="h3">Cards</Heading>
       <section className="cards grid grid-cols-2 gap-4">
-        {myProjectCards.map(
-          ({ id, date, route, title, subtitle, tags, category }) => {
+        {projects.map(
+          ({
+            id,
+            date,
+            route,
+            title,
+            subtitle,
+            tags,
+            category,
+            name,
+            position,
+            center,
+            mail,
+          }) => {
             return (
-              <Card                    
+              <Card
                 key={id}
                 className={CardVariants({
                   variant: "",
@@ -220,87 +228,86 @@ export default function DesignSystem(props) {
                 subtitle={t(subtitle)}
                 tags={t(tags)}
                 category={t(category)}
-                buttonText={"proyecto"}
-              >
-              </Card>
-            )
+                buttonText={"texto del botón"}
+              ></Card>
+            );
           }
         )}
       </section>
 
-      <Heading level="h3" className={'mt-8'}>Card variants predefinidas</Heading>
+      <Heading level="h3" className={"mt-8"}>
+        Cards predefinidas
+      </Heading>
       <section className="cards grid grid-cols-2 gap-4 mt-4">
-        <Card   
-          cardType={"project"}                 
+        <Card
+          cardType={"project"}
           className={CardVariants({
             variant: "project",
           })}
-          date={'fecha'}
-          title={'ViSH: Open source e-Learning platform'}
-          subtitle={"ViSH is a social and collaborative platform focused on the creation and sharing of open educational resources. ViSH provides a collection of tools and services to facilitate the creation, distribution and use of high quality educational materials and to foster technology enhanced learning both in the classroom as well as in Virtual Learning Environments."}
-          tags={"tag, tag, tag, tag"}
+          date={"fecha"}
+          title={"Utilización de escape rooms y videojuegos educativos en la Educación Universitaria"}
+          subtitle={"E.T.S DE ING. DE SISTEMAS INFORMÁTICOS"}
+          tags={"Aprendizaje Activo, Aprendizaje Autónomo, Investigación educativa, Aula Invertida, Gamificación"}
+          description={""}
+          route={"https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=356"}
           category={"categoría"}
-          buttonText={"proyecto"}
-        >
-        </Card>
+          buttonText={""}
+        ></Card>
 
-        <Card       
-          cardType={"course"}                 
+        <Card
+          cardType={"course"}
           className={CardVariants({
             variant: "course",
           })}
-          date={'2023'}
-          title={'Desarrollo de aplicaciones con React y React Native'}
-          subtitle={"Las tecnologías de React y React Native son una manera novedosa y muy potente de desarrollar aplicaciones de cliente, tanto aplicaciones web como aplicaciones nativas Android e iOS. Son una de las tecnologías más demandadas en el mercado laboral hoy en día, y este curso te permitirá dominarlas y hacer tus propias aplicaciones de forma autónoma."}
+          date={"2023"}
+          title={"Desarrollo de aplicaciones con React y React Native"}
+          subtitle={
+            "Las tecnologías de React y React Native son una manera novedosa y muy potente de desarrollar aplicaciones de cliente, tanto aplicaciones web como aplicaciones nativas Android e iOS. Son una de las tecnologías más demandadas en el mercado laboral hoy en día, y este curso te permitirá dominarlas y hacer tus propias aplicaciones de forma autónoma."
+          }
           description={"2nd Edition"}
           tags={"React, Desarrollo web, Front-End"}
           category={"categoría"}
           buttonText={"curso"}
-        >
-        </Card>
+        ></Card>
 
-        <Card           
-          cardType={"publication"}                 
+        <Card
+          cardType={"publication"}
           className={CardVariants({
             variant: "publication",
           })}
-          date={'2024'}
-          title={'Empowering Database Learning through Remote Educational Escape Rooms'}
-          subtitle={"Enrique Barra, Sonsoles López-Pernas, Aldo Gordillo, Alejandro Pozo Huertas, Jose Muñoz, and Javier Conde"}
-          // tags={"tag, tag, tag, tag"}
+          date={"2024"}
+          title={
+            "Empowering Database Learning through Remote Educational Escape Rooms"
+          }
+          subtitle={
+            "Enrique Barra, Sonsoles López-Pernas, Aldo Gordillo, Alejandro Pozo Huertas, Jose Muñoz, and Javier Conde"
+          }
+          tags={"tag, tag, tag, tag"}
           category={"article-journal"}
           buttonText={"leer publicación"}
-        >
-        </Card>
+        ></Card>
 
-        <Card              
-          cardType={"team"}                 
+        <Card
+          cardType={"team"}
           className={CardVariants({
             variant: "team",
           })}
-          img={"./assets/img/courses/fondo-cursos.png"}
-          date={'fecha'}
-          title={'título'}
-          subtitle={"subtitulo"}
-          tags={"tag, tag, tag, tag"}
-          category={"categoría"}
-          buttonText={"proyecto"}
-        >
-        </Card>
-
-        <Card           
-          cardType={"tool"}                 
+          img={"/assets/img/courses/fondo-cursos.png"}
+          name={"Nombre Apellidos"}
+          // description={"napellidos@upm.es"}
+          position={"Profesor Titular"}
+          center={"E.T.S. de ingenieros de telecomunicacion"}
+          mail={"napellidos@upm.es"}
+        ></Card>
+        <Card
+          cardType={"tool"}
           className={CardVariants({
             variant: "tool",
           })}
-          date={'fecha'}
-          title={'título'}
-          subtitle={"subtñitulo"}
-          tags={"tag, tag, tag, tag"}
-          category={"categoría"}
-          buttonText={"proyecto"}
-        >
-        </Card>
+          img={"/assets/img/courses/fondo-cursos.png"}
+          title={"Card de herramienta"}
+          description={"descripción de la herramienta"}
+        ></Card>
       </section>
     </main>
   );
