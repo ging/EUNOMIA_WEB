@@ -130,7 +130,7 @@ export const es = {
     "footer": {
         "title1":"Secciones",
         "title2": "Proyecto financiado por:",
-        "title3": "Colaboran:",
+        "title3": "Colaboran",
         "logoSub": "Redes Futuras para Centros de Datos y Empresas de Telecomunicaciones",
         "titleRight": "Departamento de Ingeniería de sistemas telemáticos",
         "titleRight2": "ETSI telecomunicación",

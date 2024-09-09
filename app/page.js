@@ -6,10 +6,10 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 // Simple components
-import { Button, ButtonVariants  } from "@/components/ui/button";
+import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons"
+import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 
 //Card
 import {
@@ -49,12 +49,12 @@ export default function Projects() {
       <Banner>
         <BannerContent>
           <BannerTitle>{t("front.title")}</BannerTitle>
-          <BannerDescription>{t("front.description")}</BannerDescription>
-          <BannerButton>  {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
-
+          <BannerDescription className="h-full">{t("front.description")}</BannerDescription>
+          <BannerButton className="mt-12">
+            {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </BannerButton>
         </BannerContent>
-        <BannerImg/>
+        <BannerImg />
       </Banner>
 
       <section className="standard_padding bg-snow">

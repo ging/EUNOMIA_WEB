@@ -10,15 +10,13 @@ const badgeVariants = cva(
       variant: {
         default:
           "border-transparent bg-primary text-white shadow",
+        bigger:
+          "h-fit px-4 py-1 text-base font-semibold border-primary border-2 bg-tranparent text-primary",
         secondary:
           "border-transparent bg-secondary text-secondary-foreground ",
         destructive:
           "border-transparent bg-destructive text-destructive-foreground shadow ",
         outline: "text-foreground border-primary bg-transparent shadow-none",
-      },
-      size: {
-        default: "h-fit px-2 py-1 text-sm font-medium",
-        lg: "h-fit px-4 py-1 text-base font-semibold border-primary border-2 bg-tranparent text-primary",
       },
     },
     defaultVariants: {
@@ -29,10 +27,10 @@ const badgeVariants = cva(
 
 function Badge({
   className,
-  variant, size,
+  variant,
   ...props
 }) {
-  return (<div className={cn(badgeVariants({ variant, size }), className)} {...props} />);
+  return (<div className={cn(badgeVariants({ variant }), className)} {...props} />);
 }
 
 export { Badge, badgeVariants }

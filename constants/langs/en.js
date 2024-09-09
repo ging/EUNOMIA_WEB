@@ -123,7 +123,7 @@ export const en = {
     "footer": {
         "title1":"Sections",
         "title2": "Project funded by:",
-        "title3": "Partners:",
+        "title3": "Partners",
         "logoSub": "Future Networks for Datacenters and Telcos",
         "titleRight": "Future Networks for Datacenters and Telcos (FuN4DaTe)  © 2024. All rights reserved.",
         "titleRight2": "",

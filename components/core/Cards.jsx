@@ -23,7 +23,7 @@ const CardVariants = cva(
         project: "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
         course: "bg-purple-50",
         publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "bg-snow border border-input shadow-sm hover:scale-105",
+        team: "p-0 bg-snow border border-input shadow-sm hover:scale-105",
         tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
       },
       direction: {
@@ -55,7 +55,7 @@ const Card = React.forwardRef(
     {
       variant, direction, className,
       title, subtitle, description, img, tags, date, category, route,
-      name, position, center, mail,
+      name, position, center, email,
       author, doi,
       buttonText,
       cardType,
@@ -66,8 +66,8 @@ const Card = React.forwardRef(
         {/* card header */}
         {( (date || category) &&
           <header className="w-full flex gap-4 justify-start">
-            <Badge size="lg">{date}</Badge>
-            <Badge size="lg">{category}</Badge>
+            <Badge variant="bigger">{date}</Badge>
+            <Badge variant="bigger">{category}</Badge>
           </header>
         )}
         {/* card image */}
@@ -102,8 +102,8 @@ const Card = React.forwardRef(
     const projectCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
-          <Badge size="lg">{date}</Badge>
-          <Badge size="lg">{category}</Badge>
+          <Badge variant="bigger">{date}</Badge>
+          <Badge variant="bigger">{category}</Badge>
         </header>
         <div className="h-full w-full flex flex-col justify-between">
           <Heading level="h3">{title}</Heading>
@@ -121,8 +121,8 @@ const Card = React.forwardRef(
     const courseCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="flex gap-4">
-          <Badge size="lg">{date}</Badge>
-          <Badge size="lg">{category}</Badge>
+          <Badge variant="bigger">{date}</Badge>
+          <Badge variant="bigger">{category}</Badge>
         </header>
         <div className="h-full w-full flex flex-col justify-between">
           <Heading level="h3">{title}</Heading>
@@ -138,8 +138,8 @@ const Card = React.forwardRef(
     const publicationCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
-          <Badge size="lg">{date}</Badge>
-          <Badge size="lg">{category}</Badge>
+          <Badge variant="bigger">{date}</Badge>
+          <Badge variant="bigger">{category}</Badge>
         </header>
         <div className="h-full w-full flex flex-col justify-between">
           <Heading level="h3"><i>{title}</i></Heading>
@@ -169,18 +169,18 @@ const Card = React.forwardRef(
 
     // TEAM - ok
     const teamCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
-        {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>)}
+      <article className={cn(CardVariants({ variant, direction, className })) + " mx-auto max-w-56 lg:max-w-full" }>
+        {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg + " w-full min-h-40"}/>)}
         {( (name || position || description || tags) &&
-          <div className="h-full w-full flex flex-col justify-between items-center">
+          <div className="p-4 h-full w-full flex flex-col justify-between items-center">
             <Heading level="h3" className={"text-inherit text-center"}>{name}</Heading>
             <Heading level="h5">{position}</Heading>
-            <Text>{mail}</Text>
+            <Text>{email}</Text>
           </div>
         )}
-        {/* {( mail &&    
+        {/* {( email &&    
         <footer>
-          <a href={mail}>{mail}</a>
+          <a href={email}>{email}</a>
         </footer>)} */}
       </article>
     );

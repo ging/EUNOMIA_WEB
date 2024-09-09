@@ -64,7 +64,7 @@ export default function Team(props) {
             name={name}
             position={position}
             center={center}
-            mail={mail}
+            email={email}
           ></Card>
         );
       }
