@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-// Simple components
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
+import Divider from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 
@@ -49,7 +49,9 @@ export default function Projects() {
       <Banner>
         <BannerContent>
           <BannerTitle>{t("front.title")}</BannerTitle>
-          <BannerDescription className="h-full">{t("front.description")}</BannerDescription>
+          <BannerDescription className="h-full">
+            {t("front.description")}
+          </BannerDescription>
           <BannerButton className="mt-12">
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </BannerButton>
@@ -60,14 +62,15 @@ export default function Projects() {
       <section className="standard_padding bg-snow">
         <Heading level="h2">{t("front.section1Title")}</Heading>
         <Text type="p"> {t("front.section1Description")}</Text>
-        <Heading level="h4" className="mb-8">
+        <Divider size="lg" />
+        <Heading level="h4" className="mb-6">
           {t("front.section1Subtitle")}
         </Heading>
         {/* Cards con iconos */}
-        <div className="flex flex-col md:grid md:grid-cols-3 gap-6">
+        <div className="flex flex-col sm:grid md:grid-cols-3 gap-6">
           <Card
             cardType="normal"
-            className="text-center content-center bg-white p-10"
+            className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 flex justify-center items-center">
               <svg
@@ -86,7 +89,7 @@ export default function Projects() {
           </Card>
           <Card
             cardType="normal"
-            className="text-center content-center bg-white p-10"
+            className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 flex justify-center items-center ">
               <svg
@@ -106,7 +109,7 @@ export default function Projects() {
           </Card>
           <Card
             cardType="normal"
-            className="text-center content-center bg-white p-10"
+            className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 content-center flex justify-center items-center">
               <svg
