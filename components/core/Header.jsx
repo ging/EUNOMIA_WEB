@@ -18,6 +18,7 @@ export default function Header(props) {
  
   // classes
   const headerClasses = clsx(
+    "h-fit",
     "px-8 py-4 sticky -top-[1px] w-full",
     "flex justify-between items-center",
     "bg-primary text-white",
@@ -58,7 +59,7 @@ export default function Header(props) {
   return (
     <header className={headerClasses + "z-50"} id="header_home"> {/* route={routes.route} ?????*/}
       <a href="/">
-        <div className="max-h-10 flex">
+        <div className="h-10 flex">
           <img
             className="object-contain"
             src="eunomia_logo_light.svg"

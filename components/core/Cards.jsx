@@ -19,7 +19,7 @@ const CardVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary/25 shadow hover:bg-primary/40",
+        default: "bg-white shadow hover:bg-primary/40",
         project: "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
         course: "bg-purple-50",
         publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
@@ -77,10 +77,10 @@ const Card = React.forwardRef(
         {/* card body */}
         {( (title || subtitle || description || tags) &&
           <div className="h-full w-full flex flex-col justify-between">
-            <Heading level="h3">{title}</Heading>
-            <Heading level="h5">{subtitle}</Heading>
-            <Text>{description}</Text>
-            <div className="tagsContainer h-fit min-h-12 flex flex-wrap gap-2">{renderTags(tags)}</div>
+            {title && (<Heading level="h3">{title}</Heading>)}
+            {subtitle && (<Heading level="h5">{subtitle}</Heading>)}
+            {description && (<Text>{description}</Text>)}
+            {tags && (<div className="tagsContainer h-fit flex flex-wrap gap-2">{renderTags(tags)}</div>)}
           </div>
         )}
         {/* card footer 
@@ -169,7 +169,7 @@ const Card = React.forwardRef(
 
     // TEAM - ok
     const teamCard = (
-      <article className={cn(CardVariants({ variant, direction, className })) + " mx-auto max-w-56 lg:max-w-full" }>
+      <article className={cn(CardVariants({ variant, direction, className })) + " mx-auto w-60" }>
         {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg + " w-full min-h-40"}/>)}
         {( (name || position || description || tags) &&
           <div className="p-4 h-full w-full flex flex-col justify-between items-center">
