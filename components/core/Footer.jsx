@@ -15,7 +15,7 @@ export default function Footer(props) {
 
   const projectLogoContainerClasses = clsx(
     "flex flex-col gap-4 items-start justify-start sm:justify-center",
-    "w-2/3 sm:w-2/3 md:w-1/3 ",
+    "w-3/4 sm:w-2/3 md:w-1/3 ",
     "mr-2 sm:mr-3 md:mr-4 xl:mr-5 mb-6 sm:mb-0",
   );
 
@@ -24,7 +24,7 @@ export default function Footer(props) {
   );
 
   const imgClasses = clsx(
-   "max-w-[200px] md:max-w-[140px] lg:max-w-[180px] img-contain",
+   "max-w-[180px] md:max-w-[140px] lg:max-w-[180px] img-contain",
   );
 
   return (
@@ -42,7 +42,7 @@ export default function Footer(props) {
         </div> */}
       <div className={projectLogoContainerClasses}>
         <img
-          className="w-full sm:w-2/3 md:w-3/4 lg:w-4/5 xl:3/4"
+          className="w-fit max-h-20 sm:w-2/3 md:w-3/4 lg:w-4/5 xl:3/4"
               // alternativa para que el texto de abajo no se mueva... pero saca margenes al logo className="flex justify-start w-[350px] h-[100px] sm:w-[220px] sm:h-[40px] lg:w-4/5 xl:3/4"
           src="assets/logos/eunomia_logo_lg_light.svg"
           alt="logo Eunomia"
@@ -54,7 +54,7 @@ export default function Footer(props) {
       </div>
      
         <nav
-          className="w-2/5 sm:w-2/6 md:w-1/3 lg:w-1/4 inline-block text-white"
+          className="w-1/5 mr-8 sm:mr-0 sm:w-2/6 md:w-1/3 lg:w-1/4 inline-block text-white"
         >
           <div className=" sections_title smallcaps text-left mb-2 text-[14px] font-bold">
             {t("footer.title1")}
@@ -77,7 +77,7 @@ export default function Footer(props) {
             ))}
           </ul>
         </nav>
-        <div className="text-white w-1/2 sm:w-3/5 md:w-2/5 ">
+        <div className="text-white w-3/5 sm:w-3/5 md:w-2/5 ">
           <div className="sections_title smallcaps text-left mb-2 text-[14px] font-bold">
             {t("footer.title3")}
           </div>

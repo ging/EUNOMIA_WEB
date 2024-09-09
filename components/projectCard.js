@@ -2,34 +2,36 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { myProjectCards } from "@/constants/projectsCards";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { projects } from "@/constants/projects";
 import { useTranslation } from 'react-i18next';
+import { Card , CardVariants } from "@/components/core/Cards";
 
 export default function projectCards(props) {
-  const [projectCards, setProjectCards] = useState(myProjectCards);
+  const [projectCards, setProjectCards] = useState(projects);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const { t } = useTranslation();
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     if (category === "all") {
-      setProjectCards(myProjectCards);
+      setProjectCards(projects); // Si la categoría seleccionada es "all", se restablecen todas las tarjetas (myProjectCards
     } else {
-      const filteredCards = myProjectCards.filter(
-        (card) => card.category === category
+      const filteredCards = projects.filter(
+        (card) => card.category === category // Si no, se filtran las tarjetas de acuerdo a la categoría seleccionada.
+      // se accede a la categoría de la card. Si esta es igual que la categoría seleccionada, se añade al array nuevo de "filteredCards"
       );
       setProjectCards(filteredCards);
+      
     }
   };
+  console.log(projects)
 
 
   return (
     <div>
       <div className="filter_options flex">
-        <button className={`button_filter  ${selectedCategory === "all" ? "selected" : ""}`} onClick={() => handleCategoryChange("all")}>{t('projects.filterTitle1')}</button>
-        <button className={`button_filter  ${selectedCategory === "ind" ? "selected" : ""} `} onClick={() => handleCategoryChange("ind")}>
+        <button className={`button_filter ${selectedCategory === "all" ? "selected" : ""}`} onClick={() => handleCategoryChange("all")}>{t('projects.filterTitle1')}</button>
+        <button className={`button_filter ${selectedCategory === "ind" ? "selected" : ""} `} onClick={() => handleCategoryChange("ind")}>
           {t('projects.filterTitle2')}
         </button>
         <button className={`button_filter ${selectedCategory === "erg" ? "selected" : ""}`} onClick={() => handleCategoryChange("erg")}>
@@ -40,28 +42,20 @@ export default function projectCards(props) {
       <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
         {projectCards.map(
           ({ date, route, title, subtitle, tags, category }, index) => (
-            <div key={index} className="project_card mb-4 sm:mb-0 p-4 md:p-6">
-              <div className="year_and_cta">
-                <span><p className="date">{date}</p> </span>
-                <a href={route} target="_blank">
-                  {" "}
-                  <p> {t('projects.button')}</p>
-                  {/* <FontAwesomeIcon icon={faUpRightFromSquare} /> */}
-                </a>
-              </div>
-              <div className="project_info">
-                <h4 className="project_title">{title}</h4>
-                <h5 className="project_subtitle">{subtitle}</h5>
-              </div>
-              <div className="project_tags ">
-                {tags.split(',').map((tag, tagIndex) => (
-                  <small key={tagIndex} className="project_tag">  {/*text-xs md:text-[0.85rem]*/}
-                   {tag.trim()}
-                  </small>
-                ))}
-              </div>
-            </div>
-          )
+            <Card
+            key={index}
+          cardType={"project"}
+          className={CardVariants({
+            variant: "publication",
+          })}
+          date={date}
+          category={category}
+          title={title}
+          subtitle={subtitle}
+          tags={tags}
+          route={route}
+        ></Card>         
+          )    
         )}
       </div>
     </div>

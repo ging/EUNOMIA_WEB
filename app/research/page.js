@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Filters from "@/components/ResearchFilter";
+import ProjectCard from "@/components/projectCard";
 import Link from "next/link";
 import { mypublications } from "@/constants/publications";
+
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Button } from "@/components/ui/button";
@@ -25,6 +27,7 @@ export default function Research() {
 
   const { papers, search, year, type, papersToShow } = state;
 
+  console.log(ProjectCard)
   let papersFiltered = papers.filter((paper) => {
     return (
       (!search ||
@@ -85,14 +88,15 @@ export default function Research() {
         </p>
       </div>
       <main  className="research">
+        <ProjectCard/>
         <Filters
-          search={search}
-          year={year}
-          type={type}
-          papers={papers}
-          changeSearch={(search) => setState({ ...state, search: search })}
-          changeYear={(year) => setState({ ...state, year: year })}
-          changeType={(type) => setState({ ...state, type: type })}
+          search={search} // filtro 1: busqueda de texto
+          year={year} // filtro 2: busqueda por año
+          type={type} // filtro 3: busqueda por tipo de publicacion
+          papers={papers} // lista de papers
+          changeSearch={(search) => setState({ ...state, search: search })} // función para cambiar estado de texto de busqueda
+          changeYear={(year) => setState({ ...state, year: year })} // función para cambiar estado de input del año
+          changeType={(type) => setState({ ...state, type: type })} // función para cambiar estado de input del tipo de publicacion
           results={
             papersFiltered instanceof Array ? papersFiltered.length : 0
           }

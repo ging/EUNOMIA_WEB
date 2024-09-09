@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { projects } from "@/constants/projects";
 
 // Components
 import { Button, ButtonVariants } from "@/components/ui/button";
@@ -11,6 +10,10 @@ import Text from "@/components/ui/Text";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
+import TabsCategoryFilter from "@/components/TabsCategoryFilter";
+
+// Array de datos (cards)
+import { projects } from "@/constants/projects";
 
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
@@ -19,6 +22,12 @@ export default function DesignSystem(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Funcion y array de categorias de Tabs
+  const [filteredCards, setFilteredCards] = useState(projects);
+
+  const categories = ["all", "ind", "erg", "other"]; // Tus categorías personalizadas
+
 
   return (
     <main className={"page_" + currentLang + " standard_margin"}>
@@ -225,10 +234,10 @@ export default function DesignSystem(props) {
                   variant: "",
                 })}
                 date={date}
-                title={t(title)}
-                subtitle={t(subtitle)}
-                tags={t(tags)}
-                category={t(category)}
+                title={title}
+                subtitle={subtitle}
+                tags={tags}
+                category={category}
                 buttonText={"texto del botón"}
               ></Card>
             );
@@ -309,6 +318,38 @@ export default function DesignSystem(props) {
           title={"Card de herramienta"}
           description={"descripción de la herramienta"}
         ></Card>
+      </section>
+      <section>
+   
+      <Heading level="h3" className={"mt-12"}>Tabs </Heading>
+
+      {/* Pasa las categorías y las tarjetas al componente Tabs */}
+      <TabsCategoryFilter 
+        categories={categories} 
+        cards={projects} 
+        onFilter={setFilteredCards} 
+      /> 
+
+<div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
+        {filteredCards.map(
+          ({ date, route, title, subtitle, tags, category }, index) => (
+            <Card
+            key={index}
+          cardType={"project"}
+          className={CardVariants({
+            variant: "publication",
+          })}
+          date={date}
+          category={category}
+          title={title}
+          subtitle={subtitle}
+          tags={tags}
+          route={route}
+        ></Card>         
+          )    
+        )}
+      </div> 
+
       </section>
     </main>
   );

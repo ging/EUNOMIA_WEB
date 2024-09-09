@@ -34,17 +34,18 @@ module.exports = {
         black: "#0D0D1C",
         primary: { // azul oscuro
           DEFAULT: "#24234C",
-          // 900: "#3302BF",
-          // 800: "#4507C9",
+         //900: "#3302BF",
+          800: "#4507C9",
           // 700: "#4F1BE4",
-          // 600: "#5441FF",
+          600: "#5441FF",
           // 500: "#6E76FF",
-          // 400: "#97A7FF",
-          // 300: "#BECAFF",
-          // 200: "#DBE2FF",
+          400: "#97A7FF",
+          300: "#b2bef7",
+          200: "#DBE2FF",
           // 100: "#EBF0FF",
           // 50: "#F5F8FF",
-          foreground: "#FFFFFF"
+          foreground: "#FFFFFF",
+         
         },
         secondary: { // azul claro
           DEFAULT: "#9CD7F5",
@@ -66,7 +67,11 @@ module.exports = {
           // 200: "#FFBD1B",
           // 100: "#FFE685",
         },
-        
+        background: {
+          DEFAULT:"#323238",
+          400: "525259",
+          300: "74747a"
+       }
       },
     },
     screens: {
