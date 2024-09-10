@@ -26,10 +26,10 @@ const Text = ({ type = "p", children, className }) => {
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "font-body ",
+    "font-body",
     {/*"text-balance"*/},
     {
-      "text-base max-w-[66ch]": type === "p",
+      "text-base max-w-[66ch] text-balance": type === "p",
       "text-sm": type === "small",
     },
     className

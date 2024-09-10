@@ -49,7 +49,7 @@ export default function Projects() {
       <Banner>
         <BannerContent>
           <BannerTitle>{t("front.title")}</BannerTitle>
-          <BannerDescription className="h-full">
+          <BannerDescription className="h-full text-balance">
             {t("front.description")}
           </BannerDescription>
           <BannerButton className="mt-12">
