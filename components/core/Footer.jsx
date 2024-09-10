@@ -12,6 +12,8 @@ import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 export default function Footer(props) {
   const { t } = useTranslation();
 
+  console.log(routes.length)
+
   const projectLogoContainerClasses = clsx(
     "flex flex-col gap-4 items-start justify-start sm:justify-center",
   );
@@ -54,10 +56,11 @@ export default function Footer(props) {
       </div>
 
       <nav className="w-2/5 sm:w-2/6 md:w-1/3 lg:w-1/4">
-        <div className={sectionTitleClasses}>
+        <div className={sectionTitleClasses}> 
           {t("footer.title1")}
         </div>
-        <ul className="columns-1 sm:columns-2 gap-x-3 inline-block">
+        <ul className={`"columns-1 gap-x-3 inline-block" 
+          ${routes.length <= 3 ? "sm:columns-1" : "sm:columns-2"}`}>
           {routes.map((route, index) => (
             <li
               key={index}
