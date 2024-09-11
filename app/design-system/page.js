@@ -28,7 +28,6 @@ export default function DesignSystem(props) {
 
   const categories = ["all", "ind", "erg", "other"]; // Tus categorías personalizadas
 
-
   return (
     <main className={"page_" + currentLang + " standard_margin"}>
       <Heading level="h1">Sistema de diseño</Heading>
@@ -36,7 +35,7 @@ export default function DesignSystem(props) {
 
       {/* Variant */}
       <Heading level="h5">Variante</Heading>
-      <div className="flex gap-4 pb-8">
+      <div className="flex flex-wrap gap-4 pb-8">
         <Button
           href="#"
           className={ButtonVariants({
@@ -96,7 +95,7 @@ export default function DesignSystem(props) {
 
       {/* Size */}
       <Heading level="h5">Tamaño</Heading>
-      <div className="flex gap-4 pb-8">
+      <div className="flex flex-wrap gap-4 pb-8">
         <Button
           href="#"
           className={ButtonVariants({
@@ -134,7 +133,7 @@ export default function DesignSystem(props) {
 
       {/* RADIUS */}
       <Heading level="h5">Radius</Heading>
-      <div className="flex gap-4 pb-8">
+      <div className="flex flex-wrap gap-4 pb-8">
         <Button
           href="#"
           className={ButtonVariants({
@@ -181,7 +180,7 @@ export default function DesignSystem(props) {
         </Button>
       </div>
       <Heading level="h3">Badges</Heading>
-      <div className="flex gap-4 pb-8">
+      <div className="flex flex-wrap gap-4 pb-8">
         <Badge
           href="#"
           className={badgeVariants({
@@ -211,7 +210,7 @@ export default function DesignSystem(props) {
         </Badge>
       </div>
       <Heading level="h3">Cards</Heading>
-      <section className="cards grid grid-cols-2 gap-4">
+      <section className="cards grid md:grid-cols-2 gap-4">
         {projects.map(
           ({
             id,
@@ -224,7 +223,8 @@ export default function DesignSystem(props) {
             name,
             position,
             center,
-            author, doi,
+            author,
+            doi,
             mail,
           }) => {
             return (
@@ -248,18 +248,26 @@ export default function DesignSystem(props) {
       <Heading level="h3" className={"mt-8"}>
         Cards predefinidas
       </Heading>
-      <section className="cards grid grid-cols-2 gap-4 mt-4">
+      <section className="cards grid md:grid-cols-2 gap-4 mt-4">
         <Card
           cardType={"project"}
           className={CardVariants({
             variant: "project",
           })}
           date={"fecha"}
-          title={"Utilización de escape rooms y videojuegos educativos en la Educación Universitaria"}
+          title={
+            "Utilización de escape rooms y videojuegos educativos en la Educación Universitaria"
+          }
           subtitle={"E.T.S DE ING. DE SISTEMAS INFORMÁTICOS"}
-          tags={"Aprendizaje Activo, Aprendizaje Autónomo, Investigación educativa, Aula Invertida, Gamificación"}
-          description={""}
-          route={"https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=356"}
+          tags={
+            "Aprendizaje Activo, Aprendizaje Autónomo, Investigación educativa, Aula Invertida, Gamificación"
+          }
+          description={
+            "Las tecnologías de React y React Native son una manera novedosa y muy potente de desarrollar aplicaciones de cliente, tanto aplicaciones web como aplicaciones nativas Android e iOS. Son una de las tecnologías más demandadas en el mercado laboral hoy en día, y este curso te permitirá dominarlas y hacer tus propias aplicaciones de forma autónoma."
+          }
+          route={
+            "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=356"
+          }
           category={"categoría"}
           buttonText={""}
         ></Card>
@@ -271,12 +279,12 @@ export default function DesignSystem(props) {
           })}
           date={"2023"}
           title={"Desarrollo de aplicaciones con React y React Native"}
-          subtitle={
+          subtitle={"2nd Edition"}
+          description={
             "Las tecnologías de React y React Native son una manera novedosa y muy potente de desarrollar aplicaciones de cliente, tanto aplicaciones web como aplicaciones nativas Android e iOS. Son una de las tecnologías más demandadas en el mercado laboral hoy en día, y este curso te permitirá dominarlas y hacer tus propias aplicaciones de forma autónoma."
           }
-          description={"2nd Edition"}
           tags={"React, Desarrollo web, Front-End"}
-          category={"categoría"}
+          category={"MOOC"}
           buttonText={"curso"}
         ></Card>
 
@@ -320,36 +328,40 @@ export default function DesignSystem(props) {
         ></Card>
       </section>
       <section>
-   
-      <Heading level="h3" className={"mt-12"}>Tabs </Heading>
+        <Heading level="h3" className={"mt-12"}>
+          Tabs{" "}
+        </Heading>
 
-      {/* Pasa las categorías y las tarjetas al componente Tabs */}
-      <TabsCategoryFilter 
-        categories={categories} 
-        cards={projects} 
-        onFilter={setFilteredCards} 
-      /> 
+        {/* Pasa las categorías y las tarjetas al componente Tabs */}
+        <TabsCategoryFilter
+          categories={categories}
+          cards={projects}
+          onFilter={setFilteredCards}
+        />
 
-<div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
-        {filteredCards.map(
-          ({ date, route, title, subtitle, tags, category }, index) => (
-            <Card
-            key={index}
-          cardType={"project"}
-          className={CardVariants({
-            variant: "publication",
-          })}
-          date={date}
-          category={category}
-          title={title}
-          subtitle={subtitle}
-          tags={tags}
-          route={route}
-        ></Card>         
-          )    
-        )}
-      </div> 
-
+        <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
+          {filteredCards.map(
+            (
+              { date, route, title, subtitle, description, tags, category },
+              index
+            ) => (
+              <Card
+                key={index}
+                cardType={"project"}
+                className={CardVariants({
+                  variant: "publication",
+                })}
+                date={date}
+                category={category}
+                title={title}
+                subtitle={subtitle}
+                description={description}
+                tags={tags}
+                route={route}
+              ></Card>
+            )
+          )}
+        </div>
       </section>
     </main>
   );

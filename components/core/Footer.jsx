@@ -31,7 +31,7 @@ export default function Footer(props) {
   );
 
   return (
-    <footer className="padding_footer flex flex-wrap justify-between md:flex-nowrap md:justify-center gap-4 sm:gap-8 lg:gap-12 items-start bg-primary text-white">
+    <footer className="padding_footer flex flex-wrap justify-between md:flex-nowrap gap-4 sm:gap-8 lg:gap-12 items-start bg-primary text-white">
       {/* <div className="copyright">
             {" "}
             <a

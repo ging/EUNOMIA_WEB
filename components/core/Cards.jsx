@@ -11,11 +11,11 @@ import Heading from "../ui/Heading";
 import { Badge } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
-import { FaceIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { FaceIcon, ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const CardVariants = cva(
-  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-105 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-105 transition-all overflow-hidden",
   {
     variants: {
       variant: {
@@ -38,6 +38,15 @@ const CardVariants = cva(
   }
 );
 
+const cardFooterClasses = cn(
+  "pt-4 w-full flex flex-wrap flex-row-reverse gap-2 xs:gap-4 justify-center xs:justify-start"
+)
+const cardBodyClasses = cn(
+  "h-full w-full flex flex-col justify-start"
+)
+const tagContainerClasses = cn(
+  "mt-6 w-full flex flex-wrap gap-2 justify-start"
+)
 const classesImg = cn(
   "bg-gray-200 min-h-16 min-w-16 object-cover"
 );
@@ -76,18 +85,18 @@ const Card = React.forwardRef(
         )}
         {/* card body */}
         {( (title || subtitle || description || tags) &&
-          <div className="h-full w-full flex flex-col justify-between">
+          <div className={cardBodyClasses}>
             {title && (<Heading level="h3">{title}</Heading>)}
             {subtitle && (<Heading level="h5">{subtitle}</Heading>)}
             {description && (<Text>{description}</Text>)}
-            {tags && (<div className="tagsContainer h-fit flex flex-wrap gap-2">{renderTags(tags)}</div>)}
+            {tags && (<div className={tagContainerClasses}>{renderTags(tags)}</div>)}
           </div>
         )}
         {/* card footer 
         hay que ver cómo hacer que los botones pueda haber dos botones con textos diferentes 
         */}
         {( buttonText &&
-          <footer className="w-full flex flex-row-reverse gap-4">
+          <footer className={cardFooterClasses}>
             <Button variant="" size="" className="">
               <FaceIcon />
               {buttonText}
@@ -105,11 +114,11 @@ const Card = React.forwardRef(
           <Badge variant="bigger">{date}</Badge>
           <Badge variant="bigger">{category}</Badge>
         </header>
-        <div className="h-full w-full flex flex-col justify-between">
+        <div className={cardBodyClasses}>
           <Heading level="h3">{title}</Heading>
           <Heading level="h5">{subtitle}</Heading>
           {(description && <Text>{description}</Text>)}
-          <div className="h-fit min-h-12 flex flex-wrap gap-2">{renderTags(tags)}</div>
+          <div className={tagContainerClasses}>{renderTags(tags)}</div>
         </div>
         <footer>
           <Button href={route}>Ver proyecto</Button> {/**revisar el href que no funciona el link */}
@@ -120,17 +129,20 @@ const Card = React.forwardRef(
     // COURSE
     const courseCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
-        <header className="flex gap-4">
+        <header className="flex w-full gap-4 items-center">
           <Badge variant="bigger">{date}</Badge>
           <Badge variant="bigger">{category}</Badge>
+          <span className="spacer w-full"/>
+          <Button href={route} variant="ghost" size="lg">
+            Ir al curso <ExternalLinkIcon className="w-5 h-5"/>
+          </Button>
         </header>
-        <div className="h-full w-full flex flex-col justify-between">
+        <div className={cardBodyClasses}>
           <Heading level="h3">{title}</Heading>
           <Heading level="h5">{subtitle}</Heading>
           <Text>{description}</Text>
-          <div className="h-fit min-h-12 flex flex-wrap gap-2">{renderTags(tags)}</div>
+          <div className={tagContainerClasses}>{renderTags(tags)}</div>
         </div>
-        <footer></footer>
       </article>
     );
 
@@ -141,18 +153,18 @@ const Card = React.forwardRef(
           <Badge variant="bigger">{date}</Badge>
           <Badge variant="bigger">{category}</Badge>
         </header>
-        <div className="h-full w-full flex flex-col justify-between">
+        <div className={cardBodyClasses}>
           <Heading level="h3"><i>{title}</i></Heading>
           <Heading level="h5">{author}</Heading>
         </div>
-        <footer className="w-full flex gap-4 justify-end">
+        <footer className={cardFooterClasses}>
           <Button variant="secondary">
             leer publicación
             <ArrowRightIcon />
           </Button>
 
           {doi ? (
-            <Button asChild variant="secondary" size="md" radius="rounded_md">
+            <Button asChild variant="secondary" radius="rounded_md">
               <Link
                 rel="noopener noreferrer"
                 target="_blank"
@@ -189,11 +201,11 @@ const Card = React.forwardRef(
     const toolCard = (
       <article className={cn(CardVariants({ variant, direction, className}))}>
         {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>)}
-        <div className="p-4 h-full w-full flex flex-col justify-between">
+        <div className={cardBodyClasses + " px-4 pt-1"}>
           <Heading level="h3">{title}</Heading>
           <Text>{description}</Text>
         </div>
-        <footer className="p-4 w-full flex gap-4 justify-center">
+        <footer className={cardFooterClasses + " p-4"}>
           <Button variant="secondary">
             GitHub
           </Button>
