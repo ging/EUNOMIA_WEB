@@ -1,6 +1,6 @@
 export const mycourses = [	
 	{	"date": "2023",
-		"logo": "/assets/img/courses/fondo-cursos.png",
+		"img": "/assets/img/courses/fondo-cursos.png",
 		"edition": "2",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=356",
 		"title": "Bases de Datos Relacionales y No Relacionales: conceptos, diseño y aplicación a entornos web",// has description
@@ -8,7 +8,7 @@ export const mycourses = [
     },
     {
 		"date": "2023",
-		"logo": "/assets/img/courses/fondo-cursos.png",
+		"img": "/assets/img/courses/fondo-cursos.png",
 		"edition": "2", 
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=378",
 		"title": "Desarrollo de aplicaciones con React y React Native",// has description
@@ -16,7 +16,7 @@ export const mycourses = [
     },
     {
 		"date": "2023",
-		"logo": "/assets/img/courses/fondo-cursos.png",
+		"img": "/assets/img/courses/fondo-cursos.png",
 		"edition": "3",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=361",
 		"title": "Desarrollo de un Proyecto Fullstack con JavaScript", // has description
@@ -24,7 +24,7 @@ export const mycourses = [
 	},
     {
 		"date": "2021",
-		"logo": "/assets/img/courses/fondo-cursos.png",
+		"img": "/assets/img/courses/fondo-cursos.png",
 		"edition": "3",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=194",
 		"title": "Desarrollo Backend con Node.js, Express y BBDDs", // has description
@@ -32,7 +32,7 @@ export const mycourses = [
 	},
 	{
 		"date": "2021",
-		"logo": "/assets/img/courses/fondo-cursos.png",
+		"img": "/assets/img/courses/fondo-cursos.png",
 		"edition": "11",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=256",
 		"title": "Desarrollo Frontend con HTML, CSS y JavaScript", // has description (2)
@@ -41,7 +41,7 @@ export const mycourses = [
 	},
 	{
 		"date": "2021",
-		"logo": "/assets/img/courses/fondo-cursos-png",
+		"img": "/assets/img/courses/fondo-cursos-png",
 		"edition": "4",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=267",
 		"title": "Gestión de proyectos software con Git y GitHub", // has description
@@ -49,18 +49,18 @@ export const mycourses = [
 	},
     {
 		"date": "2021",
-		"logo": "/assets/img/courses/fondo-cursos.png",
+		"img": "/assets/img/courses/fondo-cursos.png",
 		"edition": "5",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=264",
-		"title": "Siete habilidades clave en la era digital", // has description -> https://innovacioneducativa.upm.es/sites/default/files/moocs/catalogo-2021-enero-con-portada.pdf
+		"title": "Siete habilidades clave en la era digital", // has description -> https://innovacioneducativa.upm.es/sites/default/files/moocs/cataimg-2021-enero-con-portada.pdf
 		"description": "Estamos viviendo una revolución digital en la que los cambios se producen a un ritmo frenético. Las profesiones del mañana serán nuevas y no se conocen aún. Por ello es importante formarse en ciertas habilidades transversales que, independientemente del tipo del tipo de profesión que se desarrolle ahora o se vaya a desarrollar en el futuro, son esenciales para aprovechar las oportunidades del mundo digital. ",
 	},
     {
 		"date": "2018",
-		"logo": "/assets/img/courses/fondo-cursos-png",
+		"img": "/assets/img/courses/fondo-cursos-png",
 		"edition": "2",
 		"route": "https://innovacioneducativa.upm.es/mooc/informacion-mooc?idmooc=51",
-		"title": "Introducción a LINUX como entorno de desarrollo de sistemas software", // has description -> https://innovacioneducativa.upm.es/sites/default/files/moocs/catalogo-2021-enero-con-portada.pdf
+		"title": "Introducción a LINUX como entorno de desarrollo de sistemas software", // has description -> https://innovacioneducativa.upm.es/sites/default/files/moocs/cataimg-2021-enero-con-portada.pdf
 		"description": "El objetivo del curso es proporcionar a los estudiantes los conocimientos teóricos y prácticos necesarios para empezar a utilizar el sistema operativo LINUX/UNIX, junto con un conjunto básico de herramientas y servicios en red, como entorno de soporte para el desarrollo de aplicaciones del software.",
 	},
 ];

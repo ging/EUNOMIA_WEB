@@ -6,14 +6,18 @@ import { useTranslation } from "react-i18next";
 // Components
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
+import RecentPublications from "@/components/RecentPublications";
 import Text from "@/components/ui/Text";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
 import TabsCategoryFilter from "@/components/TabsCategoryFilter";
+import { FaceIcon } from "@radix-ui/react-icons";
 
 // Array de datos (cards)
 import { projects } from "@/constants/projects";
+import { mypublications } from "@/constants/publications";
+
 
 export default function DesignSystem(props) {
   const { t, i18n } = useTranslation();
@@ -31,8 +35,8 @@ export default function DesignSystem(props) {
   return (
     <main className={"page_" + currentLang + " standard_margin"}>
       <Heading level="h1">Sistema de diseño</Heading>
-      <Heading level="h3">Botones</Heading>
 
+      <Heading level="h3">Botones</Heading>
       {/* Variant */}
       <Heading level="h5">Variante</Heading>
       <div className="flex flex-wrap gap-4 pb-8">
@@ -105,7 +109,7 @@ export default function DesignSystem(props) {
           })}
           {...props}
         >
-          Botón lg
+          Botón lg <FaceIcon />
         </Button>
         <Button
           href="#"
@@ -116,18 +120,18 @@ export default function DesignSystem(props) {
           })}
           {...props}
         >
-          Botón Default
+          Botón Default <FaceIcon />
         </Button>
         <Button
           href="#"
           className={ButtonVariants({
             variant: "default",
-            size: "sm",
+            size: "icon",
             radius: "rounded_sm",
           })}
           {...props}
         >
-          Botón sm
+          Botón sm <FaceIcon />
         </Button>
       </div>
 
@@ -235,7 +239,7 @@ export default function DesignSystem(props) {
                 })}
                 date={date}
                 title={title}
-                subtitle={subtitle}
+                subtitle={center}
                 tags={tags}
                 category={category}
                 buttonText={"texto del botón"}
@@ -303,7 +307,7 @@ export default function DesignSystem(props) {
           tags={"tag, tag, tag, tag"}
           category={"article-journal"}
           doi={"https://doi.org/10.1016/j.entcom.2023.100588"}
-          buttonText={"leer publicación"}
+          // buttonText={"leer publicación"}
         ></Card>
 
         <Card
@@ -325,6 +329,8 @@ export default function DesignSystem(props) {
           img={"/assets/img/courses/fondo-cursos.png"}
           title={"Card de herramienta"}
           description={"descripción de la herramienta"}
+          route={"https://github.com/agordillo/RESCORM"}
+          github={"https://github.com/agordillo/RESCORM"}
         ></Card>
       </section>
       <section>
@@ -342,7 +348,7 @@ export default function DesignSystem(props) {
         <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
           {filteredCards.map(
             (
-              { date, route, title, subtitle, description, tags, category },
+              { date, route, title, center, description, tags, category },
               index
             ) => (
               <Card
@@ -354,7 +360,7 @@ export default function DesignSystem(props) {
                 date={date}
                 category={category}
                 title={title}
-                subtitle={subtitle}
+                subtitle={center}
                 description={description}
                 tags={tags}
                 route={route}
@@ -363,6 +369,9 @@ export default function DesignSystem(props) {
           )}
         </div>
       </section>
+      
+      <Heading level="h3">Recent publications</Heading>
+      <RecentPublications/>
     </main>
   );
 }

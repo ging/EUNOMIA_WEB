@@ -1,8 +1,8 @@
 export const mypublications = [
   {
-    date: [2024],
+    date: [2024, 1],
     doi: "https://doi.org/10.1109/MIC.2023.3333199",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Enrique Barra, Sonsoles López-Pernas, Aldo Gordillo, Alejandro Pozo Huertas, Jose Muñoz, and Javier Conde",
     title:
@@ -18,7 +18,7 @@ export const mypublications = [
   {
     date: [2023],
     doi: "https://doi.org/10.1016/j.entcom.2023.100588",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Daniel López-Fernández, Aldo Gordillo, Raúl Lara-Cabrera, and Javier Alegre",
     title:
@@ -34,11 +34,12 @@ export const mypublications = [
   {
     date: [2023],
     doi: "https://doi.org/10.1109/TE.2023.3241099",
-    type: "article-journal",
-    author:
-      "Daniel López-Fernández, Aldo Gordillo, Jennifer Pérez, and Edmundo Tovar",
+    category: "article-journal",
+
     title:
       "Learning and Motivational Impact of Game-Based Learning: Comparing Face-to-Face and Online Formats on Computer Science Education",
+      author:
+      "Daniel López-Fernández, Aldo Gordillo, Jennifer Pérez, and Edmundo Tovar",
     journal: "IEEE Transactions on Education",
     year: "2023",
     month: "undefined",
@@ -50,7 +51,7 @@ export const mypublications = [
   {
     date: [2023],
     doi: "https://doi.org/10.1109/MCG.2023.3244036",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Daniel López-Fernández, Jesús Mayor, Marta García-Pérez, and Aldo Gordillo",
     title:
@@ -66,7 +67,7 @@ export const mypublications = [
   {
     date: [2023],
     doi: "https://doi.org/10.1109/TG.2022.3213127",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Daniel López-Fernández, Jesus Mayor, Jennifer Pérez, and Aldo Gordillo",
     title:
@@ -82,7 +83,7 @@ export const mypublications = [
   {
     date: [2023],
     doi: "https://doi.org/10.1109/MS.2023.3275035",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sonsoles López-Pernas, Enrique Barra, Aldo Gordillo, Álvaro Alonso, and Juan Quemada",
     title:
@@ -98,7 +99,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1109/ACCESS.2022.3157609",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Mikko Apiola, Mohammed Saqr, Sonsoles López-Pernas, and Matti Tedre",
     title:
@@ -114,7 +115,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1109/TE.2022.3142688",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Daniel López-Fernández, and Edmundo Tovar",
     title:
       "Comparing the Effectiveness of Video-Based Learning and Game-Based Learning Using Teacher-Authored Video Games for Online Software Engineering Education",
@@ -129,7 +130,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1109/MCG.2022.3189557",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sonsoles López-Pernas, Andres Munoz-Arcentales, Carlos Aparicio, Enrique Barra, Aldo Gordillo, Joaquín Salvachúa, and Juan Quemada",
     title:
@@ -145,7 +146,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1080/10494820.2022.2041045",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sonsoles López-Pernas, Mohammed Saqr, Aldo Gordillo, and Enrique Barra",
     title: "A learning analytics perspective on educational escape rooms",
@@ -160,7 +161,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1016/j.edurev.2022.100437",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Mohammed Saqr, Ramy Elmoazen, Matti Tedre, Sonsoles López-Pernas, and Laura Hirsto",
     title:
@@ -176,7 +177,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.18608/jla.2022.7415",
-    type: "article-journal",
+    category: "article-journal",
     author: "Mohammed Saqr, and Sonsoles López-Pernas",
     title:
       "The curious case of centrality measures: A large-scale empirical investigation",
@@ -191,7 +192,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1109/access.2022.3159674",
-    type: "article-journal",
+    category: "article-journal",
     author: "Mohammed Saqr, Oleksandra Poquet, and Sonsoles López-Pernas",
     title: "Networks in Education: A Travelogue Through Five Decades",
     journal: "IEEE Access",
@@ -205,7 +206,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1109/access.2022.3160230",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Janne Tyni, Anni Tarkiainen, Sonsoles López-Pernas, Mohammed Saqr, Juho Kahila, Roman Bednarik, and Matti Tedre",
     title:
@@ -221,7 +222,7 @@ export const mypublications = [
   {
     date: [2022],
     doi: "https://doi.org/10.1016/j.chb.2021.107123",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Teemu Valtonen, Sonsoles López-Pernas, Mohammed Saqr, Henriikka Vartiainen, Erkko Tapio Sointu, and Matti Tedre",
     title: "The nature and building blocks of educational technology research",
@@ -236,7 +237,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/FIE49875.2021.9637209",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Mikko Apiola, Matti Tedre, Sonsoles López-Pernas, Mohammed Saqr, Mats Daniels, and Arnold Pears",
     title: "A Scientometric Journey Through the FIE Bookshelf: 1982-2020",
@@ -251,7 +252,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.3390/electronics10131523",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Javier Conde, Sonsoles López-Pernas, Alejandro Pozo, Andres Munoz-Arcentales, Gabriel Huecas, and Álvaro Alonso",
     title:
@@ -267,7 +268,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/MIC.2021.3056923",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "J. Conde, A. Munoz-Arcentales, Á. Alonso, S. López-Pernas, and J. Salvachúa",
     title:
@@ -283,7 +284,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/RITA.2021.3052686",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Aldo Gordillo, Enrique Barra, Pablo Garaizar, and Sonsoles López-Pernas",
     title:
@@ -299,7 +300,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.3390/su13158485",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Aldo Gordillo, Enrique Barra, Sonsoles López-Pernas, and Juan Quemada",
     title:
@@ -315,7 +316,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/ACCESS.2021.3111513",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "SGAME: An Authoring Tool to Easily Create Educational Video Games by Integrating SCORM-Compliant Learning Objects",
@@ -330,7 +331,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/TE.2021.3057849",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Aldo Gordillo, Daniel López-Fernández, Pedro P. Alarcón, and Edmundo Tovar",
     title:
@@ -346,7 +347,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/ACCESS.2021.3095552",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Daniel López-Fernández, Aldo Gordillo, Fernando Ortega, Agustín Yagüe, and Edmundo Tovar",
     title: "LEGO® Serious Play in Software Engineering Education",
@@ -361,7 +362,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/MITP.2021.3062749",
-    type: "article-journal",
+    category: "article-journal",
     author: "Sonsoles López-Pernas, Aldo Gordillo, and Enrique Barra",
     title: "Technology-Enhanced Educational Escape Rooms: A Road Map",
     journal: "IT Professional",
@@ -375,7 +376,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/ACCESS.2021.3073601",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sonsoles López-Pernas, Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
@@ -391,7 +392,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/ACCESS.2021.3063711",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sonsoles López-Pernas, Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title: "Escapp: A Web Platform for Conducting Educational Escape Rooms",
@@ -406,7 +407,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/ACCESS.2021.3134844",
-    type: "article-journal",
+    category: "article-journal",
     author: "Sonsoles López-Pernas, and Mohammed Saqr",
     title:
       "Bringing Synchrony and Clarity to Complex Multi-Channel Data: A Learning Analytics Study in Programming Education",
@@ -420,7 +421,7 @@ export const mypublications = [
   },
   {
     date: [2021],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Sonsoles López-Pernas, and Mohammed Saqr",
     title:
       "Idiographic Learning Analytics: A Within-Person Ethical Perspective",
@@ -436,7 +437,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.3390/su13094825",
-    type: "article-journal",
+    category: "article-journal",
     author: "Sonsoles López-Pernas, Mohammed Saqr, and Olga Viberg",
     title:
       "Putting It All Together: Combining Learning Analytics Methods and Data Sources to Understand Students’ Approaches to Learning Programming",
@@ -451,7 +452,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.3390/ijerph18083980",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Lourdes Marco, Alejandro Pozo, Gabriel Huecas, Juan Quemada, and Álvaro Alonso",
     title:
@@ -468,7 +469,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.3390/s21217095",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Andres Munoz-Arcentales, Sonsoles López-Pernas, Javier Conde, Álvaro Alonso, Joaquín Salvachúa, and Juan José Hierro",
     title:
@@ -484,7 +485,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1109/ICALT52272.2021.00056",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Mohammed Saqr, and Sonsoles López-Pernas",
     title: "Idiographic learning analytics: A definition and a case study",
     journal:
@@ -498,7 +499,7 @@ export const mypublications = [
   },
   {
     date: [2021],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Mohammed Saqr, and Sonsoles López-Pernas",
     title:
       "Idiographic Learning Analytics: A single student (N=1) approach using psychological networks",
@@ -513,7 +514,7 @@ export const mypublications = [
   },
   {
     date: [2021],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Mohammed Saqr, and Sonsoles López-Pernas",
     title:
       "The Dire Cost of Early Disengagement: A Four-Year Learning Analytics Study over a Full Program",
@@ -529,7 +530,7 @@ export const mypublications = [
   {
     date: [2021],
     doi: "https://doi.org/10.1016/j.compedu.2021.104325",
-    type: "article-journal",
+    category: "article-journal",
     author: "Mohammed Saqr, and Sonsoles López-Pernas",
     title:
       "The longitudinal trajectories of online engagement over a full program",
@@ -544,7 +545,7 @@ export const mypublications = [
   {
     date: [2021, 12],
     doi: "https://doi.org/10.1007/s11412-021-09356-4",
-    type: "article-journal",
+    category: "article-journal",
     author: "Mohammed Saqr, and Sonsoles López-Pernas",
     title:
       "Modelling diffusion in computer-supported collaborative learning: a large scale learning analytics study",
@@ -560,7 +561,7 @@ export const mypublications = [
   {
     date: [2020, 1],
     doi: "https://doi.org/10.3390/su12030770",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Álvaro Alonso, Alejandro Pozo, Aldo Gordillo, Sonsoles López-Pernas, Andrés Munoz-Arcentales, Lourdes Marco, and Enrique Barra",
     title:
@@ -576,7 +577,7 @@ export const mypublications = [
   {
     date: [2020, 9],
     doi: "https://doi.org/10.3390/su12187451",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Enrique Barra, Sonsoles López-Pernas, Álvaro Alonso, Juan Fernando Sánchez-Rada, Aldo Gordillo, and Juan Quemada",
     title:
@@ -592,7 +593,7 @@ export const mypublications = [
   {
     date: [2020, 12],
     doi: "https://doi.org/10.1109/ACCESS.2020.3044380",
-    type: "article-journal",
+    category: "article-journal",
     author: "A. Gordillo, D. López-Fernández, S. López-Pernas, and J. Quemada",
     title:
       "Evaluating an Educational Escape Room Conducted Remotely for Teaching Software Engineering",
@@ -607,7 +608,7 @@ export const mypublications = [
   {
     date: [2020],
     doi: "https://doi.org/10.3390/app10134638",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Daniel López-Fernández, and Katrien Verbert",
     title:
       "Examining the Usefulness of Quality Scores for Generating Learning Object Recommendations in Repositories of Open Educational Resources",
@@ -622,7 +623,7 @@ export const mypublications = [
   {
     date: [2020],
     doi: "https://doi.org/10.1109/IE49459.2020.9154949",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Sonsoles López-Pernas, Alfonso Jiménez, Aldo Gordillo, Enrique Barra, Lourdes Marco, and Juan Quemada",
     title:
@@ -639,7 +640,7 @@ export const mypublications = [
   {
     date: [2020],
     doi: "https://doi.org/10.1109/EDUCON45650.2020.9125173",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "S. Martin, A. Gordillo, E. Sancristobal, M. Castro, and J. Quemada",
     title: "Analysis of management systems for virtual and remote labs",
@@ -655,7 +656,7 @@ export const mypublications = [
   {
     date: [2020],
     doi: "https://doi.org/10.3390/su12093885",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Andres Munoz-Arcentales, Sonsoles López-Pernas, Alejandro Pozo, Álvaro Alonso, Joaquín Salvachúa, and Gabriel Huecas",
     title:
@@ -671,7 +672,7 @@ export const mypublications = [
   {
     date: [2020, 8],
     doi: "https://doi.org/10.3390/s20154341",
-    type: "article-journal",
+    category: "article-journal",
     author: "Alejandro Pozo, Álvaro Alonso, and Joaquín Salvachúa",
     title:
       "Evaluation of an IoT Application-Scoped Access Control Model over a Publish/Subscribe Architecture Based on FIWARE",
@@ -686,7 +687,7 @@ export const mypublications = [
   {
     date: [2020, 5],
     doi: "https://doi.org/10.3390/s20102899",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Washington Velásquez, Manuel S. Alvarez-Alvarado, Andres Munoz-Arcentales, Sonsoles López-Pernas, and Joaquín Salvachúa",
     title:
@@ -702,7 +703,7 @@ export const mypublications = [
   {
     date: [2019, 11],
     doi: "https://doi.org/10.21125/iceri.2019.0560",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Álvaro Alonso, Aldo Gordillo, Alejandro Pozo, Sonsoles López-Pernas, Lourdes Marco, and Enrique Barra",
     title:
@@ -718,7 +719,7 @@ export const mypublications = [
   {
     date: [2019, 7],
     doi: "https://doi.org/10.1109/ACCESS.2019.2926556",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Alvaro Alonso, Alejandro Pozo Huertas, Johnny Choque, Gloria Bueno, Joaquin Salvachúa, Luis Diez, Jorge Marin, and Pedro Luis Chas Alonso",
     title:
@@ -734,7 +735,7 @@ export const mypublications = [
   {
     date: [2019, 10],
     doi: "https://doi.org/10.3390/su11205568",
-    type: "article-journal",
+    category: "article-journal",
     author: "and Aldo Gordillo",
     title:
       "Effect of an Instructor-Centered Tool for Automatic Assessment of Programming Assignments on Students’ Perceptions and Performance",
@@ -749,7 +750,7 @@ export const mypublications = [
   {
     date: [2019, 10],
     doi: "https://doi.org/10.3916/C61-2019-09",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Sonsoles López-Pernas, and Enrique Barra",
     title: "Effectiveness of MOOCs for teachers in safe ICT use training",
     journal: "Comunicar",
@@ -763,7 +764,7 @@ export const mypublications = [
   {
     date: [2019, 11],
     doi: "https://doi.org/10.21125/iceri.2019.0557",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Sonsoles López-Pernas, and Enrique Barra",
     title:
       "Students’ Perceptions Toward the Use of Teacher-created Educational Games in a Secondary Education Setting",
@@ -778,7 +779,7 @@ export const mypublications = [
   {
     date: [2019, 3],
     doi: "https://doi.org/10.1109/ACCESS.2019.2902976",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sonsoles López-Pernas, Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
@@ -794,7 +795,7 @@ export const mypublications = [
   {
     date: [2019, 11],
     doi: "https://doi.org/10.21125/iceri.2019.1191",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Sonsoles López-Pernas, Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
@@ -810,7 +811,7 @@ export const mypublications = [
   {
     date: [2019, 12],
     doi: "https://doi.org/10.1109/ACCESS.2019.2960312",
-    type: "article-journal",
+    category: "article-journal",
     author: "S. López-Pernas, A. Gordillo, E. Barra, and J. Quemada",
     title:
       "Analyzing Learning Effectiveness and Students’ Perceptions of an Educational Escape Room in a Programming Course in Higher Education",
@@ -825,7 +826,7 @@ export const mypublications = [
   {
     date: [2019],
     doi: "https://doi.org/10.3390/app9183813",
-    type: "article-journal",
+    category: "article-journal",
     author: "Lourdes Marco, Álvaro Alonso, and Juan Quemada",
     title:
       "An Identity Model for Providing Inclusive Services and Applications",
@@ -840,7 +841,7 @@ export const mypublications = [
   {
     date: [2019],
     doi: "https://doi.org/10.1016/j.procs.2019.11.042",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Andres Munoz-Arcentales, Sonsoles López-Pernas, Alejandro Pozo, Álvaro Alonso, Joaquín Salvachúa, and Gabriel Huecas",
     title:
@@ -856,7 +857,7 @@ export const mypublications = [
   {
     date: [2019, 11],
     doi: "https://doi.org/10.21125/iceri.2019.1195",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Juan Quemada, Enrique Barra, Aldo Gordillo, Santiago Pavon, Joaquín Salvachua, Ignacio Vazquez, and Sonsoles López-Pernas",
     title: "AMMIL: A Methodology for Developing Video-based Learning Courses",
@@ -870,7 +871,7 @@ export const mypublications = [
   },
   {
     date: [2019, 6],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Washington Velásquez, Jose Muñoz, Thomas Bohnert, and Joaquin Salvachúa",
     title:
@@ -887,7 +888,7 @@ export const mypublications = [
   {
     date: [2018, 7],
     doi: "https://doi.org/10.3390/s18072226",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Alvaro Alonso, Alejandro Pozo Huertas, José Manuel Cantera, Francisco Vega, and Juan José Hierro",
     title: "Industrial Data Space Architecture Implementation Using FIWARE",
@@ -902,7 +903,7 @@ export const mypublications = [
   {
     date: [2018, 10],
     doi: "https://doi.org/10.1109/TLA.2018.8795140",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Roberto Cordova, Ignacio Marin-Garcia, Jose Muñoz, Victor Asanza, and Washington Velásquez",
     title:
@@ -918,7 +919,7 @@ export const mypublications = [
   {
     date: [2018, 1],
     doi: "https://doi.org/10.5944/educxx1.20196",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Estimación de calidad de objetos de aprendizaje en repositorios de recursos educativos abiertos basada en las interacciones de los estudiantes",
@@ -933,7 +934,7 @@ export const mypublications = [
   {
     date: [2018, 11],
     doi: "https://doi.org/10.21125/iceri.2018.0634",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Sven Charleer, and Katrien Verbert",
     title:
       "An open source hybrid learning object recommender system based on Europeana",
@@ -949,7 +950,7 @@ export const mypublications = [
   {
     date: [2018, 11],
     doi: "https://doi.org/10.21125/iceri.2018.0632",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Sonsoles López-Pernas, and Enrique Barra",
     title:
       "RESCORM: A boilerplate for creating SCORM-compliant React applications",
@@ -965,7 +966,7 @@ export const mypublications = [
   {
     date: [2018, 1],
     doi: "https://doi.org/10.1109/ICOIN.2018.8343184",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Luis Jurado, and Joaquin Salvachúa",
     title: "Simulation of Scalability in IoT Applications",
     journal:
@@ -979,7 +980,7 @@ export const mypublications = [
   },
   {
     date: [2018, 8],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Luis Jurado, and Joaquin Salvachúa",
     title:
       "e-Health IoT Reactive Services for Elderly Care at Home in Smart City Built on an Emerging Fast Data Architecture",
@@ -995,7 +996,7 @@ export const mypublications = [
   {
     date: [2018, 11],
     doi: "https://doi.org/10.21125/iceri.2018.0898",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Sonsoles López-Pernas, Alberto Benito, Lourdes Marco, and Aldo Gordillo",
     title:
@@ -1012,7 +1013,7 @@ export const mypublications = [
   {
     date: [2018, 11],
     doi: "https://doi.org/10.21125/iceri.2018.1525",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Lourdes Marco, Sonsoles López-Pernas, and Alvaro Alonso",
     title: "Accessibility review for web-based learning tools and materials",
     journal:
@@ -1027,7 +1028,7 @@ export const mypublications = [
   {
     date: [2018, 1],
     doi: "https://doi.org/10.1109/CCWC.2018.8301622",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Jose Muñoz, Andreina Montoya, Marjorie Chalen, and Washington Velásquez",
     title:
@@ -1044,7 +1045,7 @@ export const mypublications = [
   {
     date: [2018, 6],
     doi: "https://doi.org/10.1109/ISNCC.2018.8531069",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Jose Muñoz, Washington Velásquez, and Joaquin Salvachúa",
     title:
       "Practical Approach of Fast-Data Architecture Applied to Alert Generation in Emergency Evacuation Systems",
@@ -1060,7 +1061,7 @@ export const mypublications = [
   {
     date: [2018, 12],
     doi: "https://doi.org/10.3966/160792642018121907007",
-    type: "article-journal",
+    category: "article-journal",
     author: "Diego Rivera, Ramón Alcarria, Diego Martín, and Gabriel Huecas",
     title:
       "Proposal and Assessment of Algorithms for Power Consumption Reduction in Wireless Networks with E-Ink Displays",
@@ -1075,23 +1076,23 @@ export const mypublications = [
   {
     date: [2018, 8],
     doi: "https://doi.org/10.1109/ACCESS.2018.2866557",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Washington Velásquez, Manuel Alvarez Alvarado, and Joaquin Salvachúa",
     title:
-      "Body Mass Index in Human Walking on Different Types of Soil using Graph Theory",
+      "Body Mass Index in Human Walking on Different categorys of Soil using Graph Theory",
     journal: "IEEE Access",
     year: "2018",
     month: "8",
     volume: "PP",
     pages: "2169-3536",
     content:
-      "Velásquez, W., Alvarez Alvarado, M., &#38; Salvachúa, J. (2018). Body Mass Index in Human Walking on Different Types of Soil using Graph Theory. <i>IEEE Access</i>, <i>PP</i>, 2169–3536. https://doi.org/10.1109/ACCESS.2018.2866557",
+      "Velásquez, W., Alvarez Alvarado, M., &#38; Salvachúa, J. (2018). Body Mass Index in Human Walking on Different categorys of Soil using Graph Theory. <i>IEEE Access</i>, <i>PP</i>, 2169–3536. https://doi.org/10.1109/ACCESS.2018.2866557",
   },
   {
     date: [2018, 6],
     doi: "https://doi.org/10.1109/ISNCC.2018.8530904",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Washington Velásquez, Marjorie Chalen, and Joaquin Salvachúa",
     title:
       "Survival Analysis of Elderly while Escaping from a Simulated Building",
@@ -1107,7 +1108,7 @@ export const mypublications = [
   {
     date: [2018, 1],
     doi: "https://doi.org/10.1109/CCWC.2018.8301618",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Washington Velásquez, Jose Muñoz, Marjorie Chalen, and Joaquin Salvachúa",
     title:
@@ -1124,7 +1125,7 @@ export const mypublications = [
   {
     date: [2018, 1],
     doi: "https://doi.org/10.1109/CCWC.2018.8301721",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Washington Velásquez, Jose Muñoz, and Joaquin Salvachúa",
     title: "Fast-data architecture proposal to alert people in emergency",
     journal:
@@ -1139,7 +1140,7 @@ export const mypublications = [
   {
     date: [2018, 4],
     doi: "https://doi.org/10.1109/CAIS.2018.8441979",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Washington Velásquez, Jose Muñoz, and Joaquin Salvachúa",
     title:
       "A Case Study: Ingestion Analysis of WSN Data in Databases using Docker",
@@ -1155,7 +1156,7 @@ export const mypublications = [
   {
     date: [2018, 1],
     doi: "https://doi.org/10.1109/CCWC.2018.8301649",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Washington Velásquez, Jose Muñoz, Wendy Yánez, and Joaquin Salvachúa",
     title:
@@ -1172,7 +1173,7 @@ export const mypublications = [
   {
     date: [2017, 7],
     doi: "https://doi.org/10.1109/TMM.2017.2733301",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Alvaro Alonso, Ignacio Aguado, Joaquin Salvachúa, and Pedro Rodríguez",
     title:
@@ -1188,7 +1189,7 @@ export const mypublications = [
   {
     date: [2017, 10],
     doi: "https://doi.org/10.3390/fi9040064",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Alvaro Alonso, Federico Fernández, Lourdes Marco, and Joaquin Salvachúa",
     title: "IAACaaS: IoT application-scoped access control as a service",
@@ -1203,7 +1204,7 @@ export const mypublications = [
   {
     date: [2017, 6],
     doi: "https://doi.org/10.1109/TLA.2017.7932702",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Aldo Alvarado, Bajana Barahona, Jose Muñoz, and Washington Velásquez",
     title:
@@ -1219,7 +1220,7 @@ export const mypublications = [
   {
     date: [2017, 3],
     doi: "https://doi.org/10.1109/ICIN.2017.7899433",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Federico Fernandez, Alvaro Alonso, Lourdes Marco, and Joaquin Salvachúa",
     title:
@@ -1236,7 +1237,7 @@ export const mypublications = [
   {
     date: [2017, 3],
     doi: "https://doi.org/10.1109/TLA.2017.7867596",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title: "A hybrid recommendation model for learning object repositories",
     journal: "IEEE Latin America Transactions",
@@ -1250,7 +1251,7 @@ export const mypublications = [
   {
     date: [2017, 3],
     doi: "https://doi.org/10.1002/cae.21789",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "An easy to use open source authoring tool to create effective and reusable learning objects",
@@ -1265,7 +1266,7 @@ export const mypublications = [
   {
     date: [2017, 1],
     doi: "https://doi.org/10.1109/CCWC.2017.7868348",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Jose Muñoz, Wendy Yánez, and Washington Velásquez",
     title:
       "Proposal of a communication structure model for activating reactive signaling in an emergency evacuation systems",
@@ -1280,7 +1281,7 @@ export const mypublications = [
   },
   {
     date: [2017, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "Washington Velásquez, and Jose Muñoz",
     title:
       "Programa de educación tecnológico dirigido a la población urbano-marginal del norte de Guayaquil, Ecuador",
@@ -1295,7 +1296,7 @@ export const mypublications = [
   {
     date: [2017, 1],
     doi: "https://doi.org/10.1109/CCWC.2017.7868434",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Washington Velásquez, Jose Muñoz, and Joaquin Salvachúa",
     title:
       "A distributed system model for managing data ingestion in a wireless sensor network",
@@ -1311,7 +1312,7 @@ export const mypublications = [
   {
     date: [2017, 9],
     doi: "https://doi.org/10.1109/FITCE.2017.8093000",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Pedro Verdugo, Joaquin Salvachiua, and Gabriel Huecas",
     title: "An agile container-based approach to TaaS",
     journal: "Proceedings of the 56th FITCE Congress",
@@ -1325,7 +1326,7 @@ export const mypublications = [
   {
     date: [2017, 1],
     doi: "https://doi.org/10.5220/0006427200350040",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Pedro Verdugo, Joaquin Salvachúa, and Gabriel Huecas",
     title:
       "Energy and Cost Considerations for Single Board Computers Usage in Citizen Science Scenarios",
@@ -1341,7 +1342,7 @@ export const mypublications = [
   {
     date: [2016, 8],
     doi: "https://doi.org/10.1109/FiCloud.2016.12",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Alvaro Alonso, Ignacio Aguado, Joaquin Salvachúa, and Pedro Rodríguez",
     title:
@@ -1357,7 +1358,7 @@ export const mypublications = [
   },
   {
     date: [2016, 3],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Alvaro Alonso, Pedro Rodríguez, Ignacio Aguado, and Joaquin Salvachúa",
     title:
@@ -1374,7 +1375,7 @@ export const mypublications = [
   {
     date: [2016, 7],
     doi: "https://doi.org/10.21125/edulearn.2016.2006",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "A model based on e-learning standards to combine, integrate and assemble learning objects",
@@ -1390,7 +1391,7 @@ export const mypublications = [
   {
     date: [2016, 7],
     doi: "https://doi.org/10.21125/edulearn.2016.2008",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Learning by doing: an experience with a novel e-learning platform and a learning object authoring tool in a teachers' course about e-Safety",
@@ -1405,7 +1406,7 @@ export const mypublications = [
   },
   {
     date: [2016, 9],
-    type: "book",
+    category: "book",
     author: "and Gabriel Huecas",
     title: "Apuntes de Teoría de la Información",
     journal: "undefined",
@@ -1417,7 +1418,7 @@ export const mypublications = [
   },
   {
     date: [2015, 11],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Enrique Barra, Aldo Gordillo, Maria Eugenia Blas, Jesus Guijarro, and Ignacio Vázquez",
     title:
@@ -1433,7 +1434,7 @@ export const mypublications = [
   },
   {
     date: [2015, 9],
-    type: "chapter",
+    category: "chapter",
     author: "Enrique Barra, Aldo Gordillo, and Juan Quemada",
     title:
       "Plataforma social y colaborativa para la creación de recursos educativos abiertos (Open Educational Resources)",
@@ -1448,7 +1449,7 @@ export const mypublications = [
   {
     date: [2015, 11],
     doi: "https://doi.org/10.1109/RITA.2015.2486318",
-    type: "article-journal",
+    category: "article-journal",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Enhancing web-based learning resources with existing and custom quizzes through an authoring tool",
@@ -1463,7 +1464,7 @@ export const mypublications = [
   {
     date: [2015, 9],
     doi: "https://doi.org/10.1016/j.csi.2015.09.004",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Pedro Rodríguez, Alvaro Alonso, Joaquin Salvachúa, and Javier Cerviño Arriba",
     title:
@@ -1478,7 +1479,7 @@ export const mypublications = [
   },
   {
     date: [2015, 11],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Ignacio Vázquez, Enrique Barra, Aldo Gordillo, and Juan Quemada",
     title:
       "Design of an e-learning authoring tool user interface using mental models: A case study",
@@ -1493,7 +1494,7 @@ export const mypublications = [
   {
     date: [2014, 12],
     doi: "https://doi.org/10.1109/FiCloud.2014.13",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Alvaro Alonso, Pedro Rodríguez, Joaquin Salvachúa, and Javier Cerviño Arriba",
     title: "Dynamic media stream mobility with TURN",
@@ -1509,7 +1510,7 @@ export const mypublications = [
   {
     date: [2014, 6],
     doi: "https://doi.org/10.1080/13614568.2013.857728",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Enrique Barra, Sandra Aguirre Herrera, Jose Pastor, and Juan Quemada",
     title:
@@ -1524,7 +1525,7 @@ export const mypublications = [
   },
   {
     date: [2014, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Enrique Barra, Abel Carril, Aldo Gordillo, Joaquin Salvachúa, and Juan Quemada",
     title:
@@ -1540,7 +1541,7 @@ export const mypublications = [
   },
   {
     date: [2014, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "Enrique Barra, Aldo Gordillo, and Juan Quemada",
     title:
       "Virtual Science Hub: An open source platform to enrich science teaching",
@@ -1556,7 +1557,7 @@ export const mypublications = [
   {
     date: [2014, 10],
     doi: "https://doi.org/10.1109/FIE.2014.7044340",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Aldo Gordillo, Enrique Barra, Sandra Aguirre Herrera, and Juan Quemada",
     title:
@@ -1572,7 +1573,7 @@ export const mypublications = [
   {
     date: [2014, 10],
     doi: "https://doi.org/10.1109/FIE.2014.7044498",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "A flexible open source web platform to facilitate learning object evaluation",
@@ -1587,7 +1588,7 @@ export const mypublications = [
   {
     date: [2014, 10],
     doi: "https://doi.org/10.1109/FIE.2014.7044188",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Enhancing web-based learning resources with quizzes through an authoring tool and an audience response system",
@@ -1602,7 +1603,7 @@ export const mypublications = [
   {
     date: [2014, 10],
     doi: "https://doi.org/10.1109/FIE.2014.7044497",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Facilitating the creation of interactive multi-device learning objects using an online authoring tool",
@@ -1617,7 +1618,7 @@ export const mypublications = [
   {
     date: [2014, 10],
     doi: "https://doi.org/10.1109/FIE.2014.7044499",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Towards a learning object pedagogical quality metric based on the LORI evaluation model",
@@ -1632,7 +1633,7 @@ export const mypublications = [
   {
     date: [2014, 12],
     doi: "https://doi.org/10.1109/FiCloud.2014.20",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Pedro Rodríguez, Alvaro Alonso, Joaquin Salvachúa, and Javier Cerviño Arriba",
     title:
@@ -1649,7 +1650,7 @@ export const mypublications = [
   {
     date: [2014, 5],
     doi: "https://doi.org/10.1109/ICCE-TW.2014.6904089",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Irena Trajkovska, Philipp Aeschlimann, Christof Marti, Thomas Bohnert, and Joaquin Salvachúa",
     title:
@@ -1666,7 +1667,7 @@ export const mypublications = [
   {
     date: [2014, 5],
     doi: "https://doi.org/10.1109/ICCE-TW.2014.6904090",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Irena Trajkovska, Piyush Harsh, Thomas Bohnert, and Joaquin Salvachúa",
     title:
@@ -1683,7 +1684,7 @@ export const mypublications = [
   {
     date: [2014, 1],
     doi: "https://doi.org/10.1109/CCNC.2014.6866584",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Irena Trajkovska, Pedro Rodríguez, Javier Cerviño Arriba, Piyush Harsh, and Joaquin Salvachúa",
     title: "P2P incentive model for QoS based streaming systems",
@@ -1699,7 +1700,7 @@ export const mypublications = [
   {
     date: [2013, 10],
     doi: "https://doi.org/10.1109/FIE.2013.6684913",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Enrique Barra, Aldo Gordillo, Daniel Gallego, and Juan Quemada",
     title: "Integration of SCORM packages into web games",
     journal: "Proceedings of the Frontiers in Education Conference, FIE",
@@ -1713,7 +1714,7 @@ export const mypublications = [
   {
     date: [2013, 2],
     doi: "https://doi.org/10.1007/s11036-012-0380-4",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Javier Cerviño Arriba, Pedro Rodríguez, Irena Trajkovska, Fernando Escribano, and Joaquin Salvachúa",
     title:
@@ -1729,7 +1730,7 @@ export const mypublications = [
   {
     date: [2013, 10],
     doi: "https://doi.org/10.1109/FIE.2013.6685060",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Daniel Gallego, Enrique Barra, Aldo Gordillo, and Gabriel Huecas",
     title:
       "Enhanced recommendations for e-learning authoring tools based on a proactive context-aware recommender",
@@ -1744,7 +1745,7 @@ export const mypublications = [
   {
     date: [2013, 6],
     doi: "https://doi.org/10.1109/WCCIT.2013.6618700",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Daniel Gallego, Enrique Barra, Pedro Rodríguez, and Gabriel Huecas",
     title:
@@ -1761,7 +1762,7 @@ export const mypublications = [
   {
     date: [2013, 1],
     doi: "https://doi.org/10.3145/epi.2013.ene.03",
-    type: "article-journal",
+    category: "article-journal",
     author: "Daniel Gallego, Antonio Fumero, and Gabriel Huecas",
     title:
       "Proactividad y contextualización: Futuro del diseño de sistemas recomendadores",
@@ -1776,7 +1777,7 @@ export const mypublications = [
   {
     date: [2013, 10],
     doi: "https://doi.org/10.1016/j.sysarc.2013.02.004",
-    type: "article-journal",
+    category: "article-journal",
     author: "Daniel Gallego, Wolfgang Woerndl, and Gabriel Huecas",
     title:
       "Evaluating the Impact of Proactivity in the User Experience of a Context-aware Restaurant Recommender for Android Smartphones",
@@ -1791,7 +1792,7 @@ export const mypublications = [
   {
     date: [2013, 10],
     doi: "https://doi.org/10.1109/FIE.2013.6684852",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, Daniel Gallego, and Juan Quemada",
     title:
       "A model for integrating learning object repository resources into web videoconference services",
@@ -1806,7 +1807,7 @@ export const mypublications = [
   {
     date: [2013, 10],
     doi: "https://doi.org/10.1109/FIE.2013.6685169",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, Daniel Gallego, and Juan Quemada",
     title:
       "An online e-Learning authoring tool to create interactive multi-device learning objects using e-Infrastructure resources",
@@ -1820,7 +1821,7 @@ export const mypublications = [
   },
   {
     date: [2013, 3],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Enrique Barra, and Juan Quemada",
     title:
       "Enhancing K-12 science education through a multi-device web tool to facilitate content integration and e-Infrastructure access",
@@ -1836,7 +1837,7 @@ export const mypublications = [
   {
     date: [2013, 10],
     doi: "https://doi.org/10.1109/FIE.2013.6684850",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Aldo Gordillo, Daniel Gallego, Enrique Barra, and Juan Quemada",
     title: "The city as a learning gamified platform",
     journal: "Proceedings of the Frontiers in Education Conference, FIE",
@@ -1850,7 +1851,7 @@ export const mypublications = [
   {
     date: [2013, 6],
     doi: "https://doi.org/10.1109/WCCIT.2013.6618658",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Pedro Rodríguez, Alvaro Alonso, Joaquin Salvachúa, Enrique Barra, and Javier Cerviño Arriba",
     title:
@@ -1865,7 +1866,7 @@ export const mypublications = [
   },
   {
     date: [2013, 6],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Pedro Rodríguez, Joaquin Salvachúa, Javier Cerviño Arriba, and Alvaro Alonso",
     title:
@@ -1882,7 +1883,7 @@ export const mypublications = [
   {
     date: [2013, 6],
     doi: "https://doi.org/10.1109/WCCIT.2013.6618669",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Irena Trajkovska, Pedro Rodríguez, Javier Cerviño Arriba, and Joaquin Salvachúa",
     title:
@@ -1898,7 +1899,7 @@ export const mypublications = [
   },
   {
     date: [2012, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Sandra Aguirre Herrera, Enrique Barra, Juan Quemada, and Jose Pastor",
     title:
@@ -1914,7 +1915,7 @@ export const mypublications = [
   },
   {
     date: [2012, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "Sandra Aguirre Herrera, and Juan Quemada",
     title:
       "E-learning systems support of collaborative agreements: A theoretical model",
@@ -1928,7 +1929,7 @@ export const mypublications = [
   },
   {
     date: [2012, 12],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Alvaro Alonso, Pedro Rodríguez, Joaquin Salvachúa, Enrique Barra, and Javier Cerviño Arriba",
     title:
@@ -1943,7 +1944,7 @@ export const mypublications = [
   },
   {
     date: [2012, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Enrique Barra, Sandra Aguirre Herrera, Jose Pastor, and Juan Quemada",
     title:
@@ -1960,7 +1961,7 @@ export const mypublications = [
   {
     date: [2012, 10],
     doi: "https://doi.org/10.1109/FIE.2012.6462237",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Enrique Barra, Daniel Gallego, Sandra Aguirre Herrera, and Juan Quemada",
     title: "A web tool to create educational content with gaming visualization",
@@ -1975,7 +1976,7 @@ export const mypublications = [
   {
     date: [2012, 10],
     doi: "https://doi.org/10.1109/FIE.2012.6462236",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Enrique Barra, Daniel Gallego, Sandra Aguirre Herrera, and Juan Quemada",
     title:
@@ -1991,7 +1992,7 @@ export const mypublications = [
   {
     date: [2012, 5],
     doi: "https://doi.org/10.1109/ICDEW.2012.40",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Javier Cerviño Arriba, Evangelia Kalyvianaki, Joaquin Salvachúa, and Peter Pietzuch",
     title: "Adaptive Provisioning of Stream Processing Systems in the Cloud",
@@ -2007,7 +2008,7 @@ export const mypublications = [
   {
     date: [2012, 1],
     doi: "https://doi.org/10.4018/978-1-4666-0879-5.ch8.8",
-    type: "chapter",
+    category: "chapter",
     author: "Luis Galindo, and Joaquin Salvachúa",
     title: "Multimedia Services Offer Mixing Telco and Internet Assets",
     journal: "Grid and Cloud Computing",
@@ -2021,7 +2022,7 @@ export const mypublications = [
   {
     date: [2012, 10],
     doi: "https://doi.org/10.1109/FIE.2012.6462246",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Daniel Gallego, Enrique Barra, Sandra Aguirre Herrera, and Gabriel Huecas",
     title:
@@ -2037,7 +2038,7 @@ export const mypublications = [
   {
     date: [2012, 6],
     doi: "https://doi.org/10.1109/MUSIC.2012.11",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Daniel Gallego, and Gabriel Huecas",
     title:
       "An Empirical Case of a Context-Aware Mobile Recommender System in a Banking Environment",
@@ -2051,7 +2052,7 @@ export const mypublications = [
   },
   {
     date: [2012, 12],
-    type: "article-journal",
+    category: "article-journal",
     author: "Daniel Gallego, Iván Toro, and Joaquin Salvachúa",
     title:
       "Generating Awareness from Collaborative Working Environment using Social Data",
@@ -2066,7 +2067,7 @@ export const mypublications = [
   },
   {
     date: [2012, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Jose Pastor, Sandra Aguirre Herrera, Enrique Barra, and Juan Quemada",
     title:
@@ -2081,7 +2082,7 @@ export const mypublications = [
   },
   {
     date: [2012],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Pedro Rodríguez, Javier Cerviño Arriba, Irena Trajkovska, and Joaquin Salvachúa",
     title: "Advanced Videoconferencing Services Based on WebRTC",
@@ -2097,7 +2098,7 @@ export const mypublications = [
   {
     date: [2012, 7],
     doi: "https://doi.org/10.1109/ISPA.2012.64",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "L.A.G. Sanchez, and Joaquin Salvachúa",
     title: "SDP as a Service (SDPaaS): A New Revenue Stream for Operators",
     journal:
@@ -2112,7 +2113,7 @@ export const mypublications = [
   {
     date: [2012, 6],
     doi: "https://doi.org/10.1007/s11036-012-0371-5",
-    type: "article-journal",
+    category: "article-journal",
     author: "Weisong Shi, James Joshi, Tao Zhang, Eun Park, and Juan Quemada",
     title:
       "ACM/Springer Mobile Networks and Applications (MONET) Special Issue on “Collaborative Computing: Networking, Applications and Worksharing”",
@@ -2126,7 +2127,7 @@ export const mypublications = [
   },
   {
     date: [2012, 5],
-    type: "article-journal",
+    category: "article-journal",
     author: "Antonio Tapiador, Diego Carrera, and Joaquin Salvachúa",
     title: "Tie-RBAC: an application of RBAC to social networks",
     journal: "arXiv e-prints",
@@ -2140,7 +2141,7 @@ export const mypublications = [
   {
     date: [2012, 12],
     doi: "https://doi.org/10.1109/FGCT.2012.6476557",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Antonio Tapiador, Diego Carrera, and Joaquin Salvachúa",
     title: "Social Stream, a social network framework",
     journal:
@@ -2154,7 +2155,7 @@ export const mypublications = [
   },
   {
     date: [2012, 9],
-    type: "article-journal",
+    category: "article-journal",
     author: "Antonio Tapiador, and Joaquin Salvachúa",
     title: "Content Management in Ruby on Rails",
     journal: "arXiv e-prints",
@@ -2167,7 +2168,7 @@ export const mypublications = [
   },
   {
     date: [2012, 7],
-    type: "article-journal",
+    category: "article-journal",
     author: "Antonio Tapiador, Víctor Sánchez, and Joaquin Salvachúa",
     title: "An analysis of social network connect services",
     journal: "arXiv e-prints",
@@ -2180,7 +2181,7 @@ export const mypublications = [
   },
   {
     date: [2012],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Irena Trajkovska, Pedro Rodríguez, Javier Cerviño Arriba, and Joaquin Salvachúa",
     title:
@@ -2196,7 +2197,7 @@ export const mypublications = [
   },
   {
     date: [2011, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Sandra Aguirre Herrera, Juan Quemada, Jose Pastor, Estibaliz Martinez, María Mendiola, Victoria Machuca, and Raquel Portaencasa",
     title:
@@ -2213,7 +2214,7 @@ export const mypublications = [
   {
     date: [2011, 10],
     doi: "https://doi.org/10.1109/FIE.2011.6143012",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Enrique Barra, Sandra Aguirre Herrera, and Juan Quemada",
     title:
       "Work in progress - Exploiting videoconferencing possibilities to promote the European convergence process",
@@ -2229,7 +2230,7 @@ export const mypublications = [
   {
     date: [2011, 8],
     doi: "https://doi.org/10.1109/CLOUD.2011.51",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Javier Cerviño Arriba, Fernando Escribano, Pedro Rodríguez, Irena Trajkovska, and Joaquin Salvachúa",
     title: "Videoconference Capacity Leasing on Hybrid Clouds",
@@ -2245,7 +2246,7 @@ export const mypublications = [
   {
     date: [2011, 8],
     doi: "https://doi.org/10.1109/CLOUD.2011.52",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Javier Cerviño Arriba, Pedro Rodríguez, Irena Trajkovska, Alberto Mozo, and Joaquin Salvachúa",
     title:
@@ -2262,7 +2263,7 @@ export const mypublications = [
   {
     date: [2011, 1],
     doi: "https://doi.org/10.1007/978-1-4419-9845-3_6",
-    type: "chapter",
+    category: "chapter",
     author: "Daniel Gallego, Iván Toro, and Joaquin Salvachúa",
     title:
       "Collaborative Content Generation Architectures for the Mobile Augmented Reality Environment",
@@ -2277,7 +2278,7 @@ export const mypublications = [
   {
     date: [2010, 11],
     doi: "https://doi.org/10.1109/FIE.2010.5673116",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Sandra Aguirre Herrera, Juan Quemada, and Joaquin Salvachúa",
     title: "Integrated study programs through e-Learning",
     journal:
@@ -2291,7 +2292,7 @@ export const mypublications = [
   },
   {
     date: [2010],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Enrique Barra, Antonio Mendo, Hernández David, Prieto Ruiz, Antonio Tapiador, Del Dujo, and Juan Quemada",
     title:
@@ -2306,7 +2307,7 @@ export const mypublications = [
   },
   {
     date: [2010, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Daniel Gallego, Iván Toro, and Joaquin Salvachúa",
     title:
       "Generación de Contexto Colaborativo a partir de herramientas CSCW 2.0",
@@ -2321,7 +2322,7 @@ export const mypublications = [
   },
   {
     date: [2010, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Diego Moreno, Emilio García, Sandra Aguirre Herrera, and Juan Quemada",
     title: "SFDL: MVC Applied to Workflow Design",
@@ -2337,7 +2338,7 @@ export const mypublications = [
   {
     date: [2010, 10],
     doi: "https://doi.org/10.1007/978-3-642-16581-8_17",
-    type: "chapter",
+    category: "chapter",
     author: "Antonio Tapiador, Antonio Fumero, and Joaquin Salvachúa",
     title: "Extended Identity for Social Networks",
     journal: "Recent Trends and Developments in Social Software",
@@ -2351,7 +2352,7 @@ export const mypublications = [
   {
     date: [2010, 10],
     doi: "https://doi.org/10.1145/1873951.1874193",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Irena Trajkovska, Joaquin Salvachúa, and Alberto Mozo",
     title:
       "A novel P2P and cloud computing hybrid architecture for multimedia streaming with QoS cost functions",
@@ -2366,7 +2367,7 @@ export const mypublications = [
   },
   {
     date: [2009, 5],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Javier Cerviño Arriba, Pedro Rodríguez, Fernando Escribano, and Joaquin Salvachúa",
     title: "2019",
@@ -2380,7 +2381,7 @@ export const mypublications = [
   },
   {
     date: [2009, 5],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Diego Moreno, Emilio García, Sandra Aguirre Herrera, and Juan Quemada",
     title:
@@ -2396,7 +2397,7 @@ export const mypublications = [
   {
     date: [2009, 12],
     doi: "https://doi.org/10.4108/ICST.COLLABORATECOM2009.8285",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Pedro Rodríguez, Daniel Gallego, Javier Cerviño Arriba, Fernando Escribano, Juan Quemada, and Joaquin Salvachúa",
     title: "VaaS: Videoconference as a service",
@@ -2411,7 +2412,7 @@ export const mypublications = [
   },
   {
     date: [2008],
-    type: "article-journal",
+    category: "article-journal",
     author: "Sandra Aguirre Herrera, Juan Quemada, and Joaquin Salvachúa",
     title: "Mediadores e Interoperabilidad en Elearning",
     journal: "undefined",
@@ -2425,7 +2426,7 @@ export const mypublications = [
   {
     date: [2008, 11],
     doi: "https://doi.org/10.1109/FIE.2008.4720474",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Sandra Aguirre Herrera, Juan Quemada, and Joaquin Salvachúa",
     title:
       "Work in progress - Developing Joint Degrees through e-Learning systems",
@@ -2439,7 +2440,7 @@ export const mypublications = [
   },
   {
     date: [2008, 9],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Javier Cerviño Arriba, Pedro Pérez, Joaquin Salvachúa, Gabriel Huecas, and Fernando Cantero",
     title: "Marte 3.0: Una videoconferencia 2.0",
@@ -2454,7 +2455,7 @@ export const mypublications = [
   },
   {
     date: [2008, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Javier Cerviño Arriba, Joaquin Salvachúa, Pedro Pérez, Gabriel Huecas, and Juan Quemada",
     title: "Demostrador de una arquitectura de videoconferencia en la Web 2.0.",
@@ -2468,7 +2469,7 @@ export const mypublications = [
   },
   {
     date: [2008, 9],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Antonio Dujo, Antonio Fumero, Joaquin Salvachúa, and Javier Cerviño Arriba",
     title: "Identidad Extendida en Redes Sociales",
@@ -2484,7 +2485,7 @@ export const mypublications = [
   {
     date: [2008, 1],
     doi: "https://doi.org/10.1109/NGMAST.2008.79",
-    type: "article-journal",
+    category: "article-journal",
     author: "Luis Galindo, and Joaquin Salvachúa",
     title: "Overview of the New User Centred Mobile Applications",
     journal:
@@ -2498,7 +2499,7 @@ export const mypublications = [
   },
   {
     date: [2008, 9],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Emilio García, Fernando Cantero, Carlos Cubo, Encarna Pastor, and Enrique Barra",
     title:
@@ -2513,7 +2514,7 @@ export const mypublications = [
   },
   {
     date: [2008, 9],
-    type: "article-journal",
+    category: "article-journal",
     author: "Diego Moreno, Santiago Pavón, Gabriel Huecas, and Pedro Pérez",
     title:
       "Diseño de una pasarela de acceso a sistemas propietarios de videoconferencia",
@@ -2528,7 +2529,7 @@ export const mypublications = [
   {
     date: [2008, 2],
     doi: "https://doi.org/10.1016/j.comcom.2007.08.035",
-    type: "article-journal",
+    category: "article-journal",
     author: "Alberto Mozo, and Joaquin Salvachúa",
     title: "Scalable tag search in social network applications",
     journal: "Computer Communications",
@@ -2542,7 +2543,7 @@ export const mypublications = [
   {
     date: [2008, 9],
     doi: "https://doi.org/10.1109/WETICE.2008.59",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "and Juan Quemada",
     title: "Collaboration, Social Interaction and Social Protocols.",
     journal:
@@ -2556,7 +2557,7 @@ export const mypublications = [
   },
   {
     date: [2008, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Juan Quemada, Gabriel Huecas, Santiago Pavón, and Joaquin Salvachúa",
     title:
@@ -2571,7 +2572,7 @@ export const mypublications = [
   },
   {
     date: [2008, 9],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "David Ruiz, Enrique Barra, Santiago Pavón, Carlos Cubo, and Jaime Castro",
     title:
@@ -2586,7 +2587,7 @@ export const mypublications = [
   },
   {
     date: [2008, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Joaquin Salvachúa, Juan Quemada, Sandra Aguirre Herrera, Alberto Mozo, Antonio Dujo, Antonio Fumero, Isidro González, Juan Macho, Fernando Alcántara, Javier Cerviño Arriba, and Diego Moreno",
     title:
@@ -2601,7 +2602,7 @@ export const mypublications = [
   },
   {
     date: [2007, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "Pilar Díaz, Gabriel Huecas, Almudena García Manso, and J. Allende",
     title:
       "Metaheurísticas de optimización combinatoria: uso de Simulated Annealing para un problema de calendarización",
@@ -2616,7 +2617,7 @@ export const mypublications = [
   {
     date: [2007, 10],
     doi: "https://doi.org/10.1007/978-3-540-75869-3_15",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Daniel Morato, Javier Aracil, José Hernández, Sergio López-Buedo, Jorge Vergara Méndez, Pedro Reviriego, Gabriel Huecas, Santiago Pavón, and Juan Quemada",
     title:
@@ -2632,7 +2633,7 @@ export const mypublications = [
   },
   {
     date: [2007, 1],
-    type: "book",
+    category: "book",
     author:
       "Joaquin Salvachúa, Alberto Mozo, Daniel Alvarino, Jesus Renero, and Jose Agundez",
     title:
@@ -2647,7 +2648,7 @@ export const mypublications = [
   },
   {
     date: [2006],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sandra Aguirre Herrera, Joaquin Salvachúa, Juan Quemada, Antonio Fumero, and Antonio Tapiador",
     title: "Desarrollo de Titulaciones Conjuntas en los Sistemas de E-Learning",
@@ -2663,7 +2664,7 @@ export const mypublications = [
   {
     date: [2006, 11],
     doi: "https://doi.org/10.1109/COLCOM.2006.361839",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sandra Aguirre Herrera, Joaquin Salvachúa, Juan Quemada, Antonio Fumero, and Antonio Tapiador",
     title: "Joint Degrees in E-Learning Systems: A Web Services Approach",
@@ -2678,7 +2679,7 @@ export const mypublications = [
   {
     date: [2006, 6],
     doi: "https://doi.org/10.1109/ICE.2006.7477106",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Antonio Fumero, Sandra Aguirre Herrera, Antonio Tapiador, and Joaquin Salvachúa",
     title: "Next-Generation Educational Web",
@@ -2694,7 +2695,7 @@ export const mypublications = [
   {
     date: [2006, 10],
     doi: "https://doi.org/10.1109/P2P.2006.43",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Alberto Mozo, and Joaquin Salvachúa",
     title:
       "Tag Indexed DHT for Scalable Search Infrastructure in Social Network Applications",
@@ -2709,7 +2710,7 @@ export const mypublications = [
   {
     date: [2006, 11],
     doi: "https://doi.org/10.1109/COLCOM.2006.361836",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Juan Quemada, Joaquin Salvachúa, Tomas Robles, Encarna Pastor, Santiago Pavón, and Gabriel Huecas",
     title:
@@ -2725,7 +2726,7 @@ export const mypublications = [
   },
   {
     date: [2006, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Joaquin Salvachúa, Sandra Aguirre Herrera, Antonio Fumero, Antonio Tapiador, Alberto Mozo, and Juan Quemada",
     title: "¿ Como puede ser el E-learning 2.0?",
@@ -2740,7 +2741,7 @@ export const mypublications = [
   {
     date: [2006, 8],
     doi: "https://doi.org/10.1109/ICALT.2006.1652431",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Bernd Simon, S. Sobernig, Fridolin Wild, Sandra Aguirre Herrera, Stefan Brantner, Peter Dolog, Gustaf Neumann, G. Huber, Tomaž Klobučar, S. Markus, Zoltan Miklos, Wolfgang Nejdl, D. Olmedilla, Joaquin Salvachúa, Michael Sintek, and T. Zillinger",
     title: "Building Blocks for a Smart Space for Learning^TM",
@@ -2755,7 +2756,7 @@ export const mypublications = [
   {
     date: [2006, 11],
     doi: "https://doi.org/10.1109/COLCOM.2006.361841",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Antonio Tapiador, Antonio Fumero, Joaquin Salvachúa, and Sandra Aguirre Herrera",
     title: "A Web Collaboration Architecture",
@@ -2770,7 +2771,7 @@ export const mypublications = [
   },
   {
     date: [2005, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Sandra Aguirre Herrera, Stefan Brantner, Gernot Hube, Sascha Markus, Zoltan Miklos, Alberto Mozo, Daniel Olmedilla, Joaquin Salvachúa, Bernd Simon, Stefan Sobernig, and Thomas Zillinger",
     title:
@@ -2785,7 +2786,7 @@ export const mypublications = [
   },
   {
     date: [2005],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Sandra Aguirre Herrera, Joaquin Salvachúa, Juan Quemada, and Alberto Mozo",
     title:
@@ -2800,7 +2801,7 @@ export const mypublications = [
   },
   {
     date: [2005, 6],
-    type: "book",
+    category: "book",
     author:
       "Gabriel Huecas, J. Allende, Baltasar Fernández-Manjón, Pilar Díaz, Antonio Reinoso, and Ricardo Sánchez-Cortés",
     title: "Programación En Java 2. Serie Schaum",
@@ -2814,7 +2815,7 @@ export const mypublications = [
   },
   {
     date: [2005, 9],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "P. Miguel-Moro, Santiago Pavón, Rüdiger Geib, Eduardo Azañón-Teruel, Sandra Donaire-Arroyo, Aurora Ferrándiz-Cancio, Carlos Ralli Ucendo, Francisco Bueno, Ignacio Soto-Campos, María Calderón, Dirk Hugo, and Emmanuel Riou",
     title:
@@ -2830,7 +2831,7 @@ export const mypublications = [
   {
     date: [2005, 1],
     doi: "https://doi.org/10.1109/COLCOM.2005.1651238",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Juan Quemada, Tomas Miguel, Santiago Pavón, Gabriel Huecas, Tomás Robles, Joaquin Salvachúa, Diego Ortiz, Vicente Sirvent, Fernando Escribano, and Javier Sedano",
     title:
@@ -2847,7 +2848,7 @@ export const mypublications = [
   {
     date: [2005, 6],
     doi: "https://doi.org/10.1007/11494881_15",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Alberto Verdejo, Narciso Martí-Oliet, Tomás Robles, Joaquin Salvachúa, Luis Díaz, and Bradley Margarita",
     title: "Transforming Information in RDF to Rewriting Logic",
@@ -2862,7 +2863,7 @@ export const mypublications = [
   },
   {
     date: [2004],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Antonio García, Jose Rubio Guivernau, David Fernández, Juan Quemada, Mario Morelli, Mario Palet, and Antonio Gómez",
     title: "Nuevo modelo de punto de intercambio de tráfico en IPv6",
@@ -2876,7 +2877,7 @@ export const mypublications = [
   },
   {
     date: [2004, 5],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Partially Isaias, Juan Quemada, Gabriel Huecas, Tomas Miguel, Joaquin Salvachúa, Blanca Fernandez, Bernd Simon, Wirtshaftsuniversitt Wien, Katherine Maillet, and Effie Law",
     title: "EducaNext: A Framework for Sharing Live Educational",
@@ -2891,7 +2892,7 @@ export const mypublications = [
   {
     date: [2004, 9],
     doi: "https://doi.org/10.1007/978-3-540-30232-2_3",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "and Juan Quemada",
     title:
       "Formal Description Techniques and Software Engineering: Some Reflections after 2 Decades of Research",
@@ -2907,7 +2908,7 @@ export const mypublications = [
   {
     date: [2004, 1],
     doi: "https://doi.org/10.1145/1013367.1013370",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Juan Quemada, Gabriel Huecas, Tomas Miguel, Joaquin Salvachúa, Blanca Fernandez, Bernd Simon, Katherine Maillet, and Efiie Lai-Cong",
     title:
@@ -2924,7 +2925,7 @@ export const mypublications = [
   {
     date: [2004, 10],
     doi: "https://doi.org/10.1007/978-3-540-30470-8_80",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Germán Rivera, Bernd Simon, Juan Quemada, and Joaquin Salvachúa",
     title: "Improving LOM-Based Interoperability of Learning Repositories",
     journal:
@@ -2938,7 +2939,7 @@ export const mypublications = [
   },
   {
     date: [2003, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "Juan Quemada, J.C. Gallego, and Gabriel Huecas",
     title: "EducaNext: Un servicio de intercambio de recursos educativos",
     journal: "RedIRIS: boletín de la Red Nacional de I+D RedIRIS",
@@ -2952,7 +2953,7 @@ export const mypublications = [
   {
     date: [2003, 2],
     doi: "https://doi.org/10.1109/SAINTW.2003.1210156",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Juan Quemada, Tomas Miguel, E. Castro, Santiago Pavón, Gabriel Huecas, Tomas Robles, Joaquin Salvachúa, E. Apolinario, J. Sedano, and M.J. Perea",
     title:
@@ -2969,7 +2970,7 @@ export const mypublications = [
   {
     date: [2003, 1],
     doi: "https://doi.org/10.1007/978-94-017-1122-7_10",
-    type: "chapter",
+    category: "chapter",
     author:
       "Juan Quemada, Joaquin Salvachúa, Blanca Rodríguez, and Gabriel Huecas",
     title: "Sharing Live Educational Resources in Universal with Isabel",
@@ -2983,7 +2984,7 @@ export const mypublications = [
   },
   {
     date: [2003, 10],
-    type: "article-journal",
+    category: "article-journal",
     author: "Juan Quemada, and Bernd Simon",
     title:
       "A Use-Case Based Model for Learning Resources in Educational Mediators",
@@ -2998,7 +2999,7 @@ export const mypublications = [
   {
     date: [2003, 6],
     doi: "https://doi.org/10.1109/MIC.2003.1200300",
-    type: "article-journal",
+    category: "article-journal",
     author: "Tomas Robles, R. Ortiz, and Joaquin Salvachúa",
     title: "Porting the session initiation protocol to IPv6",
     journal: "Internet Computing, IEEE",
@@ -3012,7 +3013,7 @@ export const mypublications = [
   {
     date: [2003, 7],
     doi: "https://doi.org/10.1007/978-1-4471-0327-1_4",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Tomas Robles, Juan Quemada, Tomas Miguel, Santiago Pavón, Manuel Petit, Gabriel Huecas, Hector Velayos, Eva Castro, and Sistemas Telemticos",
     title: "Distributed Global Conferences Over Heterogeneous Networks",
@@ -3027,7 +3028,7 @@ export const mypublications = [
   },
   {
     date: [2003, 11],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Joaquin Salvachúa, Gabriel Huecas, Tomas Robles, Blanca Rodríguez, Santiago Pavón, and Juan Quemada",
     title:
@@ -3043,7 +3044,7 @@ export const mypublications = [
   },
   {
     date: [2003, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Bernd Simon, Zol An, Mikí Os, Wolfgang Nejdl, Michael Sintek, and Joaquin Salvachúa",
     title:
@@ -3058,7 +3059,7 @@ export const mypublications = [
   },
   {
     date: [2003, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Bernd Simon, Zoltan Miklos, Wolfgang Nejdl, Michael Sintek, and Joaquin Salvachúa",
     title: "Elena: A Mediation Infrastructure for Educational Services",
@@ -3073,7 +3074,7 @@ export const mypublications = [
   },
   {
     date: [2002, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "J. Salvachúa, Gabriel Huecas, B. Rodríguez, and Juan Quemada",
     title: "Modelling a distributed multimedia conference with rdf",
     journal: "undefined",
@@ -3086,7 +3087,7 @@ export const mypublications = [
   },
   {
     date: [2001, 1],
-    type: "article-journal",
+    category: "article-journal",
     author: "J. Allende, and Gabriel Huecas",
     title: "Java 2 : Iniciación y Referencia",
     journal: "undefined",
@@ -3099,7 +3100,7 @@ export const mypublications = [
   },
   {
     date: [2001, 1],
-    type: "book",
+    category: "book",
     author: "and Gabriel Huecas",
     title: "Java 2 Iniciación y Referencia",
     journal: "undefined",
@@ -3111,7 +3112,7 @@ export const mypublications = [
   },
   {
     date: [2001, 8],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Tomas Robles, Gabriel Huecas, Juan Quemada, Alberto Verdejo, and Luis Díaz",
     title: "Process calculi: E-LOTOS",
@@ -3126,7 +3127,7 @@ export const mypublications = [
   {
     date: [2000, 1],
     doi: "https://doi.org/10.1007/978-0-387-35532-0_7",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Tomás Robles, Héctor Munoz, Juan Quemada, Tomas Miguel, Santiago Pavón, Joaquin Salvachúa, Gabriel Huecas, Eva Castro, and Manuel Petit",
     title: "Managing Distributed Conferences with ISABEL",
@@ -3142,7 +3143,7 @@ export const mypublications = [
   {
     date: [1999, 10],
     doi: "https://doi.org/10.1007/978-0-387-34892-6_15",
-    type: "article-journal",
+    category: "article-journal",
     author: "David Frutos Escrig, and Juan Quemada",
     title: "Characterizing Termination in LOTOS via Testing",
     journal:
@@ -3156,7 +3157,7 @@ export const mypublications = [
   },
   {
     date: [1999],
-    type: "article-journal",
+    category: "article-journal",
     author: "Bernd Simon, and Juan Quemada",
     title: "A Reflection of Metadata Standards based on Reference Scenarios",
     journal: "Campus 2002",
@@ -3170,7 +3171,7 @@ export const mypublications = [
   {
     date: [1998, 1],
     doi: "https://doi.org/10.1007/978-0-387-35394-4_18",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Gabriel Huecas, Tomás Robles, L. Gonzalez, and J. Serrano",
     title:
       "Development of a Validation System based on Formal Description Techniques: Application to an Ada Run Time System",
@@ -3185,7 +3186,7 @@ export const mypublications = [
   },
   {
     date: [1997, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Manuel José Fernández Iglesias, Martín Llamas Nistal, Juan Burguillo, and Juan Quemada",
     title:
@@ -3201,7 +3202,7 @@ export const mypublications = [
   },
   {
     date: [1997, 1],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "David Larrabeiti, M. Agúndez, Arturo Azcorra, C. García, Juan Quemada, Tomas Miguel, and M. Petit",
     title:
@@ -3217,7 +3218,7 @@ export const mypublications = [
   {
     date: [1997, 1],
     doi: "https://doi.org/10.1007/978-0-387-35271-8_8",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Giovanny Lucero, and Juan Quemada",
     title: "Specifying the ODP Trader: An Introduction to E-LOTOS",
     journal:
@@ -3231,7 +3232,7 @@ export const mypublications = [
   },
   {
     date: [1997, 5],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Juan Quemada, Tomas Miguel, Arturo Azcorra, Santiago Pavón, Joaquin Salvachúa, Jose Moreno, Moreno Dit-upm, Pedro Luis Chas-Alonso, Carlos Acuña, Lidia Rodríguez, Vasco Lagarto, João Bastos, Francisco Fontes, and Jose Domingues",
     title: "Abc'95: A Tele-Education Case Study",
@@ -3246,7 +3247,7 @@ export const mypublications = [
   {
     date: [1997, 5],
     doi: "https://doi.org/10.1007/3-540-58494-3_29",
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Juan Quemada, Tomas Miguel, Arturo Azcorra, Santiago Pavón, Joaquin Salvachúa, Manuel Petit, Pedro Luis Chas-Alonso, Carlos Acuña, Lidia Yamamoto, Vasco Lagarto, Joao Vastos, and Francisco Fontes",
     title:
@@ -3262,7 +3263,7 @@ export const mypublications = [
   },
   {
     date: [1997, 5],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Juan Quemada, Tomas Miguel, Arturo Azcorra, Santiago Pavón, Joaquin Salvachúa, Manuel Petit, David Larrabeiti, Tomas Robles, Gabriel Huecas, Daniel Rodríguez, Fernando Echevarrieta, and Eva Castro",
     title:
@@ -3277,7 +3278,7 @@ export const mypublications = [
   },
   {
     date: [1997, 5],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "Juan Quemada, Tomas Miguel, Arturo Azcorra, Santiago Pavón, Joaquin Salvachúa, Manuel Petit, Jose Moreno, Moreno Dit-upm, Pedro Luis Chas-Alonso, Carlos Acuña, Lidia Rodríguez, Vasco Lagarto, João Bastos, Francisco Fontes, and Jose Domingues",
     title: "Tele-Education Experiences With The Isabel Application",
@@ -3292,7 +3293,7 @@ export const mypublications = [
   {
     date: [1996, 1],
     doi: "https://doi.org/10.1007/978-0-387-35079-0_31",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "David Larrabeiti, Juan Quemada, and Santiago Pavón",
     title: "From LOTOS to Petri Nets through Iexpansion",
     journal:
@@ -3307,7 +3308,7 @@ export const mypublications = [
   {
     date: [1996, 1],
     doi: "https://doi.org/10.1007/978-0-387-35079-0_22",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Martín Llamas Nistal, Juan Quemada, and Manuel José Fernández Iglesias",
     title: "Direct Verification of Bisimulations",
@@ -3322,7 +3323,7 @@ export const mypublications = [
   {
     date: [1996, 1],
     doi: "https://doi.org/10.1007/BFb0020854",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Juan Quemada, Tomas Miguel, Arturo Azcorra, Santiago Pavón, Joaquin Salvachúa, Manuel Petit, David Larrabeiti, Tomás Robles, and Gabriel Huecas",
     title: "ISABEL: A CSCW application for the distribution of events",
@@ -3336,9 +3337,9 @@ export const mypublications = [
   },
   {
     date: [1996, 6],
-    type: "article-journal",
+    category: "article-journal",
     author: "Gualberto Rabay, and Juan Quemada",
-    title: "TE-LOLA: A timed LOLA prototype",
+    title: "TE-LOLA: A timed LOLA protocategory",
     journal:
       "Proceedings of the International Workshop on applied Formal Methods",
     year: "1996",
@@ -3346,11 +3347,11 @@ export const mypublications = [
     volume: "undefined",
     pages: "85-95",
     content:
-      "Rabay, G., &#38; Quemada, J. (1996). TE-LOLA: A timed LOLA prototype. <i>Proceedings of the International Workshop on Applied Formal Methods</i>, 85–95.",
+      "Rabay, G., &#38; Quemada, J. (1996). TE-LOLA: A timed LOLA protocategory. <i>Proceedings of the International Workshop on Applied Formal Methods</i>, 85–95.",
   },
   {
     date: [1995, 12],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "F. Catalán, I.M. González, Gabriel Huecas, J. Miguel, and M.L. Sánchez",
     title: "Conformance Testing on Complex Systems Using Lotos",
@@ -3364,7 +3365,7 @@ export const mypublications = [
   },
   {
     date: [1995, 5],
-    type: "document",
+    category: "document",
     author:
       "Luc Léonard, Guy Leduc, David Frutos Escrig, Luis Díaz, Carlos Nieto, Juan Quemada, and Gualberto Rabay",
     title: "Belgian-Spanish Proposal for a Time Extended LOTOS",
@@ -3378,7 +3379,7 @@ export const mypublications = [
   },
   {
     date: [1995, 9],
-    type: "chapter",
+    category: "chapter",
     author:
       "Luc Léonard, Guy Leduc, Carlos Nieto, Juan Quemada, Gualberto Rabay, David Frutos Escrig, and Luis Díaz",
     title: "Time Extended LOTOS",
@@ -3393,7 +3394,7 @@ export const mypublications = [
   {
     date: [1995, 1],
     doi: "https://doi.org/10.1007/978-1-4615-2203-4_12",
-    type: "chapter",
+    category: "chapter",
     author: "Tomas Miguel, Arturo Azcorra, Juan Quemada, and Jose Manas",
     title: "A Pragmatic Approach to Verification, Validation and Compilation",
     journal: "LOTOSphere: Software Development with LOTOS",
@@ -3407,7 +3408,7 @@ export const mypublications = [
   {
     date: [1995, 1],
     doi: "https://doi.org/10.1007/978-1-4615-2203-4_2",
-    type: "chapter",
+    category: "chapter",
     author: "Juan Quemada, Arturo Azcorra, and Santiago Pavón",
     title: "The Lotosphere Design Methodology",
     journal: "LOTOSphere: Software Development with LOTOS",
@@ -3420,7 +3421,7 @@ export const mypublications = [
   },
   {
     date: [1994, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Martín Llamas Nistal, Manuel José Fernández Iglesias, and Juan Quemada",
     title: "Normalización de expresiones LOTOs bajo equivalencia de prueba",
@@ -3436,7 +3437,7 @@ export const mypublications = [
   {
     date: [1994, 1],
     doi: "https://doi.org/10.1142/9789812831583_0009",
-    type: "article-journal",
+    category: "article-journal",
     author: "Juan Quemada, Carlos Nieto, David Frutos Escrig, and Luis Díaz",
     title: "A timed LOTOS extension",
     journal: "Theories and Experiences for Real-Time System Development",
@@ -3449,7 +3450,7 @@ export const mypublications = [
   },
   {
     date: [1993, 9],
-    type: "article-journal",
+    category: "article-journal",
     author:
       "J. Matins, T. Miquel, Tomas Robles, Joaquin Salvachúa, Gabriel Huecas, and M. Veiga",
     title: "Topo: quick reference auxiliary toolswversion 3r2",
@@ -3464,7 +3465,7 @@ export const mypublications = [
   {
     date: [1993, 2],
     doi: "https://doi.org/10.1016/0169-7552(93)90044-5",
-    type: "article-journal",
+    category: "article-journal",
     author: "and Juan Quemada",
     title: "On tools for FDTs",
     journal: "Computer Networks and ISDN Systems",
@@ -3478,7 +3479,7 @@ export const mypublications = [
   {
     date: [1993, 5],
     doi: "https://doi.org/10.1007/BF01211556",
-    type: "article-journal",
+    category: "article-journal",
     author: "Juan Quemada, David Frutos Escrig, and Arturo Azcorra",
     title: "TIC: A timed calculus",
     journal: "Formal Asp. Comput.",
@@ -3491,7 +3492,7 @@ export const mypublications = [
   },
   {
     date: [1993, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, David Larrabeiti, and Santiago Pavón",
     title:
       "Compressing the State Space Representation of LOTOS Specifications.",
@@ -3507,7 +3508,7 @@ export const mypublications = [
   {
     date: [1992, 12],
     doi: "https://doi.org/10.1016/B978-0-444-89874-6.50018-0",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Angel Fernandez, Carlos Nieto, Leon Vidaller, and Juan Quemada",
     title: "Development of Satellite Communication Networks Based on LOTOS",
     journal:
@@ -3522,7 +3523,7 @@ export const mypublications = [
   {
     date: [1992, 12],
     doi: "https://doi.org/10.1016/B978-0-444-89402-1.50039-4",
-    type: "chapter",
+    category: "chapter",
     author: "Jose Manas, and Joaquin Salvachúa",
     title: "Λβ: a Virtual LOTOS Machine",
     journal: "Formal Description Techniques, IV",
@@ -3536,7 +3537,7 @@ export const mypublications = [
   {
     date: [1992, 12],
     doi: "https://doi.org/10.1016/B978-0-444-89874-6.50012-X",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, and Arturo Azcorra",
     title: "Structuring Protocols using Exceptions in a LOTOS Extension",
     journal:
@@ -3550,7 +3551,7 @@ export const mypublications = [
   },
   {
     date: [1992, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Tomás Robles, Jose Manas, and Gabriel Huecas",
     title: "Specification and Derivation of OSI Conformance Test Suites",
     journal:
@@ -3565,7 +3566,7 @@ export const mypublications = [
   {
     date: [1991, 6],
     doi: "https://doi.org/10.1109/MELCON.1991.161891",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Gabriel Huecas, J.L. Mariz, J. Vinyes, and Enrique Vázquez",
     title:
       "Specification of an ISDN Q.931 protocol entity using the LOTOS formal description technique",
@@ -3579,7 +3580,7 @@ export const mypublications = [
   },
   {
     date: [1991, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Jose Manas, and Joaquin Salvachúa",
     title: "Lambda-beta: A Virtual LOTOS Machine.",
     journal:
@@ -3594,7 +3595,7 @@ export const mypublications = [
   {
     date: [1991, 1],
     doi: "https://doi.org/10.1016/B978-0-444-89402-1.50042-4",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Jose Manas, Joaquin Salvachúa, and Tomas Miguel",
     title:
       "Tool Demonstration: A Cross Compiling Experiment: a PC Implementation of a LOTOS Spec",
@@ -3610,7 +3611,7 @@ export const mypublications = [
   {
     date: [1991, 11],
     doi: "https://doi.org/10.1016/B978-0-444-89402-1.50030-8",
-    type: "paper-conference",
+    category: "paper-conference",
     author:
       "Santiago Pavón, M. Hulström, Juan Quemada, David Frutos Escrig, and Y. Ortega",
     title: "Inverse Expansion.",
@@ -3625,7 +3626,7 @@ export const mypublications = [
   },
   {
     date: [1991, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "and Juan Quemada",
     title:
       "Compressed State Space Representation in LOTOS with the Interleaved Expansion",
@@ -3640,7 +3641,7 @@ export const mypublications = [
   },
   {
     date: [1990, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Tomas Miguel, Tomás Robles, Joaquin Salvachúa, and Arturo Azcorra",
     title: "The SRTS Experience: Using TOPO for LOTOS Design and Realization.",
     journal:
@@ -3654,7 +3655,7 @@ export const mypublications = [
   },
   {
     date: [1990, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Santiago Pavón, and Martín Llamas Nistal",
     title: "The Testing Functionalities of LOLA.",
     journal:
@@ -3668,7 +3669,7 @@ export const mypublications = [
   },
   {
     date: [1989, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, Arturo Azcorra, and David Frutos Escrig",
     title: "TIC: A Timed Calculus for LOTOS.",
     journal:
@@ -3683,7 +3684,7 @@ export const mypublications = [
   {
     date: [1989, 1],
     doi: "https://doi.org/10.1007/3-540-52148-8_25",
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, Santiago Pavón, and Angel Fernandez",
     title: "State Exploration by Transformation with LOLA.",
     journal: "Automatic Verification Methods for Finite State Systems",
@@ -3697,7 +3698,7 @@ export const mypublications = [
   {
     date: [1988, 12],
     doi: "https://doi.org/10.1016/0066-4138(88)90002-X",
-    type: "article-journal",
+    category: "article-journal",
     author: "Angel Fernandez, Juan Quemada, Leon Vidaller, and Carlos Nieto",
     title: "LOTOS based derivation methodology in the PRODAT project",
     journal: "Annual Review in Automatic Programming",
@@ -3710,7 +3711,7 @@ export const mypublications = [
   },
   {
     date: [1988, 9],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, Santiago Pavón, and Angel Fernandez",
     title:
       "Transforming LOTOS Specifications with LOLA - The Parameterised Expansion.",
@@ -3725,7 +3726,7 @@ export const mypublications = [
   },
   {
     date: [1987, 1],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, and Angel Fernandez",
     title: "Introduction of Quantitative Relative Time into LOTOS.",
     journal:
@@ -3740,7 +3741,7 @@ export const mypublications = [
   {
     date: [1983, 9],
     doi: "https://doi.org/10.1016/0165-6074(83)90188-6",
-    type: "article-journal",
+    category: "article-journal",
     author: "J. Vinyes, Juan Quemada, and Angel Fernandez",
     title: "A building access control system with alarm monitoring",
     journal: "Microprocessing and Microprogramming",
@@ -3753,7 +3754,7 @@ export const mypublications = [
   },
   {
     date: [1981, 11],
-    type: "paper-conference",
+    category: "paper-conference",
     author: "Juan Quemada, and Juan García",
     title:
       "A 16-Channel Cassette Recorder and Telephone Transmitter with CRT Based Display for Clinical EEG 1",

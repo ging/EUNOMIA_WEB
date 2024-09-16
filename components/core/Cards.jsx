@@ -11,19 +11,24 @@ import Heading from "../ui/Heading";
 import { Badge } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
-import { FaceIcon, ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
+import {
+  FaceIcon,
+  ArrowRightIcon,
+  ExternalLinkIcon,
+} from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const CardVariants = cva(
-  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-105 transition-all overflow-hidden",
+  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       variant: {
         default: "bg-white shadow hover:bg-primary/40",
-        project: "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
+        project:
+          "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
         course: "bg-purple-50",
         publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "p-0 bg-snow border border-input shadow-sm hover:scale-105",
+        team: "p-0 bg-snow border border-input shadow-sm hover:scale-[101%]",
         tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
       },
       direction: {
@@ -40,16 +45,12 @@ const CardVariants = cva(
 
 const cardFooterClasses = cn(
   "pt-4 w-full flex flex-wrap flex-row-reverse gap-2 xs:gap-4 justify-center xs:justify-start"
-)
-const cardBodyClasses = cn(
-  "h-full w-full flex flex-col justify-start"
-)
+);
+const cardBodyClasses = cn("h-full w-full flex flex-col justify-start");
 const tagContainerClasses = cn(
   "mt-6 w-full flex flex-wrap gap-2 justify-start"
-)
-const classesImg = cn(
-  "bg-gray-200 min-h-16 min-w-16 object-cover"
 );
+const classesImg = cn("bg-gray-200 min-h-16 min-w-16 object-cover");
 
 const renderTags = (tags) => {
   if (!tags) return null;
@@ -62,46 +63,73 @@ const renderTags = (tags) => {
 const Card = React.forwardRef(
   (
     {
-      variant, direction, className,
-      title, subtitle, description, img, tags, date, category, route,
-      name, position, center, email,
-      author, doi,
+      variant,
+      direction,
+      className,
+      title,
+      subtitle,
+      description,
+      img,
+      tags,
+      date,
+      category,
+      route,
+      name,
+      position,
+      center,
+      email,
+      author,
+      doi,
+      github,
       buttonText,
       cardType,
-    }, ref
+    },
+    ref
   ) => {
     const globalCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         {/* card header */}
-        {( (date || category) &&
+        {(date || category) && (
           <header className="w-full flex gap-4 justify-start">
-            <Badge variant="bigger">{date}</Badge>
-            <Badge variant="bigger">{category}</Badge>
+            <Badge variant="outline" size="lg">
+              {date}
+            </Badge>
+            <Badge variant="outline" size="lg">
+              {category}
+            </Badge>
           </header>
         )}
         {/* card image */}
-        {( img && 
-          <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>
+        {img && (
+          <img
+            src={/* process.env.PUBLIC_URL */ +img}
+            alt={img}
+            className={classesImg}
+          />
         )}
         {/* card body */}
-        {( (title || subtitle || description || tags) &&
+        {(title || subtitle || description || tags) && (
           <div className={cardBodyClasses}>
-            {title && (<Heading level="h3">{title}</Heading>)}
-            {subtitle && (<Heading level="h5">{subtitle}</Heading>)}
-            {description && (<Text>{description}</Text>)}
-            {tags && (<div className={tagContainerClasses}>{renderTags(tags)}</div>)}
+            {title && <Heading level="h3">{title}</Heading>}
+            {subtitle && <Heading level="h5">{subtitle}</Heading>}
+            {description && <Text>{description}</Text>}
+            {tags && (
+              <div className={tagContainerClasses}>{renderTags(tags)}</div>
+            )}
           </div>
         )}
         {/* card footer 
         hay que ver cómo hacer que los botones pueda haber dos botones con textos diferentes 
         */}
-        {( buttonText &&
+        {buttonText && (
           <footer className={cardFooterClasses}>
             <Button variant="" size="" className="">
               <FaceIcon />
               {buttonText}
             </Button>
-            <Button variant="secondary" size="" className="">{buttonText}</Button>
+            <Button variant="secondary" size="" className="">
+              {buttonText}
+            </Button>
           </footer>
         )}
       </article>
@@ -111,17 +139,22 @@ const Card = React.forwardRef(
     const projectCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
-          <Badge variant="bigger">{date}</Badge>
-          <Badge variant="bigger">{category}</Badge>
+          <Badge variant="outline" size="lg">
+            {date}
+          </Badge>
+          <Badge variant="outline" size="lg">
+            {category}
+          </Badge>
         </header>
         <div className={cardBodyClasses}>
           <Heading level="h3">{title}</Heading>
           <Heading level="h5">{subtitle}</Heading>
-          {(description && <Text>{description}</Text>)}
+          {description && <Text>{description}</Text>}
           <div className={tagContainerClasses}>{renderTags(tags)}</div>
         </div>
         <footer>
-          <Button href={route}>Ver proyecto</Button> {/**revisar el href que no funciona el link */}
+          <Button href={route}>Ver proyecto</Button>{" "}
+          {/**revisar el href que no funciona el link */}
         </footer>
       </article>
     );
@@ -130,11 +163,15 @@ const Card = React.forwardRef(
     const courseCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="flex w-full gap-4 items-center">
-          <Badge variant="bigger">{date}</Badge>
-          <Badge variant="bigger">{category}</Badge>
-          <span className="spacer w-full"/>
+          <Badge variant="outline" size="lg">
+            {date}
+          </Badge>
+          <Badge variant="outline" size="lg">
+            {category}
+          </Badge>
+          <span className="spacer w-full" />
           <Button href={route} variant="ghost" size="lg">
-            Ir al curso <ExternalLinkIcon className="w-5 h-5"/>
+            Ir al curso <ExternalLinkIcon className="w-5 h-5" />
           </Button>
         </header>
         <div className={cardBodyClasses}>
@@ -150,28 +187,26 @@ const Card = React.forwardRef(
     const publicationCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="w-full flex gap-4 justify-start">
-          <Badge variant="bigger">{date}</Badge>
-          <Badge variant="bigger">{category}</Badge>
+          <Badge variant="outline" size="lg">
+            {date}
+          </Badge>
+          <Badge variant="outline" size="lg">
+            {category}
+          </Badge>
         </header>
         <div className={cardBodyClasses}>
-          <Heading level="h3"><i>{title}</i></Heading>
+          <Heading level="h3">
+            <i>{title}</i>
+          </Heading>
           <Heading level="h5">{author}</Heading>
         </div>
         <footer className={cardFooterClasses}>
-          <Button variant="secondary">
-            leer publicación
-            <ArrowRightIcon />
-          </Button>
-
           {doi ? (
             <Button asChild variant="secondary" radius="rounded_md">
-              <Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href={doi}
-              >
-                DOI btn test
+              <Link rel="noopener noreferrer" target="_blank" href={doi}>
+                Leer publicación
                 {/* {t("publications.button")} */}
+                <ArrowRightIcon />
               </Link>
             </Button>
           ) : null}
@@ -181,13 +216,25 @@ const Card = React.forwardRef(
 
     // TEAM - ok
     const teamCard = (
-      <article className={cn(CardVariants({ variant, direction, className })) + " mx-auto w-60" }>
-        {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg + " w-full min-h-40"}/>)}
-        {( (name || position || description || tags) &&
+      <article
+        className={
+          cn(CardVariants({ variant, direction, className })) + " mx-auto w-60"
+        }
+      >
+        {img && (
+          <img
+            src={/* process.env.PUBLIC_URL */ +img}
+            alt={img}
+            className={classesImg + " w-full min-h-40"}
+          />
+        )}
+        {(name || position || description || email) && (
           <div className="p-4 h-full w-full flex flex-col justify-between items-center">
-            <Heading level="h3" className={"text-inherit text-center"}>{name}</Heading>
+            <Heading level="h3" className={"text-inherit text-center"}>
+              {name}
+            </Heading>
             <Heading level="h5">{position}</Heading>
-            <Text>{email}</Text>
+            {email && <Text>{email}</Text>}
           </div>
         )}
         {/* {( email &&    
@@ -199,19 +246,30 @@ const Card = React.forwardRef(
 
     // TOOL - ok
     const toolCard = (
-      <article className={cn(CardVariants({ variant, direction, className}))}>
-        {(img && <img src={/* process.env.PUBLIC_URL */ + img} alt={img} className={classesImg}/>)}
+      <article className={cn(CardVariants({ variant, direction, className }))}>
+        {img && (
+          <img
+            src={/* process.env.PUBLIC_URL */ +img}
+            alt={img}
+            className={classesImg}
+          />
+        )}
         <div className={cardBodyClasses + " px-4 pt-1"}>
           <Heading level="h3">{title}</Heading>
           <Text>{description}</Text>
         </div>
         <footer className={cardFooterClasses + " p-4"}>
-          <Button variant="secondary">
-            GitHub
+          <Button asChild variant="secondary" radius="rounded_md">
+            <Link rel="noopener noreferrer" target="_blank" href={route}>
+              Ver herramienta
+              <ArrowRightIcon />
+            </Link>
           </Button>
-          <Button variant="">
-              Ver herramienta<ArrowRightIcon/>
-          </Button>
+          {( github && <Button asChild variant="link">
+            <Link rel="noopener noreferrer" target="_blank" href={github}>
+              GitHub
+            </Link>
+          </Button>)}
         </footer>
       </article>
     );
