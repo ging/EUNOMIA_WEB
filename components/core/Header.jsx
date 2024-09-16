@@ -86,7 +86,7 @@ export default function Header(props) {
         </div>
         {/* /menu icons */}
 
-        {/* menu nav */}
+        {/* menu nav */} 
         <div className={menuClasses}>
           <ul className={menuItems}>
             {routes.map((route, index) => (

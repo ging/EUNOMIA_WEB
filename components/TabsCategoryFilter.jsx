@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function TabsCategoryFilter({ categories, cards, onFilter }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const { t } = useTranslation();
-
+ 
   // Función para manejar el cambio de categoría
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);

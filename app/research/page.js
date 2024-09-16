@@ -14,7 +14,7 @@ export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const [state, setState] = useState({
-    papers: mypublications,
+    items: mypublications,
     search: "",
     year: undefined,
     type: undefined,
@@ -25,10 +25,16 @@ export default function Research() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { papers, search, year, type, papersToShow } = state;
+  // desestructuración state
+  const { items, search, year, type, papersToShow } = state;
 
-  console.log(ProjectCard)
-  let papersFiltered = papers.filter((paper) => {
+  // creado array de categorías de publications 
+  const categoriesTypes = [...new Set(mypublications.map(publication => publication.type))];
+  categoriesTypes.push("all")
+
+  console.log(categoriesTypes)
+  
+  let papersFiltered = items.filter((paper) => {
     return (
       (!search ||
         search
@@ -88,15 +94,17 @@ export default function Research() {
         </p>
       </div>
       <main  className="research">
-        <ProjectCard/>
+       
         <Filters
           search={search} // filtro 1: busqueda de texto
           year={year} // filtro 2: busqueda por año
           type={type} // filtro 3: busqueda por tipo de publicacion
-          papers={papers} // lista de papers
+          items={items} // lista de papers
+          // con estas funciones se comunica el hijo con el padre 
           changeSearch={(search) => setState({ ...state, search: search })} // función para cambiar estado de texto de busqueda
           changeYear={(year) => setState({ ...state, year: year })} // función para cambiar estado de input del año
           changeType={(type) => setState({ ...state, type: type })} // función para cambiar estado de input del tipo de publicacion
+          categoriesTypes={categoriesTypes}
           results={
             papersFiltered instanceof Array ? papersFiltered.length : 0
           }

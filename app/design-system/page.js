@@ -26,7 +26,8 @@ export default function DesignSystem(props) {
   // Funcion y array de categorias de Tabs
   const [filteredCards, setFilteredCards] = useState(projects);
 
-  const categories = ["all", "ind", "erg", "other"]; // Tus categorías personalizadas
+  // Tus categorías para el filtro
+  const categories = ["all", "ind", "erg", "other"]; 
 
   return (
     <main className={"page_" + currentLang + " standard_margin"}>

@@ -68,12 +68,15 @@ export const en = {
     "publications": {
         "title": "Publications",
         "filter":{
-            "fieldTitle":"Search",
+            "fieldTitle1":"Search",
             "fieldTitle2":"Publication type",
             "fieldTitle3":"Year",
-            "fieldOpt":"All",
-            "fieldOpt2":"Journal Article",
-            "fieldOpt3":"Conference proceedings",
+            "fieldOpt1":"Journal Article",
+            "fieldOpt2":"Conference proceedings",
+            "fieldOpt3":"Book",
+            "fieldOpt4":"Chapter",
+            "fieldOpt5":"Document",
+            "fieldOpt6":"All",
             "text":"Results"
         },
         "button": "Read publication",

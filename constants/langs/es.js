@@ -71,10 +71,10 @@ export const es = {
     "publications": {
         "title": "Publicaciones",
         "filter":{
-            "fieldTitle":"Buscar",
+            "fieldTitle1":"Buscar",
             "fieldTitle2":"Tipo de publicación",
             "fieldTitle3":"Año",
-            "fieldOpt":"Todo",
+            "fieldOpt1":"Todo",
             "fieldOpt2":"Artículos de revista",
             "fieldOpt3":"Actas de congreso",
             "text":"Resultados"
