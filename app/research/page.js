@@ -20,7 +20,7 @@ export default function Research() {
     items: mypublications,
     search: "",
     year: undefined,
-    type: undefined,
+    category: undefined,
     papersToShow: 6, // Number of papers to show initially
   });
 
@@ -29,13 +29,13 @@ export default function Research() {
   }, []);
 
   // desestructuración state
-  const { items, search, year, type, papersToShow } = state;
+  const { items, search, year, category, papersToShow } = state;
 
   // creado array de categorías de publications 
-  const categoriesTypes = [...new Set(mypublications.map(publication => publication.type))];
-  categoriesTypes.push("all")
+  const categories = [...new Set(mypublications.map(publication => publication.category))];
+  categories.push("all")
 
-  console.log(categoriesTypes)
+  console.log(categories)
   
   let papersFiltered = items.filter((paper) => {
     return (
@@ -74,7 +74,7 @@ export default function Research() {
           )) &&
       (!year ||
         (paper.date && paper.date[0] && paper.date[0].toString() === year)) &&
-      (!type || (paper.type && paper.type === type))
+      (!category || (paper.category && paper.category === category))
     );
   });
 
@@ -100,13 +100,13 @@ export default function Research() {
         <Filters
           search={search} // filtro 1: busqueda de texto
           year={year} // filtro 2: busqueda por año
-          type={type} // filtro 3: busqueda por tipo de publicacion
+          category={category} // filtro 3: busqueda por tipo de publicacion
           items={items} // lista de papers
           // con estas funciones se comunica el hijo con el padre 
           changeSearch={(search) => setState({ ...state, search: search })} // función para cambiar estado de texto de busqueda
           changeYear={(year) => setState({ ...state, year: year })} // función para cambiar estado de input del año
-          changeType={(type) => setState({ ...state, type: type })} // función para cambiar estado de input del tipo de publicacion
-          categoriesTypes={categoriesTypes}
+          changeCategory={(category) => setState({ ...state, category: category })} // función para cambiar estado de input del tipo de publicacion
+          categories={categories}
           results={
             papersFiltered instanceof Array ? papersFiltered.length : 0
           }

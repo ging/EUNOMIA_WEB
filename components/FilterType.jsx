@@ -15,7 +15,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 
-export default function FilterText( {type, changeType, categories } ) {
+export default function FilterText( {category, changeCategory, categories } ) {
   const { t } = useTranslation();
   return (
     <>
@@ -23,13 +23,13 @@ export default function FilterText( {type, changeType, categories } ) {
           <Select
             className="filter flex flex-col"
             onValueChange={(value) =>
-              changeType(value === "all" ? undefined : value)
+              changeCategory(value === "all" ? undefined : value)
             }
           >
             <SelectTrigger className="w-full" htmlFor="publication">
               <SelectValue
                 onChange={(e) =>
-                  changeType(
+                  changeCategory(
                     e.target.value === "all" ? undefined : e.target.value
                   )
                 }

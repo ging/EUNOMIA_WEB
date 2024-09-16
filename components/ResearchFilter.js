@@ -17,7 +17,7 @@ import FilterText from "./FilterText";
 import FilterDate from "./FilterDate";
 import FilterType from "./FilterType";
 
-export default function Filters({search, changeSearch, year, changeYear, items, type, changeType, results, categoriesTypes }) {
+export default function Filters({search, changeSearch, year, changeYear, items, category, changeCategory, results, categories }) {
   const { t } = useTranslation();
 
   return (
@@ -25,7 +25,7 @@ export default function Filters({search, changeSearch, year, changeYear, items, 
       <FilterText search={search} changeSearch={changeSearch} ></FilterText>
       <div className="container_selects gap_div flex flex-row">
         <div className="container_select_label w-1/2">
-          <FilterType type={type} changeType={changeType} categories={categoriesTypes}/>
+          <FilterType category={category} changeCategory={changeCategory} categories={categories}/>
         </div>
         <div className="container_select_label w-1/2">
        <FilterDate items={items} year={year} changeYear={changeYear}/>
