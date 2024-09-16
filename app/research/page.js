@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Filters from "@/components/ResearchFilter";
-import ProjectCard from "@/components/projectCard";
 import Link from "next/link";
 import { mypublications } from "@/constants/publications";
 
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
-import { Button } from "@/components/ui/button";
+import { Button, ButtonVariants } from "@/components/ui/button";
+import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
+import Divider from "@/components/ui/divider";
+
 
 export default function Research() {
   const { t, i18n } = useTranslation();
@@ -84,17 +87,16 @@ export default function Research() {
 
   return (
     <div className={"research page_" + currentLang}>
-      <div className="banner" id="banner-publications">
-        <h1>{t("publications.title")}</h1>
-        <p>
+      <div className="standard_margin" id="banner-publications">
+        <Heading level="h1">{t("publications.title")}</Heading>
+        <Text type="p">
           Este apartado es una recopilación de las publicaciones del equipo de
           la UPM y de la UC3M. Las publicaciones de la UPM están centrados en el
           tema de computación bla bla bla etc y los de la UC3M se centran en
           sistemas de redes de no se cuantitos.
-        </p>
+        </Text>
       </div>
-      <main  className="research">
-       
+      <main className="research">
         <Filters
           search={search} // filtro 1: busqueda de texto
           year={year} // filtro 2: busqueda por año
@@ -112,34 +114,40 @@ export default function Research() {
         <section className="flex flex-col gap-4 standard_margin">
           {papersFiltered
             .slice(0, papersToShow)
-            .map(({ date, type, doi, author, title, journal }, ind) => {
+            .map(({ date, category, doi, author, title, journal }, ind) => {
               return (
                 <Card
-                cardType={"publication"}
-                className={CardVariants({
-                  variant: "publication",
-                })}
-                date={date}
-                category={type}
-                title={title}
-                author={author}
-                doi={doi}
-              ></Card>                
+                  cardType={"publication"}
+                  className={CardVariants({
+                    variant: "publication",
+                  })}
+                  date={date}
+                  category={category}
+                  title={title}
+                  author={author}
+                  doi={doi}
+                ></Card>
               );
             })}
         </section>
 
         <div className="mb-4 w-full flex justify-center">
-        {papersFiltered.length > papersToShow && (
-            <Button onClick={handleLoadMore}
-              variant="secondary"
-              size="lg"
+          {papersFiltered.length > papersToShow && (
+            <Button
+              onClick={handleLoadMore}
+              className={
+                ButtonVariants({
+                  variant: "default",
+                  size: "lg",
+                  radius: "rounded_sm",
+                }) + " w-fit mt-4 my-auto"
+              }
             >
               {t("publications.button2")}
             </Button>
           )}
         </div>
-
+        <Divider/>
       </main>
     </div>
   );
