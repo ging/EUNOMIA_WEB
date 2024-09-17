@@ -11,9 +11,8 @@ import {
 } from "@/components/ui/select";
 
 import { useTranslation } from "react-i18next";
-import { Badge } from "@/components/ui/badge";
 
-export default function FilterText( {year, changeYear, items} ) {
+export default function FilterDate( {year, changeYear, items} ) {
   const { t } = useTranslation();
   function getYears(items) {
     // función para obtener todos los años de todas las

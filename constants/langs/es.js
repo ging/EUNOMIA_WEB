@@ -94,7 +94,7 @@ export const es = {
         "filterTitle2":"Proyectos - individual",
         "filterTitle3":"Grupo de investigación educativa (GIE)",
         "filterTitle4":"Otros",
-        "button":"Detalles",
+        "button":"Detalles", 
 
     },
     "team": {
@@ -134,6 +134,7 @@ export const es = {
         "logoSub": "Redes Futuras para Centros de Datos y Empresas de Telecomunicaciones",
         "titleRight": "Departamento de Ingeniería de sistemas telemáticos",
         "titleRight2": "ETSI telecomunicación",
+        "email":"Correo de contacto:"
     },
     "tools":{
     "title":"Herramientas",

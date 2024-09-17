@@ -19,13 +19,10 @@ export default function About(props) {
         <div className="banner py-8">
           <Heading level="h1" className="">
             {t("contact.title")}
-          </Heading>
+          </Heading> 
 
           <Text>
-            Si quieres más información sobre nuestro proyecto o te gustaría
-            unirte a la comunidad Eunomia para participar en nuestras
-            actividades, puedes enviar un correo electónico o llamar a las
-            direcciones que te incluimos a continuación.
+          {t("contact.body")}
           </Text>
         </div>
         <section className="">

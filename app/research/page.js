@@ -12,7 +12,6 @@ import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import Divider from "@/components/ui/divider";
 
-
 export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;

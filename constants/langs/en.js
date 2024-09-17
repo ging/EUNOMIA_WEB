@@ -44,7 +44,6 @@ export const en = {
             "sectionBody": "(Estado del arte) According to Cisco’s Visual Networking Index (VNI), data traffic has been continuously growing since the introduction of the Internet. While in the past the average overall growth seen in the operators’ networks has been around 35%, this trend seems to keep increasing towards a 45% growth rate [Cisco2018]. Video streaming is still the dominating type of traffic nowadays, but other applications and services have appeared in the past years to stress networks even more, for example Machine-2-Machine (M2M) applications and Online Gaming, with 46% CAGR and 59% CAGR respectively. In parallel, mobile traffic (5G and Beyond-5G) is expected to play a key role in the use of telco infrastructure. Indeed, global mobile traffic is expected to grow twice as fast as IP traffic.",
             "sectionHighlight": "“Frase destacada del texto de la introducción un poco más larga y tal”",
         },
-      
         "Subprojects": {
             "sectionTitle": "Subprojects",
             "Subproject1": {
@@ -79,7 +78,7 @@ export const en = {
             "fieldOpt6":"All",
             "text":"Results"
         },
-        "button": "Read publication",
+        "button": "Read publication", 
         "button2": "Load more",
     },
     "courses": {
@@ -130,6 +129,7 @@ export const en = {
         "logoSub": "Future Networks for Datacenters and Telcos",
         "titleRight": "Future Networks for Datacenters and Telcos (FuN4DaTe)  © 2024. All rights reserved.",
         "titleRight2": "",
+        "email":"Contact Email:"
     },
     "tools":{
         "title":"Tools",

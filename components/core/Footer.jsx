@@ -51,7 +51,7 @@ export default function Footer(props) {
         />
         <div className="text-white flex items-center">
           <EnvelopeClosedIcon className="mr-2 mb-0.5" />
-          <p className="text-white text-[14px]">Correo de contacto</p>
+          <p className="text-white text-[14px]"><b>{t("footer.email")} </b>responsable@upm.es</p>
         </div>
       </div>
 

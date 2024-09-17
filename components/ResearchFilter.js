@@ -1,21 +1,13 @@
 "use client";
 
 import React from "react";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 
 import FilterText from "./FilterText";
 import FilterDate from "./FilterDate";
-import FilterType from "./FilterType";
+import FilterType from "./FilterCategory";
 
 export default function Filters({search, changeSearch, year, changeYear, items, category, changeCategory, results, categories }) {
   const { t } = useTranslation();

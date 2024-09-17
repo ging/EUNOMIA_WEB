@@ -127,7 +127,7 @@ export default function DesignSystem(props) {
           href="#"
           className={ButtonVariants({
             variant: "default",
-            size: "icon",
+            size: "sm",
             radius: "rounded_sm",
           })}
           {...props}
@@ -185,6 +185,7 @@ export default function DesignSystem(props) {
         </Button>
       </div>
       <Heading level="h3">Badges</Heading>
+      <Heading level="h5">Variant</Heading>
       <div className="flex flex-wrap gap-4 pb-8">
         <Badge
           href="#"
@@ -212,6 +213,36 @@ export default function DesignSystem(props) {
           {...props}
         >
           badge outline
+        </Badge>
+        </div>
+        <Heading level="h5">Size</Heading>
+        <div className="flex flex-wrap gap-4 pb-8">
+        <Badge
+          href="#"
+          className={badgeVariants({
+            size: "lg",
+          })}
+          {...props}
+        >
+          badge lg
+        </Badge>
+        <Badge
+          href="#"
+          className={badgeVariants({
+            size: "default",
+          })}
+          {...props}
+        >
+          badge default
+        </Badge>
+        <Badge
+          href="#"
+          className={badgeVariants({
+            size: "sm",
+          })}
+          {...props}
+        >
+          badge sm
         </Badge>
       </div>
       <Heading level="h3">Cards</Heading>
