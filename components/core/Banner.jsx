@@ -15,9 +15,9 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     className={cn(
       "standard_padding  md:min-h-[90dvh]",
-      "text-white",
+      "text-snow",
       "bg-main bg-cover bg-center",
-      "flex gap-8 justify-between items-center",
+      "flex gap-8 justify-around items-center",
       className
     )}
     {...props}

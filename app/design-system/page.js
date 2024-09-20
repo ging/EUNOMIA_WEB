@@ -404,6 +404,33 @@ export default function DesignSystem(props) {
       
       <Heading level="h3">Recent publications</Heading>
       <RecentPublications/>
+
+
+      <Heading level="h3" className={"border-t-2 border-t-primary pt-2 mt-4"}>Jerarquías de textos</Heading>
+
+
+      <Heading level="h1">Títulos de 1er nivel</Heading>
+      <Text type="p"></Text>
+
+      <Heading level="h2">Títulos de 2o nivel</Heading>
+      <Text type="p"></Text>
+
+      <Heading level="h3">Títulos de 3er nivel</Heading>
+      <Text type="p"></Text>
+
+      <Heading level="h4">Títulos de 4o nivel</Heading>
+      <Text type="p"></Text>
+
+      <Heading level="h5">Títulos de 5o nivel</Heading>
+      <Text type="p"></Text>
+
+      <Heading level="h6">Títulos de 6º nivel</Heading>
+      <Text type="p"></Text>
+
+      <Text type="p">jerarquías de textos</Text>
+      <Text type="small">jerarquías de textos</Text>
+
+
     </main>
   );
 }

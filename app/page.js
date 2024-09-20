@@ -52,9 +52,17 @@ export default function Projects() {
           <BannerDescription className="h-full text-balance">
             {t("front.description")}
           </BannerDescription>
-          <BannerButton className="mt-12">
+          <Divider/>
+          <Button
+            href="#"
+            className={ButtonVariants({
+              variant: "default",
+              size: "lg",
+              radius: "rounded_sm", 
+            })}
+          >
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
-          </BannerButton>
+          </Button>
         </BannerContent>
         <BannerImg />
       </Banner>
@@ -85,7 +93,7 @@ export default function Projects() {
                 <path d="M62.329 28.9806L77.6194 24.1001L73.8556 14.1188L66.2815 17.4879L60.266 20.117C60.9939 18.9107 61.3753 17.5271 61.3682 16.1182L61.447 0.04422L50.8177 0.579501L51.6523 8.82903L52.4555 16.8739C51.4981 15.3675 50.0353 14.2513 48.3295 13.7252L33.0864 8.65585L30.2991 18.9993L38.3618 20.731L46.0935 22.4313C44.4041 22.8922 42.925 23.9207 41.9049 25.3438L32.4566 38.3164L41.3694 44.1729L45.5265 37.0254L49.5894 30.0983C49.4932 31.8778 50.0161 33.6356 51.0695 35.0732L60.5178 48.1245L68.8481 41.4178L63.3051 35.2464L57.9354 29.201C59.3892 29.5665 60.9191 29.4898 62.329 28.9806Z" />
               </svg>
             </div>
-            <CardTitle> {t("front.Goals.Goal1.GoalTitle")}</CardTitle>
+            <Heading level="h5"> {t("front.Goals.Goal1.GoalTitle")}</Heading>
           </Card>
           <Card
             cardType="normal"
@@ -105,7 +113,7 @@ export default function Projects() {
                 <path d="M112.456 116.778L94.594 98.9208C93.305 101.439 91.678 103.77 89.7579 105.848L106.567 122.652C107.883 123.968 107.952 125.7 107.259 126.434C106.567 127.168 104.793 127.057 103.476 125.741L86.5711 108.84C84.3513 110.652 81.8885 112.144 79.2546 113.273L97.6012 131.629C99.8216 133.876 102.839 135.155 105.998 135.189C107.319 135.205 108.63 134.958 109.855 134.463C111.08 133.969 112.195 133.236 113.135 132.308C117.222 128.221 116.904 121.253 112.456 116.778Z" />
               </svg>
             </div>
-            <CardTitle> {t("front.Goals.Goal2.GoalTitle")}</CardTitle>
+            <Heading level="h5"> {t("front.Goals.Goal2.GoalTitle")}</Heading>
           </Card>
           <Card
             cardType="normal"
@@ -131,10 +139,7 @@ export default function Projects() {
                 <path d="M89.8746 120.594C83.6571 123.284 76.9338 124.605 70.1606 124.469C63.3874 124.333 56.7228 122.743 50.6184 119.806C48.8856 122.472 46.7424 124.847 44.2681 126.844C52.2852 131.19 61.2379 133.525 70.3569 133.648C79.4758 133.77 88.4882 131.677 96.6193 127.548C94.0098 125.61 91.732 123.261 89.8746 120.594Z" />
               </svg>
             </div>
-            <CardTitle className="text-primary">
-              {" "}
-              {t("front.Goals.Goal3.GoalTitle")}
-            </CardTitle>
+            <Heading level="h5"> {t("front.Goals.Goal3.GoalTitle")}</Heading>
           </Card>
         </div>
       </section>
