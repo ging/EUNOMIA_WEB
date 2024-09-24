@@ -14,7 +14,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      "standard_padding  md:min-h-[90dvh]",
+      "min-h-[80vh] md:min-h-[80vh]",
       "text-white",
       "bg-main bg-cover bg-center",
       "flex gap-8 justify-between items-center",
@@ -29,7 +29,7 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     level="h1"
-    className={cn("h-fit my-12", className)}
+    className={cn("standard_padding h-fit my-12", className)}
     {...props}
   />
 ));
@@ -74,6 +74,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
       src="assets/logos/eunomia_icon_light.svg"
       alt="icon"
     />
+    
   </div>
 ));
 BannerImg.displayName = "BannerImg";

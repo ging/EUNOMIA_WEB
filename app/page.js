@@ -10,7 +10,7 @@ import Heading from "@/components/ui/Heading";
 import Divider from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-
+import P5Banner from "@/components/P5Banner";
 //Card
 import {
   Card,
@@ -45,9 +45,11 @@ export default function Projects() {
   // <p className="basis-3/4">{t("project.Intro.title")}</p>
 
   return (
-    <main>
-      <Banner>
-        <BannerContent>
+    <main className="relative ">
+      
+      <Banner className="relative">
+      <P5Banner className="absolute top-32 z-0 max-h-[90vh]" />
+        <BannerContent className=" z-10">
           <BannerTitle>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance">
             {t("front.description")}
@@ -56,8 +58,8 @@ export default function Projects() {
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </BannerButton>
         </BannerContent>
-        <BannerImg />
       </Banner>
+    
 
       <section className="standard_padding bg-snow">
         <Heading level="h2">{t("front.section1Title")}</Heading>

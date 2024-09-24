@@ -3,6 +3,7 @@
 import { Source_Sans_3, Ubuntu } from "next/font/google";
 import "./globals.css";
 import { useState, useEffect } from "react";
+import Head from 'next/head';
 
 
 
@@ -26,6 +27,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html hola="bye">
+      <Head>
+        <link rel="icon" href="/icon.ico" />
+      </Head>
       <body className={sourceSans.className}>
         <Header/>
         {isClient ? (

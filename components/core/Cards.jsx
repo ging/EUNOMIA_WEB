@@ -83,6 +83,7 @@ const Card = React.forwardRef(
       github,
       buttonText,
       cardType,
+      role
     },
     ref
   ) => {
@@ -234,6 +235,7 @@ const Card = React.forwardRef(
               {name}
             </Heading>
             <Heading level="h5">{position}</Heading>
+            <Text>{role}</Text>
             {email && <Text>{email}</Text>}
           </div>
         )}

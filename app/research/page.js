@@ -91,8 +91,7 @@ export default function Research() {
         <Text type="p">
           Este apartado es una recopilación de las publicaciones del equipo de
           la UPM y de la UC3M. Las publicaciones de la UPM están centrados en el
-          tema de computación bla bla bla etc y los de la UC3M se centran en
-          sistemas de redes de no se cuantitos.
+          tema de computación.
         </Text>
       </div>
       <main className="research">

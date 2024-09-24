@@ -21,8 +21,8 @@ export default function Team(props) {
     window.scrollTo(0, 0);
   }, []);
 
-  const renderMembers = (members) => {
-    return members.map(
+  const renderMembers = (team) => {
+    return team.map(
       ({
         name,
         description,
@@ -44,7 +44,8 @@ export default function Team(props) {
             })}
             img={img}
             name={name}
-            position={position}
+            position={translatedPosition}
+            role={translatedRole}
             center={center}
             email={email}
           ></Card>
@@ -59,7 +60,7 @@ export default function Team(props) {
       <main className="standard_margin">
         <Heading level="h1">{t("team.title")}</Heading>
         <section className="w-fit mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-          {team["UPM Team"]?.members ? renderMembers(team["UPM Team"].members) : <p>No members found.</p>}
+          {team ? renderMembers(team) : <p>No members found.</p>}
         </section>
       </main>
     </main>
