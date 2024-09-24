@@ -1,6 +1,6 @@
 export const mypublications = [
   {
-    date: [2024, 1],
+    date: [2024],
     doi: "https://doi.org/10.1109/MIC.2023.3333199",
     category: "article-journal",
     author:
