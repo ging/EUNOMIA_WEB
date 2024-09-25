@@ -17,7 +17,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
       "min-h-[80vh] md:min-h-[80vh]",
       "text-white",
       "bg-main bg-cover bg-center",
-      "flex gap-8 justify-around items-center",
+      "flex gap-8 justify-start items-center",
       className
     )}
     {...props}

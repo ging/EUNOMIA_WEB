@@ -16,13 +16,17 @@ const P5Banner = () => {
       let rotation;
       let reponsiveWindowHeight = p.windowHeight*0.80
       let minSizeInteraction = 45;
+      let asterisk;
 
-    
+      // p.preload = () => {
+      //   asterisk = p.loadImage('/askterisk.png'); // Ruta a la imagen en el directorio public
+      // };
       p.setup = () => {
         p.createCanvas(p.windowWidth, reponsiveWindowHeight);
         cols = p.windowWidth / cellSize;
         rows = reponsiveWindowHeight / cellSize;
         p.noStroke();
+        asterisk = p.loadImage('/assets/img/asterisk.png'); // Ruta a la imagen en el directorio public
       };
 
       p.draw = () => {
@@ -51,16 +55,21 @@ const P5Banner = () => {
               p.rotate(rotation);
             } else {
               p.rotate(0);
-            }
-            
+            }       
             p.rectMode(p.CENTER);
-            
             transparency = p.map(sizeRect, 0, 60, -200, 255);
             p.stroke(94, 106, 160, transparency);
             p.noFill();
             p.strokeWeight(8);
             p.rect(0, 0, 45, 45, 10);
+            // asterisco bajo el mouse
+            if (sizeRect >= 59.5) {
+              p.imageMode(p.CENTER);
+              p.tint(255,180);
+              p.image(asterisk, 0, 0,32, 32);
+            }
             p.pop();  // Restaurar el estado anterior de las transformaciones    
+          
           }
         
       p.windowResized = () => {

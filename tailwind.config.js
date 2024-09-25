@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx,css,scss,sass}",
@@ -10,8 +12,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'font-main': ['"Ubuntu"'],
-        'font-body': ['"Source Sans 3","__Source_Sans_3_32aa65", "__Source_Sans_3_Fallback_32"'],
+        'inter': ['inter'],
+        'source-sans': ['"Source Sans 3","__Source_Sans_3_32aa65", "__Source_Sans_3_Fallback_32"'],
       },
       fontSize: {
         // 'xs': ['0.75rem', { lineHeight: '1.4' }],
@@ -84,7 +86,21 @@ module.exports = {
       'main': "url('/assets/fondos/eunomia_fondo_default.png')",
     }
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addBase, theme }) {
+      addBase({
+        'h1': { fontFamily: theme('fontFamily.inter') },
+        'h2': { fontFamily: theme('fontFamily.inter') },
+        'h3': { fontFamily: theme('fontFamily.inter') },
+        'h4': { fontFamily: theme('fontFamily.inter') },
+        'h5': { fontFamily: theme('fontFamily.inter') },
+        'h6': { fontFamily: theme('fontFamily.inter') },
+        'p': { fontFamily: theme('fontFamily.source-sans') },
+        'a': { fontFamily: theme('fontFamily.source-sans') },
+        'button': { fontFamily: theme('fontFamily.source-sans') },
+      })
+    })
+  ],
   // corePlugins: {
   //   preflight: false,
   // },
