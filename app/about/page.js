@@ -104,9 +104,9 @@ export default function About(props) {
                     </svg>
                   </span>
                   <p>
-                    E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN <br/>
-                    Av. Complutense, 30 <br/>
-                    28040 Madrid Edificio B
+                  {t("contact.direction1")} <br/>
+                  {t("contact.direction2")} <br/>
+                  {t("contact.direction3")} <br/>
                   </p>
                 </h5>
               </li>

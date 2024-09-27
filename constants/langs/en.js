@@ -120,7 +120,12 @@ export const en = {
         "title2": "Any questions? Contact us. ",
         "title3": "Where are we?",
         "listTitle2":"Phone",
-        "body": "Do you want to get in touch with us for any consultation or colaborations ( course, project or publication) ? In the CyberAula group we are open to work together with other groups or educational institutions, as well as the participation in european or national projects as long as they are related to our main lines of action. Ask and we'll be glad to establish contact for possible colaborations.",
+        "body": "If you want more information about our project or would like to join the Eunomia community to participate in our activities, you can send an email or call the addresses listed below.",
+        "direction1": "E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN",
+        "direction2": "Av. Complutense, 30",
+        "direction3": "28040 Madrid Building B"
+                   
+                   
     },
     "footer": {
         "title1":"Sections",

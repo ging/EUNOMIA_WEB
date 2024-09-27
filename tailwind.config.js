@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx,css,scss,sass}",
@@ -12,8 +13,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'inter': ['inter'],
-        'source-sans': ['"Source Sans 3","__Source_Sans_3_32aa65", "__Source_Sans_3_Fallback_32"'],
+        "ubuntu": ['var(--font-ubuntu)', 'sans-serif'],
+        "sourceSans": ['var(--font-sourceSans)', 'sans-serif'],
       },
       fontSize: {
         // 'xs': ['0.75rem', { lineHeight: '1.4' }],
@@ -89,15 +90,15 @@ module.exports = {
   plugins: [
     plugin(function({ addBase, theme }) {
       addBase({
-        'h1': { fontFamily: theme('fontFamily.inter') },
-        'h2': { fontFamily: theme('fontFamily.inter') },
-        'h3': { fontFamily: theme('fontFamily.inter') },
-        'h4': { fontFamily: theme('fontFamily.inter') },
-        'h5': { fontFamily: theme('fontFamily.inter') },
-        'h6': { fontFamily: theme('fontFamily.inter') },
-        'p': { fontFamily: theme('fontFamily.source-sans') },
-        'a': { fontFamily: theme('fontFamily.source-sans') },
-        'button': { fontFamily: theme('fontFamily.source-sans') },
+        'h1': { fontFamily: theme('fontFamily.ubuntu') },
+        'h2': { fontFamily: theme('fontFamily.ubuntu') },
+        'h3': { fontFamily: theme('fontFamily.ubuntu') },
+        'h4': { fontFamily: theme('fontFamily.ubuntu') },
+        'h5': { fontFamily: theme('fontFamily.ubuntu') },
+        'h6': { fontFamily: theme('fontFamily.ubuntu') },
+        'p': { fontFamily: theme('fontFamily.sourceSans') },
+        'a': { fontFamily: theme('fontFamily.sourceSans') },
+        'button': { fontFamily: theme('fontFamily.sourceSans') },
       })
     })
   ],

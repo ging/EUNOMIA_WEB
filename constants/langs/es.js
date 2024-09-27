@@ -124,8 +124,10 @@ export const es = {
         "listTitle":"E-mail",
         "listTitle2":"Teléfono",
         
-        "body": "¿Deseas ponerte en contacto con nosotros para cualquier colaboración o consulta (curso, proyecto o publicación)?. En el grupo CyberAula estamos abiertos a colaborar con grupos e instituciones educativas, y a la participación en proyectos europeos y nacionales, siempre y cuando estén relacionados con nuestras principales líneas de actuación. Pregúntanos y estaremos encantados de contactar para posibles colaboraciones. ", 
-        
+        "body": "Si quieres más información sobre nuestro proyecto o te gustaría unirte a la comunidad Eunomia para participar en nuestras actividades, puedes enviar un correo electónico o llamar a las direcciones que te incluimos a continuación. ", 
+        "direction1": "E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN",
+        "direction2": "Av. Complutense, 30",
+        "direction3": "28040 Madrid Edificio B"
     },
     "footer": {
         "title1":"Secciones",
