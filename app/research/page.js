@@ -90,8 +90,7 @@ export default function Research() {
         <Heading level="h1">{t("publications.title")}</Heading>
         <Text type="p">
           Este apartado es una recopilación de las publicaciones del equipo de
-          la UPM y de la UC3M. Las publicaciones de la UPM están centrados en el
-          tema de computación.
+          la UPM en Eunomia. Pendiente traducción
         </Text>
       </div>
       <main className="research">

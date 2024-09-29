@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
   return (
     <html className={` ${sourceSans.variable} ${ubuntu.variable} `}> 
       <Head>
-        <link rel="icon" href="/icon.ico" />
       </Head>
        <body> 
         {/* <body className={`${ubuntu.className} ${sourceSans.className} `}>  */}

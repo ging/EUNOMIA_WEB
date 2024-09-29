@@ -99,6 +99,7 @@ module.exports = {
         'p': { fontFamily: theme('fontFamily.sourceSans') },
         'a': { fontFamily: theme('fontFamily.sourceSans') },
         'button': { fontFamily: theme('fontFamily.sourceSans') },
+        'label': { fontFamily: theme('fontFamily.sourceSans') },
       })
     })
   ],
