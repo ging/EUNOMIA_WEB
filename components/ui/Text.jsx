@@ -20,7 +20,7 @@ const Text = ({ type = "p", children, className }) => {
       Component = "small";
       break;
     default:
-      Component = "p"; // Por defecto, usar h1 si no se especifica nivel válido
+      Component = "p"; // Por defecto, usar p si no se especifica nivel válido
       break;
   }
 
