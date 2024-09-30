@@ -191,6 +191,7 @@ export default function DesignSystem(props) {
           href="#"
           className={badgeVariants({
             variant: "default",
+            size: "default",
           })}
           {...props}
         >
@@ -200,6 +201,7 @@ export default function DesignSystem(props) {
           href="#"
           className={badgeVariants({
             variant: "secondary",
+            size: "default",
           })}
           {...props}
         >
@@ -209,6 +211,7 @@ export default function DesignSystem(props) {
           href="#"
           className={badgeVariants({
             variant: "outline",
+            size: "default",
           })}
           {...props}
         >

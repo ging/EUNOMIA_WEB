@@ -17,17 +17,19 @@ module.exports = {
         "sourceSans": ['var(--font-sourceSans)', 'sans-serif'],
       },
       fontSize: {
-        // 'xs': ['0.75rem', { lineHeight: '1.4' }],
-        'sm': ['0.75rem', { lineHeight: '1.4' }],
+        '2xs': ['0.625rem', { lineHeight: '1.4' }],
+        'xs': ['0.75rem', { lineHeight: '1.4' }],
+        'sm': ['0.825rem', { lineHeight: '1.4' }],
         'base': ['1rem', { lineHeight: '1.4' }], // body
-
         // con Hs creo que es mejor la verdad y así reservamos los tamañosde tw por si acaso
-        'h1': ['3rem', { lineHeight: '1.4em' }],
+        'h1': ['3rem', { lineHeight: '1.4' }],
         'h2': ['2.5rem', { lineHeight: '1.4' }],
         'h3': ['1.75rem', { lineHeight: '1.4' }],
         'h4': ['1.5rem', { lineHeight: '1.4' }],
-        'h5': ['1.25rem', { lineHeight: '1.4' }],
-        'h6': ['0.9rem', { lineHeight: '1.4' }],
+        'h5': ['1.25rem', { lineHeight: '1.4' }, { color: "current"}],
+       // prueba
+        //'md': ['1.25rem', { lineHeight: '1.4' }, { color: "current"}],
+        'h6': ['1rem', { lineHeight: '1.4' }],
       },
       colors: {
         // whiteFull: "#ffffff",

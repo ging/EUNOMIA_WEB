@@ -26,7 +26,7 @@ html body {
 
 body {
   font-family: "Helvetica",OpenSans, sans-serif;
-  color:#000;
+  /*color:#000;*/
   background-color:#f8f6f0;
 }
 
@@ -55,7 +55,7 @@ h3 {
 }
 
 a {
-  color: #000;
+  /*color: #000;*/
   text-decoration: none;
 }
 
