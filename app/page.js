@@ -59,7 +59,7 @@ export default function Projects() {
             href="#"
             className={ButtonVariants({
               variant: "default",
-              size: "lg",
+              size: "default",
               radius: "rounded_sm", 
             })}
           >

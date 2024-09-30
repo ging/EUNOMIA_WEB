@@ -17,7 +17,7 @@ export default function About(props) {
 
       <main className="standard_padding ">
         <div className="banner py-8">
-          <Heading level="h1" className="">
+          <Heading level="h2" className="">
             {t("contact.title")}
           </Heading> 
 

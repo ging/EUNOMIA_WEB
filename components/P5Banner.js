@@ -17,6 +17,7 @@ const P5Banner = () => {
       let reponsiveWindowHeight = p.windowHeight*0.80
       let minSizeInteraction = 45;
       let asterisk;
+      let tint;
 
       // p.preload = () => {
       //   asterisk = p.loadImage('/askterisk.png'); // Ruta a la imagen en el directorio public
@@ -63,9 +64,10 @@ const P5Banner = () => {
             p.strokeWeight(8);
             p.rect(0, 0, 45, 45, 10);
             // asterisco bajo el mouse
-            if (sizeRect >= 59.5) {
+            if (sizeRect >= 59) {
               p.imageMode(p.CENTER);
-              p.tint(255,180);
+              tint = p.map(sizeRect, 59, 60, 50, 180);
+              p.tint(255,tint);
               p.image(asterisk, 0, 0,32, 32);
             }
             p.pop();  // Restaurar el estado anterior de las transformaciones    

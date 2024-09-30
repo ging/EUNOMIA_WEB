@@ -19,17 +19,17 @@ import {
 import Link from "next/link";
 
 const CardVariants = cva(
-  "h-full min-w-20 p-4 inline-flex flex-col gap-4 items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  " min-w-20 p-4 inline-flex flex-col items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       variant: {
-        default: "bg-white shadow hover:bg-primary/40",
+        default: "gap-4 bg-white shadow hover:bg-primary/40",
         project:
-          "bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
-        course: "bg-purple-50",
-        publication: "bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "p-0 bg-snow border border-input shadow-sm hover:scale-[101%]",
-        tool: "p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
+          "gap-4 bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
+        course: "gap-4 bg-purple-50",
+        publication: "gap-4 bg-blue-50 shadow-sm hover:bg-destructive/90",
+        team: "p-0 bg-snow border border-input justify-start items-start shadow-sm hover:bg-snow hover:scale-[101%] gap-1",
+        tool: "gap-4 p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
       },
       direction: {
         default: "flex flex-col", // horizontal
@@ -91,7 +91,7 @@ const Card = React.forwardRef(
       <article className={cn(CardVariants({ variant, direction, className }))}>
         {/* card header */}
         {(date || category) && (
-          <header className="w-full flex gap-4 justify-start">
+          <header className="w-full flex justify-start">
             <Badge variant="outline" size="lg">
               {date}
             </Badge>
@@ -187,7 +187,7 @@ const Card = React.forwardRef(
     // PUBLICATIONS - ok
     const publicationCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
-        <header className="w-full flex gap-4 justify-start">
+        <header className="w-full flex gap-3 justify-start ">
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
@@ -196,14 +196,14 @@ const Card = React.forwardRef(
           </Badge>
         </header>
         <div className={cardBodyClasses}>
-          <Heading level="h3">
+          <Heading level="h4">
             <i>{title}</i>
           </Heading>
-          <Heading level="h5">{author}</Heading>
+          <Text level="p">{author}</Text>
         </div>
         <footer className={cardFooterClasses}>
           {doi ? (
-            <Button asChild variant="secondary" radius="rounded_md">
+            <Button asChild variant="secondary" size="sm" radius="rounded_md" >
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
                 Leer publicación
                 {/* {t("publications.button")} */}
@@ -219,7 +219,7 @@ const Card = React.forwardRef(
     const teamCard = (
       <article
         className={
-          cn(CardVariants({ variant, direction, className })) + " mx-auto w-60"
+          cn(CardVariants({ variant, direction, className })) + " mx-auto xs:mx-0 w-60 gap-1"
         }
       >
         {img && (
@@ -230,13 +230,13 @@ const Card = React.forwardRef(
           />
         )}
         {(name || position || description || email) && (
-          <div className="p-4 h-full w-full flex flex-col justify-between items-center">
-            <Heading level="h3" className={"text-inherit text-center"}>
-              {name}
+          <div className="p-4 h-full w-full flex flex-col justify-start items-center mb-auto">
+            <Heading level="h5" className={"text-inherit text-center pb-1"}>
+              {name} <b>{position}</b>
             </Heading>
-            <Heading level="h5">{position}</Heading>
+           
             <Text>{role}</Text>
-            {email && <Text>{email}</Text>}
+            {email && <Text className={"font-semibold"}>{email}</Text>}
           </div>
         )}
         {/* {( email &&    

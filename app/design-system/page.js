@@ -35,7 +35,7 @@ export default function DesignSystem(props) {
 
   return (
     <main className={"page_" + currentLang + " standard_margin"}>
-      <Heading level="h1">Sistema de diseño</Heading>
+      <Heading level="h2">Sistema de diseño</Heading>
 
       <Heading level="h3">Botones</Heading>
       {/* Variant */}
