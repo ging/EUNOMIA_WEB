@@ -1,22 +1,22 @@
 import { useRef, useEffect } from 'react';
 import p5 from 'p5';
 
-const P5Banner = () => {
+const P5BannerLight = () => {
   const sketchRef = useRef(null);
 
   useEffect(() => {
     const sketch = (p) => {
       let cols, rows;
-      const cellSize = 64;  // Tamaño máximo del cuadrado
+      const cellSize = 60;  // Tamaño máximo del cuadrado
       let x, y;
       let positionTileX, positionTileY;
       let differenceTileMouseX, differenceTileMouseY;
       let sizeRect;
       let transparency;
       let rotation;
-      let reponsiveWindowHeight = p.windowHeight*0.80;
+      let reponsiveWindowHeight = p.windowHeight*0.40;
       let windowWidthAdapted = p.windowWidth * 0.987;
-      let minSizeInteraction = 45;
+      let minSizeInteraction = cellSize/1.5;
       let asterisk;
       let tint;
 
@@ -32,7 +32,9 @@ const P5Banner = () => {
       };
 
       p.draw = () => {
-        p.background(46, 54, 89);
+        p.background(169, 177, 214);
+       // mas oscuro
+       // p.background(117, 129, 186);
         cols = p.windowWidth / cellSize;
         rows = reponsiveWindowHeight / cellSize;
         
@@ -40,12 +42,12 @@ const P5Banner = () => {
           for (let j = 0; j < rows; j++) {
             // Calcular la posición del cuadrado
             positionTileX = cellSize * i;
-            positionTileY = cellSize * j;
+            positionTileY = cellSize * j + 30;
             differenceTileMouseX = p.abs(positionTileX - p.mouseX);
             differenceTileMouseY = p.abs(positionTileY - p.mouseY);
             
-            x = p.map(differenceTileMouseX, 0, 1200, 30, -10);
-            y = p.map(differenceTileMouseY, 0, 1200, 30, -10);
+            x = p.map(differenceTileMouseX, 0, 1200, cellSize/2, -10);
+            y = p.map(differenceTileMouseY, 0, 1200, cellSize/2, -10);
             
             sizeRect = x + y;
             
@@ -53,23 +55,24 @@ const P5Banner = () => {
             p.translate(positionTileX, positionTileY);
             
             if (sizeRect >= minSizeInteraction) {
-              rotation = p.map(sizeRect, minSizeInteraction, 60, 0, p.PI / 4);
+              rotation = p.map(sizeRect, minSizeInteraction, cellSize, 0, p.PI / 4);
               p.rotate(rotation);
             } else {
               p.rotate(0);
             }       
             p.rectMode(p.CENTER);
-            transparency = p.map(sizeRect, 0, 60, -200, 255);
-            p.stroke(94, 106, 160, transparency);
+            transparency = p.map(sizeRect, 0, cellSize, -200, 200);
+            p.stroke(118, 116, 228, transparency);
             p.noFill();
-            p.strokeWeight(8);
-            p.rect(0, 0, 45, 45, 10);
+            p.strokeWeight(cellSize/7.5);
+            p.rect(0, 0, cellSize/1.5, cellSize/1.5, cellSize/7.5);
             // asterisco bajo el mouse
-            if (sizeRect >= 59) {
+            if (sizeRect >= cellSize-1) {
               p.imageMode(p.CENTER);
-              tint = p.map(sizeRect, 59, 60, 50, 225);
+              tint = p.map(sizeRect, cellSize-1, cellSize, 50, 225);
               p.tint(255,tint);
-              p.image(asterisk, 0, 0,32, 32);
+              p.blendMode(p.DIFFERENCE);
+              p.image(asterisk, 0, 0,cellSize/2, cellSize/2);
             }
             p.pop();  // Restaurar el estado anterior de las transformaciones    
           
@@ -94,4 +97,4 @@ const P5Banner = () => {
   return <div ref={sketchRef} className='absolute z-0 max-h-[100vh]' />;
 };
 
-export default P5Banner;
+export default P5BannerLight;

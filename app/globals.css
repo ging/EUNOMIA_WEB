@@ -69,7 +69,7 @@ del filter cambia de bloque a inline*/
     @apply gap-x-4 sm:gap-x-6 lg:gap-x-8 xl:gap-x-10
 }
 main {
-  min-height: 85dvh;
+  min-height: 80dvh;
 }
   
 @layer base {

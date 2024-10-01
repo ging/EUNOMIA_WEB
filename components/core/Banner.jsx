@@ -6,19 +6,35 @@ import Heading from "../ui/Heading";
 import Text from "../ui/Text";
 import { Button, ButtonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import { cva } from "class-variance-authority";
 
 // la imagen de fondo del banner está enganchada en tailwind.config
 
-const Banner = React.forwardRef(({ className, ...props }, ref) => (
+const BannerVariants = cva(
+  "text-white bg-main bg-cover bg-center flex gap-8 justify-start items-center",
+  {
+    variants: {
+      size: {
+        sm: 
+          "min-h-[30vh] md:min-h-[30vh] ",
+        default:
+          "min-h-[80vh] md:min-h-[80vh]",
+        lg:
+          "min-h-[80vh] md:min-h-[80vh]",
+      },
+
+    },
+    defaultVariants: {
+
+      size: "default",
+    },
+  }
+);
+
+const Banner = React.forwardRef(({ className, size, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn(
-      "min-h-[80vh] md:min-h-[80vh]",
-      "text-white",
-      "bg-main bg-cover bg-center",
-      "flex gap-8 justify-start items-center",
-      className
+    className={cn(BannerVariants({  className, size})
     )}
     {...props}
   />
@@ -39,7 +55,7 @@ const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
     level="h1"
-    className={cn("text-snow", className)}
+    className={cn( className)}
     {...props}
   />
 ));
@@ -48,7 +64,7 @@ BannerTitle.displayName = "BannerTitle";
 const BannerDescription = React.forwardRef(({ className, ...props }, ref) => (
     <Text
     ref={ref}
-    level="p"
+    type="short-p"
     className= {cn("text-snow mb-4", className)}
     {...props} />
     ))
@@ -86,4 +102,5 @@ export {
   BannerContent,
   BannerImg,
   BannerButton,
+  BannerVariants
 };

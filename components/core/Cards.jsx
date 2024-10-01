@@ -235,7 +235,7 @@ const Card = React.forwardRef(
               {name} <b>{position}</b>
             </Heading>
            
-            <Text>{role}</Text>
+            <Text type="short-p">{role}</Text>
             {email && <Text className={"font-semibold"}>{email}</Text>}
           </div>
         )}

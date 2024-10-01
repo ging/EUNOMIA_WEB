@@ -47,11 +47,11 @@ export default function Projects() {
   return (
     <main className="relative ">
       
-      <Banner className="relative">
-      <P5Banner className="absolute top-32 z-0 max-h-[90vh]" />
+      <Banner size="lg">
+       <P5Banner className="absolute z-0 max-h-[90vh]" /> 
         <BannerContent className=" z-10">
-          <BannerTitle>{t("front.title")}</BannerTitle>
-          <BannerDescription className="h-full  max-w-[65ch] ">
+          <BannerTitle className="text-snow">{t("front.title")}</BannerTitle>
+          <BannerDescription className="h-full max-w-[65ch] ">
             {t("front.description")}
           </BannerDescription>
           <Divider/>
@@ -65,6 +65,7 @@ export default function Projects() {
           >
             {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
           </Button>
+
         </BannerContent>
       </Banner>
     
