@@ -32,6 +32,7 @@ export default function Contact(props) {
 
       <main className="standard_padding ">
         <div className="banner pb-8">
+          {/* <Heading level="h4">{t("contact.title2")}</Heading> */}
           <Text>{t("contact.body")}</Text>
         </div>
         <section className="">
@@ -44,7 +45,7 @@ export default function Contact(props) {
                   </span>
                   <div>
                   <Heading level="h5">
-                    Email adress
+                  {t("contact.email")}
                   </Heading>
                   <Text type="p">gi.internetng@upm.es</Text>
                   </div>
@@ -57,7 +58,7 @@ export default function Contact(props) {
                   </span>
                   <div>
                   <Heading level="h5">
-                    Phone
+                  {t("contact.phone")}
                   </Heading>
                   <Text type="p">91 336 73 31</Text> 
                   </div>
@@ -70,7 +71,7 @@ export default function Contact(props) {
                   </span>
                   <div>
                   <Heading level="h5">
-                    Location
+                  {t("contact.location")}
                   </Heading>
                   <Text type="p" className={"pb-1"} > {t("contact.direction1")} <br /> </Text>
                   <Text type="small" className={"block leading-5"}>  {t("contact.direction2")} <br />

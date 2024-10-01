@@ -118,9 +118,11 @@ export const en = {
     "contact": {
         "title": "Contact",
         "title2": "Any questions? Contact us. ",
-        "title3": "Where are we?",
-        "listTitle2":"Phone",
+       
         "body": "If you want more information about our project or would like to join the Eunomia community to participate in our activities, you can send an email or call the addresses listed below.",
+        "email":" Email address",
+        "phone":" Telephone",
+        "location":" Location",
         "direction1": "E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN",
         "direction2": "Av. Complutense, 30",
         "direction3": "28040 Madrid Building B"
