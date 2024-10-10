@@ -14,8 +14,8 @@ const P5Banner = () => {
       let sizeRect;
       let transparency;
       let rotation;
-      let reponsiveWindowHeight = p.windowHeight * 0.80;
-      let windowWidthAdapted = p.windowWidth * 0.987;
+      let reponsiveWindowHeight = p.windowHeight;
+      let windowWidthAdapted = p.windowWidth ;
       let minSizeInteraction = 45;
       let asterisk;
 

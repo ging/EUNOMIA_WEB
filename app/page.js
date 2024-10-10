@@ -48,7 +48,7 @@ export default function Projects() {
     <main className="relative ">
       
       <Banner size="lg">
-       <P5Banner className="absolute z-0 max-h-[90vh]" /> 
+       <P5Banner className="absolute z-0" /> 
         <BannerContent className=" z-10">
           <BannerTitle className="text-snow">{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full max-w-[65ch] ">

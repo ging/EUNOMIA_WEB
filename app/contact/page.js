@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 
 import { useTranslation } from "react-i18next";
 
@@ -18,12 +19,12 @@ export default function Contact(props) {
   return (
     <div className={"about page_" + currentLang}>
       {/* <Header route={"/about"} /> */}
-      <Banner className={BannerVariants({
+      <Banner className={cn(BannerVariants({
         size: "sm",
-      })}
+      }), "overflow-hidden relative w-full")}
      {...props}>
-         <P5BannerLight className="absolute top-32 z-0 max-h-[90vh]" />
-        <BannerContent className=" z-10 mt-0">
+        <P5BannerLight className="absolute z-0"/>
+        <BannerContent className="z-10">
           <BannerTitle level="h2" className="">
             {t("contact.title")}
           </BannerTitle>

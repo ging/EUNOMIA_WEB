@@ -14,8 +14,8 @@ const P5BannerLight = () => {
       let sizeRect;
       let transparency;
       let rotation;
-      let reponsiveWindowHeight = p.windowHeight*0.40;
-      let windowWidthAdapted = p.windowWidth * 0.987;
+      let reponsiveWindowHeight = p.windowHeight;
+      let windowWidthAdapted = p.windowWidth;
       let minSizeInteraction = cellSize/1.5;
       let asterisk;
       let tint;

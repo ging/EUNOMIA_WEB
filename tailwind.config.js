@@ -26,7 +26,7 @@ module.exports = {
         'h2': ['2.5rem', { lineHeight: '1.4' }],
         'h3': ['1.75rem', { lineHeight: '1.4' }],
         'h4': ['1.5rem', { lineHeight: '1.4' }],
-        'h5': ['1.25rem', { lineHeight: '1.4' }, { color: "current"}],
+        'h5': ['1.25rem', { lineHeight: '1.4' }],
        // prueba
         //'md': ['1.25rem', { lineHeight: '1.4' }, { color: "current"}],
         'h6': ['1rem', { lineHeight: '1.4' }],

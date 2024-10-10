@@ -11,7 +11,7 @@ import { cva } from "class-variance-authority";
 // la imagen de fondo del banner está enganchada en tailwind.config
 
 const BannerVariants = cva(
-  "text-white bg-main bg-cover bg-center flex gap-8 justify-start items-center",
+  "overflow-hidden relative w-full text-white bg-main bg-cover bg-center flex gap-8 justify-start items-center",
   {
     variants: {
       size: {

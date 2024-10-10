@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 import Heading from "../ui/Heading";
 import { Badge } from "../ui/badge";
+import { Image } from "../ui/image";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import {
@@ -164,6 +165,16 @@ const Card = React.forwardRef(
     const courseCard = (
       <article className={cn(CardVariants({ variant, direction, className }))}>
         <header className="flex w-full gap-4 items-center">
+          {/* <Image DE MOMENTO DA ERROR
+          src="https://via.placeholder.com/400"
+          alt="Imagen con ajuste cover"
+          fit="cover"
+          className="mb-4" // Clase adicional para el margen inferior
+          hasBadge={true}
+          badgeVariant="success" // Asumiendo que tienes variantes de badges
+          badgeSize="small" // Asumiendo que tienes diferentes tamaños de badges
+          layout="top-right" // Ubicación del badge
+        /> */}
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
