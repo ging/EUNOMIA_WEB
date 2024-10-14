@@ -13,7 +13,7 @@ import Footer from "@/components/core/Footer";
 
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"] , variable: "--font-sourceSans" });
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "700"] , variable: "--font-ubuntu" });
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-ubuntu" });
 
 export default function RootLayout({ children }) {
   //disable SSR whole project, this will make the project to be rendered only on client side
@@ -25,8 +25,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html className={` ${sourceSans.variable} ${ubuntu.variable} `}> 
-      <Head>
-      </Head>
+      <title>Eunomia</title>
        <body> 
         {/* <body className={`${ubuntu.className} ${sourceSans.className} `}>  */}
         <Header/>

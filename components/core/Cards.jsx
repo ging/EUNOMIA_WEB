@@ -8,10 +8,22 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 import Heading from "../ui/Heading";
-import { Badge } from "../ui/badge";
-import { Image } from "../ui/image";
+import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
+import Image from "../ui/image";
+import {
+  CustomCard,
+  CardContent,
+  CardTitle,
+  CardSubtitle,
+  CardDescription,
+  CardFooter,
+  CardHeader
+} from "@/components/ui/customCard";
+
+import { useTranslation } from "react-i18next";
+
 import {
   FaceIcon,
   ArrowRightIcon,
@@ -20,46 +32,73 @@ import {
 import Link from "next/link";
 
 const CardVariants = cva(
-  " min-w-20 p-4 inline-flex flex-col items-center justify-between whitespace-nowrap rounded-md font-body text-sm text-primary drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
-      variant: {
-        default: "gap-4 bg-white shadow hover:bg-primary/40",
-        project:
-          "gap-4 bg-green-50 border border-input shadow-sm hover:bg-accent hover:text-white",
-        course: "gap-4 bg-purple-50",
-        publication: "gap-4 bg-blue-50 shadow-sm hover:bg-destructive/90",
-        team: "p-0 bg-snow border border-input justify-start items-start shadow-sm hover:bg-snow hover:scale-[101%] gap-1",
-        tool: "gap-4 p-0 bg-yellow-50 shadow-sm hover:bg-secondary/10",
-      },
       direction: {
         default: "flex flex-col", // horizontal
         vertical: "flex",
       },
     },
     defaultVariants: {
-      variant: "default",
       direction: "default",
     },
   }
 );
 
-const cardFooterClasses = cn(
-  "pt-4 w-full flex flex-wrap flex-row-reverse gap-2 xs:gap-4 justify-center xs:justify-start"
-);
-const cardBodyClasses = cn("h-full w-full flex flex-col justify-start");
 const tagContainerClasses = cn(
   "mt-6 w-full flex flex-wrap gap-2 justify-start"
 );
-const classesImg = cn("bg-gray-200 min-h-16 min-w-16 object-cover");
 
+
+/**
+ * Se puede integrar si cambiamos el modelo de datos del json por array
+ * @param {String} tags
+ * @returns string array
+ */
 const renderTags = (tags) => {
   if (!tags) return null;
   const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
   return tagsArray.map((tag, index) => (
-    <Badge key={index}>{tag}</Badge> // Añade una key a cada Label
+    <Badge key={index} variant="default">{tag}</Badge> // Añade una key a cada Label
   ));
 };
+
+// quitarle guión, añadir espaciado, mayúscula (Formateo)
+const renderCategory = (category) => {
+  if (!category) return null;
+  const categoryFormat = category.split('-') // cadena en un array de palabras
+  .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // la primera letra en mayúscula
+  .join(' '); // unir las palabras con espacio
+  return (
+    <Badge variant="outline" size="lg">{categoryFormat}</Badge>  
+  )
+};
+
+const translateCategory = (category, currentLang) => {
+  if (currentLang == "es") {
+    if (category == "article-journal") {
+      category = "artículo-revista";
+      console.log(category)
+      }
+    else if (category == "paper-conference") {
+      category = "acta-congreso";
+      console.log(category)
+      }
+    else if (category == "book") {
+      category = "libro";
+      console.log(category)
+      }
+    else if (category == "chapter") {
+      category = "capítulo";
+      console.log(category)
+      }
+  } else if (currentLang == "en") {
+    // transformar "artículo-revista" en article journal
+  }
+  return renderCategory(category)
+}
+
 
 const Card = React.forwardRef(
   (
@@ -71,6 +110,7 @@ const Card = React.forwardRef(
       subtitle,
       description,
       img,
+      svg,
       tags,
       date,
       category,
@@ -84,97 +124,43 @@ const Card = React.forwardRef(
       github,
       buttonText,
       cardType,
-      role
+      role,
+      currentLang
+      
     },
     ref
+    
   ) => {
-    const globalCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
-        {/* card header */}
-        {(date || category) && (
-          <header className="w-full flex justify-start">
-            <Badge variant="outline" size="lg">
-              {date}
-            </Badge>
-            <Badge variant="outline" size="lg">
-              {category}
-            </Badge>
-          </header>
-        )}
-        {/* card image */}
-        {img && (
-          <img
-            src={/* process.env.PUBLIC_URL */ +img}
-            alt={img}
-            className={classesImg}
-          />
-        )}
-        {/* card body */}
-        {(title || subtitle || description || tags) && (
-          <div className={cardBodyClasses}>
-            {title && <Heading level="h3">{title}</Heading>}
-            {subtitle && <Heading level="h5">{subtitle}</Heading>}
-            {description && <Text>{description}</Text>}
-            {tags && (
-              <div className={tagContainerClasses}>{renderTags(tags)}</div>
-            )}
-          </div>
-        )}
-        {/* card footer 
-        hay que ver cómo hacer que los botones pueda haber dos botones con textos diferentes 
-        */}
-        {buttonText && (
-          <footer className={cardFooterClasses}>
-            <Button variant="" size="" className="">
-              <FaceIcon />
-              {buttonText}
-            </Button>
-            <Button variant="secondary" size="" className="">
-              {buttonText}
-            </Button>
-          </footer>
-        )}
-      </article>
-    );
+    const { t } = useTranslation();
 
     // PROJECT
     const projectCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
-        <header className="w-full flex gap-4 justify-start">
+      <CustomCard className={cn(CardVariants({ direction, className }))}>
+        <CardHeader>
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
           <Badge variant="outline" size="lg">
             {category}
           </Badge>
-        </header>
-        <div className={cardBodyClasses}>
-          <Heading level="h3">{title}</Heading>
-          <Heading level="h5">{subtitle}</Heading>
-          {description && <Text>{description}</Text>}
+        </CardHeader>
+        <CardContent className="h-full">
+          <CardTitle level="h3">{title}</CardTitle>
+          <CardSubtitle level="h6">{subtitle}</CardSubtitle>
+          {description && <CardDescription>{description}</CardDescription>}
           <div className={tagContainerClasses}>{renderTags(tags)}</div>
-        </div>
-        <footer>
+        </CardContent>
+        <CardFooter className="justify-center">
           <Button href={route}>Ver proyecto</Button>{" "}
           {/**revisar el href que no funciona el link */}
-        </footer>
-      </article>
+        </CardFooter>
+      </CustomCard>
     );
 
     // COURSE
     const courseCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
-        <header className="flex w-full gap-4 items-center">
-          {/* <Image DE MOMENTO DA ERROR
-          src="https://via.placeholder.com/400"
-          alt="Imagen con ajuste cover"
-          fit="cover"
-          className="mb-4" // Clase adicional para el margen inferior
-          hasBadge={true}
-          badgeVariant="success" // Asumiendo que tienes variantes de badges
-          badgeSize="small" // Asumiendo que tienes diferentes tamaños de badges
-          layout="top-right" // Ubicación del badge
-        /> */}
+      <CustomCard className={cn(CardVariants({ direction, className }))}>
+        <CardHeader>
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
@@ -185,112 +171,114 @@ const Card = React.forwardRef(
           <Button href={route} variant="ghost" size="lg">
             Ir al curso <ExternalLinkIcon className="w-5 h-5" />
           </Button>
-        </header>
-        <div className={cardBodyClasses}>
-          <Heading level="h3">{title}</Heading>
-          <Heading level="h5">{subtitle}</Heading>
-          <Text>{description}</Text>
+        </CardHeader>
+        <CardContent>
+          <CardTitle>{title}</CardTitle>
+          <CardSubtitle level="h6">{subtitle}</CardSubtitle>
+          <CardDescription>{description}</CardDescription>
           <div className={tagContainerClasses}>{renderTags(tags)}</div>
-        </div>
-      </article>
+        </CardContent>
+      </CustomCard>
     );
 
     // PUBLICATIONS - ok
     const publicationCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
-        <header className="w-full flex gap-3 justify-start ">
+      <CustomCard className={cn(CardVariants({ direction, className }))}>
+        <CardHeader>
           <Badge variant="outline" size="lg">
             {date}
           </Badge>
-          <Badge variant="outline" size="lg">
-            {category}
-          </Badge>
-        </header>
-        <div className={cardBodyClasses}>
-          <Heading level="h4">
+          {translateCategory(category, currentLang)}
+        </CardHeader>
+        <CardContent className="h-full">
+          <CardTitle level="h3">
             <i>{title}</i>
-          </Heading>
+          </CardTitle>
           <Text level="p">{author}</Text>
-        </div>
-        <footer className={cardFooterClasses}>
+        </CardContent>
+        <CardFooter>
           {doi ? (
-            <Button asChild variant="secondary" size="sm" radius="rounded_md" >
+            <Button asChild variant="" radius="rounded_md">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
-                Leer publicación
-                {/* {t("publications.button")} */}
+              {t("publications.action-button")}
+             
                 <ArrowRightIcon />
               </Link>
             </Button>
           ) : null}
-        </footer>
-      </article>
+        </CardFooter>
+      </CustomCard>
     );
 
     // TEAM - ok
     const teamCard = (
-      <article
-        className={
-          cn(CardVariants({ variant, direction, className })) + " mx-auto xs:mx-0 w-60 gap-1"
-        }
+      <CustomCard
+        // className={
+        //   cn(CardVariants({direction, className }))
+        // }
+        className="w-64 bg-primary-300/60 h-86 p-4"
       >
-        {img && (
-          <img
-            src={/* process.env.PUBLIC_URL */ +img}
-            alt={img}
-            className={classesImg + " w-full min-h-40"}
+        {(img || svg) && (
+          <Image
+            className={"h-[220px] rounded-md"}
+            src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+            alt={title || "Image"} // Usa el título como alt si existe
+            fit="cover" // Ajustamos el contenido al contenedor
+            hasBadge={position? true : false} // Por defecto, no tiene badge
+            badgeContent={position}
           />
         )}
-        {(name || position || description || email) && (
-          <div className="p-4 h-full w-full flex flex-col justify-start items-center mb-auto">
-            <Heading level="h5" className={"text-inherit text-center pb-1"}>
-              {name} <b>{position}</b>
-            </Heading>
-           
-            <Text type="short-p">{role}</Text>
-            {email && <Text className={"font-semibold"}>{email}</Text>}
-          </div>
+        {(name || description || email) && (
+          <CardContent className="w-full justify-start items-center mb-auto">
+            <CardTitle level="h5" className={"text-inherit text-center"}>
+              {name}
+            </CardTitle>
+            { role && (<CardDescription type="short-p">{role}</CardDescription>)}
+           {email && <CardDescription className={"font-semibold"}>{email}</CardDescription>}
+          </CardContent>
         )}
         {/* {( email &&    
-        <footer>
+        <CardFooter className="justify-end">
           <a href={email}>{email}</a>
-        </footer>)} */}
-      </article>
+        </CardFooter>)} */}
+      </CustomCard>
     );
 
     // TOOL - ok
     const toolCard = (
-      <article className={cn(CardVariants({ variant, direction, className }))}>
+      <CustomCard className={cn(CardVariants({ direction, className }))}>
         {img && (
-          <img
-            src={/* process.env.PUBLIC_URL */ +img}
-            alt={img}
-            className={classesImg}
-          />
+          <Image
+          src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+          alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+          className={"h-24"}
+          fit="contain"
+        />
         )}
-        <div className={cardBodyClasses + " px-4 pt-1"}>
-          <Heading level="h3">{title}</Heading>
-          <Text>{description}</Text>
-        </div>
-        <footer className={cardFooterClasses + " p-4"}>
+        <CardContent>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
+        </CardContent>
+        <CardFooter>
+        {( github && <Button asChild variant="link">
+            <Link rel="noopener noreferrer" target="_blank" href={github}>
+              GitHub
+            </Link>
+          </Button>)}
           <Button asChild variant="secondary" radius="rounded_md">
             <Link rel="noopener noreferrer" target="_blank" href={route}>
               Ver herramienta
               <ArrowRightIcon />
             </Link>
           </Button>
-          {( github && <Button asChild variant="link">
-            <Link rel="noopener noreferrer" target="_blank" href={github}>
-              GitHub
-            </Link>
-          </Button>)}
-        </footer>
-      </article>
+        </CardFooter>
+      </CustomCard>
     );
 
     // Usar el prop cardType para determinar qué tipo de tarjeta renderizar
     switch (cardType) {
       default:
-        return globalCard;
+        return projectCard;
       case "project":
         return projectCard;
       case "course":

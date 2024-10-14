@@ -7,20 +7,20 @@ import { useTranslation } from "react-i18next";
 
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Divider from "@/components/ui/divider";
+import {Divider, DividerVariants} from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import P5Banner from "@/components/P5Banner";
-//Card
+//CustomCard
 import {
-  Card,
+  CustomCard,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
   CardSubtitle,
-} from "@/components/ui/card";
+} from "@/components/ui/customCard";
 
 //Banner
 import {
@@ -34,7 +34,7 @@ import {
 
 // UI
 export default function Projects() {
-  // const [projects, setProjects] = useState(myprojectCards);
+  // const [projects, setProjects] = useState(myprojectCustomCards);
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const { t, i18n } = useTranslation();
@@ -48,7 +48,7 @@ export default function Projects() {
     <main className="relative ">
       
       <Banner size="lg">
-       <P5Banner className="absolute z-0" /> 
+       <P5Banner className="" /> 
         <BannerContent className=" z-10">
           <BannerTitle className="text-snow">{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full max-w-[65ch] ">
@@ -77,10 +77,9 @@ export default function Projects() {
         <Heading level="h4" className="mb-6">
           {t("front.section1Subtitle")}
         </Heading>
-        {/* Cards con iconos */}
+        {/* CustomCards con iconos */}
         <div className="flex flex-col sm:grid md:grid-cols-3 gap-6">
-          <Card
-            cardType="normal"
+          <CustomCard
             className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 flex justify-center items-center">
@@ -97,9 +96,8 @@ export default function Projects() {
               </svg>
             </div>
             <Heading level="h5"> {t("front.Goals.Goal1.GoalTitle")}</Heading>
-          </Card>
-          <Card
-            cardType="normal"
+          </CustomCard>
+          <CustomCard
             className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 flex justify-center items-center ">
@@ -117,9 +115,8 @@ export default function Projects() {
               </svg>
             </div>
             <Heading level="h5"> {t("front.Goals.Goal2.GoalTitle")}</Heading>
-          </Card>
-          <Card
-            cardType="normal"
+          </CustomCard>
+          <CustomCard
             className="text-center content-center bg-white p-6"
           >
             <div className="icon pb-8 content-center flex justify-center items-center">
@@ -143,7 +140,7 @@ export default function Projects() {
               </svg>
             </div>
             <Heading level="h5"> {t("front.Goals.Goal3.GoalTitle")}</Heading>
-          </Card>
+          </CustomCard>
         </div>
       </section>
     </main>
