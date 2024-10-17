@@ -3,25 +3,25 @@
 import * as React from "react";
 import clsx from "clsx";
 
-
 import { Slot } from "@radix-ui/react-slot"
 import { cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils"
 import Heading from "@/components/ui/Heading"
+import Text from "@/components/ui/Text"
 
-const Card = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
+  <article
     ref={ref}
-    className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
+    className={cn("p-2 h-full w-full rounded-xl border flex flex-col justify-start gap-4 overflow-hidden shadow bg-primary-200 text-primary-800", className)}
     {...props} />
 ))
-Card.displayName = "Card"
+CustomCard.displayName = "CustomCard"
 
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+  <header
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-2 ", className)}
+    className={cn("w-full pb-3 flex gap-2 justify-start", className)}
     {...props} />
 
 ))
@@ -30,8 +30,8 @@ CardHeader.displayName = "CardHeader"
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
-    level="h5" 
-    className={cn("font-semibold leading-5 tracking-tight", className)}
+    level="h3" 
+    className={cn("font-semibold tracking-tight", className)}
     {...props} 
   />
 ))
@@ -40,31 +40,31 @@ CardTitle.displayName = "CardTitle"
 const CardSubtitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading 
     ref={ref}
-    level="h2" 
+    level="h6" 
     className={cn(className)}
     {...props}/>
 ))
 CardSubtitle.displayName = "CardSubtitle"
 
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
-  <p
+  <Text
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("text-muted-foreground", className)}
     {...props} />
 ))
 CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-2 pt-2 h-full bg-secondary text-black", className)} {...props} />
+  <div ref={ref} className={cn("h-fit w-full flex flex-col", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+  <footer
     ref={ref}
-    className={cn("flex items-center p-2 pt-0 capitalize", className)}
+    className={cn("pt-6 w-full flex gap-3 justify-end items-center", className)}
     {...props} />
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }
+export { CustomCard, CardHeader, CardFooter, CardTitle, CardSubtitle, CardDescription, CardContent }

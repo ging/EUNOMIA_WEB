@@ -354,7 +354,7 @@ section.content {
 }
 
 #team ul li h5 {
-  color: #777;
+  /* color: #777; */
   word-wrap: break-word;
   line-height: 14px;
   font-weight: 100;

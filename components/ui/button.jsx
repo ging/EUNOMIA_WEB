@@ -15,7 +15,7 @@ const ButtonVariants = cva(
         // Las variantes foreground están disponibles para 
         // diseños de página en darkmode, con color de texto claro, etc.
         default:
-          "bg-primary shadow text-primary-foreground hover:bg-primary-800 ",
+          "bg-primary shadow !text-primary-foreground hover:bg-primary-800",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
@@ -35,8 +35,8 @@ const ButtonVariants = cva(
           "bg-transparent text-primary-foreground underline-offset-4 underline hover:bg-secondary-100/60 shadow-none", 
       },
       size: {
-        default: " px-5 py-2.5 text-base",
-        sm: "px-4 py-2 text-sm font-semibold",
+        default: "px-5 py-2.5 text-base",
+        sm: "px-5 py-2.5 text-sm",
         lg: "px-5 py-2.5 text-h5",
         //este funciona con color
         // lg: "px-5 py-2.5 text-md",

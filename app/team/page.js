@@ -58,8 +58,8 @@ export default function Team(props) {
     <main className={"team page_" + currentLang }>
       {/* <Header route={"/team"} />   */}
       <main className="standard_margin">
-        <Heading level="h2" className="mx-auto sm:mx-0 text-center xs:text-left">{t("team.title")}</Heading>
-        <section className="mx-auto xs:ml-0 flex flex-wrap xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12 justify-start">
+        <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">{t("team.title")}</Heading>
+        <section className="flex flex-wrap justify-center xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12 ">
           {team ? renderMembers(team) : <p>No members found.</p>}
         </section>
       </main>

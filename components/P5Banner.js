@@ -14,15 +14,14 @@ const P5Banner = () => {
       let sizeRect;
       let transparency;
       let rotation;
-      let reponsiveWindowHeight = p.windowHeight*0.80;
-      let windowWidthAdapted = p.windowWidth * 0.987;
+      let reponsiveWindowHeight = p.windowHeight;
+      let windowWidthAdapted = p.windowWidth ;
       let minSizeInteraction = 45;
       let asterisk;
-      let tint;
 
-      // p.preload = () => {
-      //   asterisk = p.loadImage('/askterisk.png'); // Ruta a la imagen en el directorio public
-      // };
+      // Arreglo para almacenar los asteriscos dibujados
+      let asterisks = [];
+
       p.setup = () => {
         p.createCanvas(windowWidthAdapted, reponsiveWindowHeight);
         cols = windowWidthAdapted / cellSize;
@@ -35,50 +34,72 @@ const P5Banner = () => {
         p.background(46, 54, 89);
         cols = p.windowWidth / cellSize;
         rows = reponsiveWindowHeight / cellSize;
-        
+
+        // Dibujar los cuadrados y detectar interacción del mouse
         for (let i = 0; i < cols; i++) {
           for (let j = 0; j < rows; j++) {
-            // Calcular la posición del cuadrado
             positionTileX = cellSize * i;
             positionTileY = cellSize * j;
             differenceTileMouseX = p.abs(positionTileX - p.mouseX);
             differenceTileMouseY = p.abs(positionTileY - p.mouseY);
-            
+
             x = p.map(differenceTileMouseX, 0, 1200, 30, -10);
             y = p.map(differenceTileMouseY, 0, 1200, 30, -10);
-            
             sizeRect = x + y;
-            
-            p.push();  // Guardar el estado actual de las transformaciones
+
+            p.push();
             p.translate(positionTileX, positionTileY);
-            
+
             if (sizeRect >= minSizeInteraction) {
               rotation = p.map(sizeRect, minSizeInteraction, 60, 0, p.PI / 4);
               p.rotate(rotation);
             } else {
               p.rotate(0);
-            }       
+            }
+
             p.rectMode(p.CENTER);
             transparency = p.map(sizeRect, 0, 60, -200, 255);
             p.stroke(94, 106, 160, transparency);
             p.noFill();
             p.strokeWeight(8);
             p.rect(0, 0, 45, 45, 10);
-            // asterisco bajo el mouse
+
+            // Agregar asterisco a la lista cuando el mouse está sobre el cuadrado
             if (sizeRect >= 59) {
-              p.imageMode(p.CENTER);
-              tint = p.map(sizeRect, 59, 60, 50, 225);
-              p.tint(255,tint);
-              p.image(asterisk, 0, 0,32, 32);
+              asterisks.push({
+                x: positionTileX,
+                y: positionTileY,
+                opacity: 255  // Opacidad inicial
+              });
             }
-            p.pop();  // Restaurar el estado anterior de las transformaciones    
-          
+
+            p.pop();
           }
-        
-      p.windowResized = () => {
-        p.resizeCanvas(p.windowWidth, reponsiveWindowHeight); // Resize the canvas when the window is resized
-      };
         }
+
+        // Dibujar y actualizar los asteriscos en el arreglo
+        for (let i = asterisks.length - 1; i >= 0; i--) {
+          let ast = asterisks[i];
+
+          p.push();
+          p.translate(ast.x, ast.y);
+          p.imageMode(p.CENTER);
+          p.tint(255, ast.opacity);  // Aplicar opacidad
+          p.image(asterisk, 0, 0, 32, 32);
+          p.pop();
+
+          // Reducir la opacidad del asterisco
+          ast.opacity -= 18;
+
+          // Eliminar el asterisco si se desvanece completamente
+          if (ast.opacity <= 0) {
+            asterisks.splice(i, 1);
+          }
+        }
+
+        p.windowResized = () => {
+          p.resizeCanvas(p.windowWidth, reponsiveWindowHeight); // Resize the canvas when the window is resized
+        };
       };
     };
 
@@ -93,5 +114,6 @@ const P5Banner = () => {
 
   return <div ref={sketchRef} className='absolute z-0 max-h-[100vh]' />;
 };
+
 
 export default P5Banner;
