@@ -105,9 +105,4 @@ module.exports = {
       })
     })
   ],
-  // corePlugins: {
-  //   preflight: false,
-  // },
 };
-
-// export default config;
