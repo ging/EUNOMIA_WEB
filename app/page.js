@@ -10,7 +10,7 @@ import Heading from "@/components/ui/Heading";
 import {Divider, DividerVariants} from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
 import { ArrowRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import P5Banner from "@/components/P5Banner";
+import P5Banner from "@/components/Banner/P5Banner";
 //CustomCard
 import {
   CustomCard,

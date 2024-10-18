@@ -12,7 +12,8 @@ const Image = ({
   layout = "top-right",
   hasBadge = false,
   badgeVariant = "",
-  badgeSize = "",      
+  badgeSize = "",     
+  badgeContent = "badge", 
 }) => {
   const imageContainerClasses = clsx(
     "relative flex w-full h-full",
@@ -46,7 +47,7 @@ const Image = ({
       />
       {hasBadge && (
         <Badge className={badgeLayout} variant={badgeVariant} size={badgeSize}>
-          Hola
+          {badgeContent}
         </Badge>
       )}
     </div>

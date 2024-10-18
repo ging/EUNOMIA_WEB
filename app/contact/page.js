@@ -9,7 +9,7 @@ import Text from "@/components/ui/Text";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { MobileIcon } from "@radix-ui/react-icons";
 import { SewingPinIcon } from "@radix-ui/react-icons";
-import P5BannerLight from "@/components/P5Banner_light";
+import P5BannerLight from "@/components/Banner/P5BannerLight";
 
 import { Banner, BannerContent, BannerTitle, BannerVariants } from "@/components/core/Banner";
 
