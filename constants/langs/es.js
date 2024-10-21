@@ -108,7 +108,8 @@ export const es = {
                 "5":"Profesor Titular de Universidad", // Full Professor
                 "6":"Profesor ayudante doctor", 
                 "7":"Investigador",
-                "8":"Personal externo"
+                "8":"Personal externo",
+                "9":"Becario"
             },
             "positions":{
                 "1":"IP1",

@@ -216,7 +216,7 @@ const Card = React.forwardRef(
         // className={
         //   cn(CardVariants({direction, className }))
         // }
-        className="w-64 bg-primary-300/60 h-86 p-4"
+        className="w-[270px] bg-primary-300/60 h-86 p-4"
       >
         {(img || svg) && (
           <Image
@@ -234,7 +234,7 @@ const Card = React.forwardRef(
               {name}
             </CardTitle>
             { role && (<CardDescription type="short-p">{role}</CardDescription>)}
-           {email && <CardDescription className={"font-semibold"}>{email}</CardDescription>}
+           {email && <CardDescription className={"font-semibold break-words "}>{email}</CardDescription>}
           </CardContent>
         )}
         {/* {( email &&    

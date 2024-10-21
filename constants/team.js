@@ -1,7 +1,19 @@
 export const myteam = [
   {
+    name: "Joaquín Salvachúa",
+    position: "IP",
+    roleTranslationKey: "team.professorCards.roles.1",
+    description:
+      "Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals. His research interests include advanced cloud and edge architectures, big data infrastructure, data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
+    img: "/assets/img/team/joaquin-salvachua.jpg",
+    github: "https://github.com/jsalvachua",
+    email: "joaquin.salvachua@upm.es",
+    center: "E.T.S. de ingenieros de telecomunicacion",
+    key: "2",
+  },
+  {
     name: "Pedro Reviriego",
-    position: "(IP1)",
+    position: "",
     roleTranslationKey: "team.professorCards.roles.1",
     description:
       "Pedro Reviriego received the M.Sc. and Ph.D. degrees in telecommunications engineering from the Technical University of Madrid, Madrid, Spain, in 1994 and 1997, respectively. From 1997 to 2000, he was an Engineer with Teldat, Madrid, working on router implementation. In 2000, he joined Massana to work on the development of 1000BASE-T transceivers. From 2004 to 2007, he was a Distinguished Member of Technical Staff with the LSI Corporation, working on the development of Ethernet transceivers. From 2007 to 2018 he was with Nebrija University, from 2018 to 2022 with Universidad Carlos III de Madrid. He is currently with Universidad Politécnica de Madrid working on probabilistic data structures, high speed packet processing and machine learning.",
@@ -25,7 +37,7 @@ export const myteam = [
   {
     name: "Enrique Barra",
     // position: "team.professorCards.positions.1",
-    position: "(IP2)",
+    position: "",
     roleTranslationKey: "team.professorCards.roles.2",
     description:
       "Enrique Barra is a professor at Telematic Engineering Department, School of Telecommunications Engineering. He received the Ph.D. degree in Telematic Engineering with minoring in Multimedia and Technology Enhanced Learning from  Universidad Politécnica de Madrid (UPM).He has participated in many European projects, such as GLOBAL, FIWARE, and C@R. He is currently involved in several projects contributing to the generation and distribution of educational content in TEL environments. His research interests include videoconferencing, games in education, and social networks in education.",
@@ -71,18 +83,7 @@ export const myteam = [
     center: "E.T.S. de ingenieros de telecomunicacion",
     key: "4",
   },
-  {
-    name: "Joaquín Salvachúa",
-    position: "",
-    roleTranslationKey: "team.professorCards.roles.1",
-    description:
-      "Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals. His research interests include advanced cloud and edge architectures, big data infrastructure, data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
-    img: "/assets/img/team/joaquin-salvachua.jpg",
-    github: "https://github.com/jsalvachua",
-    email: "joaquin.salvachua@upm.es",
-    center: "E.T.S. de ingenieros de telecomunicacion",
-    key: "2",
-  },
+ 
   {
     name: "Santiago Pavón",
     roleTranslationKey: "team.professorCards.roles.1",
@@ -106,6 +107,17 @@ export const myteam = [
     email: "joseandres.munoz@upm.es",
     center: "E.T.S. de ingenieros de telecomunicacion",
     key: "9",
+  },
+  {
+    name: "Carlos Aparicio",
+    position: "",
+    roleTranslationKey: "team.professorCards.roles.3",
+    description: "",
+    img: "/assets/img/team/carlos-aparicio.jpeg",
+    github: "",
+    email: "",
+    center: "E.T.S. de ingenieros de telecomunicacion",
+    key: "30",
   },
   {
     name: "Alejandro Pozo",
@@ -132,6 +144,7 @@ export const myteam = [
     center: "E.T.S. de ingenieros de telecomunicacion",
     key: "13",
   },
+
   {
     name: "Javier Conde",
     position: "",
@@ -145,14 +158,27 @@ export const myteam = [
     key: "11",
   },
   {
-    name: "Carlos Aparicio",
+    name: "Rodrigo Menéndez",
     position: "",
-    roleTranslationKey: "team.professorCards.roles.3",
-    description: "",
-    img: "/assets/img/team/carlos-aparicio.jpeg",
+    roleTranslationKey: "team.professorCards.roles.9",
+    description:
+      "",
+    img: "/assets/img/team/avatar.png",
     github: "",
     email: "",
     center: "E.T.S. de ingenieros de telecomunicacion",
-    key: "30",
+    key: "14",
+  },
+  {
+    name: "Irene Plaza",
+    position: "",
+    roleTranslationKey: "team.professorCards.roles.9",
+    description:
+      "",
+    img: "/assets/img/team/irene-plaza.jpg",
+    github: "",
+    email: "irene.plaza.ortiz@alumnos.upm.es",
+    center: "E.T.S. de ingenieros de telecomunicacion",
+    key: "15",
   },
 ];

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import p5 from "p5";
 
-const P5Banner = () => {
+const P5BannerComponent = () => {
   const sketchRef = useRef(null);
   if (typeof window !== "undefined") {
     useEffect(() => {
@@ -116,4 +116,4 @@ const P5Banner = () => {
   }
 };
 
-export default P5Banner;
+export default P5BannerComponent;
