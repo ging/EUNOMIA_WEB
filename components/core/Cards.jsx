@@ -216,7 +216,7 @@ const Card = React.forwardRef(
         // className={
         //   cn(CardVariants({direction, className }))
         // }
-        className="w-[270px] bg-primary-300/60 h-86 p-4"
+        className="w-[280px] bg-primary-300/60 h-86 p-4"
       >
         {(img || svg) && (
           <Image

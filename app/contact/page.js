@@ -39,7 +39,7 @@ export default function Contact(props) {
         <section className="">
           <div className="">
             <ul className="contact_info grid grid-cols-1 gap-8 pb-8 lg:grid-cols-3 lg:pb-0">
-              <li className="text-center min-h-40 shadow-md py-6 border rounded border-secondary">
+              <li className="text-center min-h-40 shadow-md py-6 px-4 border rounded border-secondary">
                 <div className="flex flex-col gap-2 ">
                   <span className="content-center flex justify-center items-center">
                   <EnvelopeClosedIcon className=" h-7 w-7 text-primary" />
@@ -52,7 +52,7 @@ export default function Contact(props) {
                   </div>
                 </div>
               </li>
-              <li className="text-center min-h-40 shadow-md py-6 border rounded border-secondary">
+              <li className="text-center min-h-40 shadow-md py-6 px-4 border rounded border-secondary">
                 <div className="flex flex-col gap-2 ">
                   <span className="content-center flex justify-center items-center">
                   <MobileIcon className=" h-7 w-7 text-primary" />
@@ -65,7 +65,7 @@ export default function Contact(props) {
                   </div>
                 </div>
               </li>
-              <li className="text-center min-h-40 shadow-md py-6 border rounded border-secondary">
+              <li className="text-center min-h-40 shadow-md py-6 px-4 border rounded border-secondary">
                 <div className="flex flex-col gap-2 ">
                   <span className="content-center flex justify-center items-center">
                   <SewingPinIcon className=" h-7 w-7 text-primary" />

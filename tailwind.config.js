@@ -20,16 +20,13 @@ module.exports = {
         '2xs': ['0.625rem', { lineHeight: '1.4' }],
         'xs': ['0.75rem', { lineHeight: '1.4' }],
         'sm': ['0.825rem', { lineHeight: '1.2' }],
-        'base': ['1rem', { lineHeight: '1.4' }], // body
-        // con Hs creo que es mejor la verdad y así reservamos los tamañosde tw por si acaso
-        'h1': ['3rem', { lineHeight: '1.2' }],
-        'h2': ['2.5rem', { lineHeight: '1.2' }],
-        'h3': ['1.75rem', { lineHeight: '1.2' }],
-        'h4': ['1.5rem', { lineHeight: '1.4' }],
-        'h5': ['1.25rem', { lineHeight: '1.4' }],
-       // prueba
-        //'md': ['1.25rem', { lineHeight: '1.4' }, { color: "current"}],
+        'base': ['1rem', { lineHeight: '1.4' }], 
         'h6': ['1rem', { lineHeight: '1.4' }],
+        'h5': ['1.25rem', { lineHeight: '1.4' }],
+        'h4': ['1.5rem', { lineHeight: '1.4' }],
+        'h3': ['1.75rem', { lineHeight: '1.2' }],
+        'h2': ['2.5rem', { lineHeight: '1.2' }],
+        'h1': ['3rem', { lineHeight: '1.2' }], 
       },
       colors: {
         // whiteFull: "#ffffff",

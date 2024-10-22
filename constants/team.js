@@ -163,9 +163,9 @@ export const myteam = [
     roleTranslationKey: "team.professorCards.roles.9",
     description:
       "",
-    img: "/assets/img/team/avatar.png",
+    img: "/assets/img/team/rodrigo-menendez.jpeg",
     github: "",
-    email: "",
+    email: "rodrigo.menendez@alumnos.upm.es",
     center: "E.T.S. de ingenieros de telecomunicacion",
     key: "14",
   },
