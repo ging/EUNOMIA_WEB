@@ -14,11 +14,12 @@ const P5BannerComponent = () => {
         let sizeRect;
         let transparency;
         let rotation;
-        let reponsiveWindowHeight = p.windowHeight;
+        let reponsiveWindowHeight = p.windowHeight *0.8;
         let windowWidthAdapted = p.windowWidth;
         let minSizeInteraction = 45;
         let asterisk;
 
+    
         // Arreglo para almacenar los asteriscos dibujados
         let asterisks = [];
 
@@ -34,6 +35,7 @@ const P5BannerComponent = () => {
           p.background(46, 54, 89);
           cols = p.windowWidth / cellSize;
           rows = reponsiveWindowHeight / cellSize;
+    
 
           // Dibujar los cuadrados y detectar interacción del mouse
           for (let i = 0; i < cols; i++) {
@@ -113,6 +115,7 @@ const P5BannerComponent = () => {
     }, []);
 
     return <div ref={sketchRef} className="absolute z-0 max-h-[100vh]" />;
+    
   }
 };
 

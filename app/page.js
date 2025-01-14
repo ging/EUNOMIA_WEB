@@ -55,23 +55,28 @@ export default function Projects() {
             {t("front.description")}
           </BannerDescription>
           <Divider/>
+          <Link href="#about_eunomia" className="flex">
           <Button
-            href="#"
+            
             className={ButtonVariants({
               variant: "default",
               size: "default",
               radius: "rounded_sm", 
             })}
           >
-            {t("front.action-button")} <ArrowRightIcon className=" h-4 w-4" />
+       
+            {t("front.action-button")}
+       
+            <ArrowRightIcon className=" h-4 w-4" />
           </Button>
-
+          </Link>
         </BannerContent>
       </Banner>
     
 
-      <section className="standard_padding bg-snow">
-        <Heading level="h2">{t("front.section1Title")}</Heading>
+      <section className="standard_padding bg-snow" id="about_eunomia" >
+      <div className="h-14 lg:h-8"></div>
+        <Heading level="h2"   >{t("front.section1Title")}</Heading>
         <Text type="p"> {t("front.section1Description")}</Text>
         <Divider size="lg" />
         <Heading level="h4" className="mb-6">
